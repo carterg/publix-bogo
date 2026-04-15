@@ -4,7 +4,7 @@ const fs = require('fs');
 const URL = 'https://www.publix.com/savings/weekly-ad/view-all?filter=BOGO';
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox', '--ignore-certificate-errors'] });
   const page = await browser.newPage();
   await page.setViewport({ width: 1400, height: 2000 });
 
