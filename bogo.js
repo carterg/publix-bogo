@@ -83,4 +83,9 @@ const URL = 'https://www.publix.com/savings/weekly-ad/view-all?filter=BOGO';
   console.log(JSON.stringify({ count: result.count, apiCaptured: result.apiCaptured, apiBogoCount: result.apiBogoCount, first5: domItems.slice(0, 5) }, null, 2));
 
   await browser.close();
+
+  if (!apiPayload) {
+    console.error('API payload not captured — bogo-api.json was NOT updated (stale data would be rebuilt). Retry before building.');
+    process.exit(1);
+  }
 })().catch(e => { console.error(e); process.exit(1); });

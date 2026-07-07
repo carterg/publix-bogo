@@ -1,7 +1,14 @@
 const fs = require('fs');
 
+const MIN_ITEMS = 50;
+
 const data = JSON.parse(fs.readFileSync('bogo-api.json', 'utf8'));
 const bogo = data.filter(s => /buy 1 get 1/i.test(JSON.stringify(s)));
+
+if (bogo.length < MIN_ITEMS) {
+  console.error(`Refusing to build: only ${bogo.length} BOGO items (expected >= ${MIN_ITEMS}). Scrape likely failed — not overwriting the published page.`);
+  process.exit(1);
+}
 
 const decode = s => (s || '')
   .replace(/&#13;&#10;/g, ' ')
@@ -155,6 +162,7 @@ const html = `<!doctype html>
     <h1>Publix BOGO <span class="count">${bogo.length}</span><span class="dates">${validRange}</span></h1>
     <input type="search" id="q" placeholder="Search items…" autofocus>
     <a class="xlink" href="kroger/">Kroger deals →</a>
+    <a class="xlink" href="recipes/">Recipes →</a>
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>

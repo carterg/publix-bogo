@@ -1,7 +1,14 @@
 const fs = require('fs');
 
+const MIN_ITEMS = 15;
+
 const data = JSON.parse(fs.readFileSync('kroger-api.json', 'utf8'));
 const ads = data.ads || [];
+
+if (ads.length < MIN_ITEMS) {
+  console.error(`Refusing to build: only ${ads.length} deals (expected >= ${MIN_ITEMS}). Scrape likely failed — not overwriting the published page.`);
+  process.exit(1);
+}
 
 const esc = s => (s || '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 
@@ -180,6 +187,7 @@ const html = `<!doctype html>
     <h1>Kroger Deals <span class="count">${ads.length}</span><span class="dates">${validRange}</span></h1>
     <input type="search" id="q" placeholder="Search items…" autofocus>
     <a class="xlink" href="../">Publix BOGO →</a>
+    <a class="xlink" href="../recipes/">Recipes →</a>
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>

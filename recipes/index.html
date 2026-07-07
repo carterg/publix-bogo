@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>This Week's Recipes — 7/1 – 7/7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --border: #262b36;
+    --text: #e8ebf0;
+    --muted: #8a93a6;
+    --accent: #f59e0b;
+    --accent-bg: #2b1d05;
+    --publix: #22c55e;
+    --publix-bg: #0d2a1a;
+    --kroger: #4d9fff;
+    --kroger-bg: #0d1d33;
+    --pill: #1e2330;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(15,17,21,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+  }
+  .header-row { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+  h1 { font-size: 18px; margin: 0; font-weight: 600; letter-spacing: -0.01em; }
+  .dates { color: var(--muted); font-size: 12px; }
+  .xlink { color: var(--muted); font-size: 13px; text-decoration: none; white-space: nowrap; }
+  .xlink:hover { color: var(--text); }
+  .spacer { flex: 1; }
+  .intro { max-width: 900px; margin: 20px auto 0; padding: 0 16px; color: var(--muted); }
+  main { max-width: 900px; margin: 0 auto; padding: 16px 16px 48px; display: flex; flex-direction: column; gap: 18px; }
+  .recipe {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  h2 { margin: 0 0 6px; font-size: 19px; letter-spacing: -0.01em; }
+  .facts { display: flex; gap: 8px; flex-wrap: wrap; color: var(--muted); font-size: 13px; align-items: center; }
+  .facts .tag { background: var(--pill); border-radius: 999px; padding: 2px 10px; font-size: 12px; }
+  .blurb { color: var(--muted); margin: 10px 0 0; }
+  .cols { display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; margin-top: 14px; }
+  @media (max-width: 640px) { .cols { grid-template-columns: 1fr; gap: 8px; } }
+  h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 14px 0 8px; }
+  ul, ol { margin: 0; padding-left: 0; }
+  ul.sale { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  ul.sale li { font-size: 14px; }
+  .store {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    border-radius: 4px; padding: 1px 7px; margin-right: 4px;
+    text-transform: uppercase; letter-spacing: .03em;
+  }
+  .store.publix { color: var(--publix); background: var(--publix-bg); }
+  .store.kroger { color: var(--kroger); background: var(--kroger-bg); }
+  .deal { color: var(--accent); font-size: 12.5px; font-weight: 500; white-space: nowrap; }
+  ul.pantry { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+  ul.pantry li { background: var(--pill); color: var(--muted); border-radius: 999px; padding: 2px 10px; font-size: 12.5px; }
+  ol.steps { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+  .note {
+    margin: 16px 0 0; font-size: 13px; color: var(--muted);
+    background: var(--accent-bg); border-left: 3px solid var(--accent);
+    padding: 8px 12px; border-radius: 0 6px 6px 0;
+  }
+  .allergy { max-width: 900px; margin: 8px auto 0; padding: 0 16px; color: var(--muted); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-row">
+    <h1>This Week's Recipes</h1>
+    <span class="dates">7/1 – 7/7 · dairy &amp; egg free</span>
+    <span class="spacer"></span>
+    <a class="xlink" href="../">Publix BOGO →</a>
+    <a class="xlink" href="../kroger/">Kroger deals →</a>
+  </div>
+</header>
+<p class="intro">Five dairy- and egg-free dinners built around this week&#39;s Publix BOGOs and Kroger deals.</p>
+<main>
+<article class="recipe">
+    <div class="head">
+      <h2>BBQ Chicken with Charred Corn &amp; Crispy Potatoes</h2>
+      <div class="facts">
+        <span>45 min</span><span>serves 4</span>
+        <span class="tag">grill</span><span class="tag">family favorite</span>
+      </div>
+      <p class="blurb">Grilled (or seared) chicken glazed with BBQ sauce, with charred sweet corn and smashed roasted potatoes.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>On sale this week</h3>
+        <ul class="sale">
+          <li><span class="store kroger">Kroger</span> Perdue Boneless Chicken <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store kroger">Kroger</span> Sweet Corn &amp; Baker Russet Potatoes <span class="deal">$2.99 / 4 ct</span></li>
+          <li><span class="store publix">Publix</span> Sweet Baby Ray&#39;s Barbecue Sauce <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store publix">Publix</span> Fire &amp; Smoke Seasoning <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store publix">Publix</span> Pompeian Imported Olive Oil <span class="deal">Buy 1 Get 1 FREE</span></li>
+        </ul>
+        <h3>From the pantry</h3>
+        <ul class="pantry"><li>salt &amp; pepper</li><li>garlic powder</li></ul>
+      </div>
+      <div>
+        <h3>Steps</h3>
+        <ol class="steps">
+          <li>Boil potatoes whole until just fork-tender, ~15 min. Drain, smash lightly, toss with olive oil and seasoning, and roast at 450°F until crispy, ~20 min.</li>
+          <li>Season chicken with Fire &amp; Smoke rub. Grill or sear over medium-high heat until cooked through (165°F), brushing with BBQ sauce in the last few minutes.</li>
+          <li>Char the corn alongside the chicken, turning until spotted all over. Rest the chicken 5 min, glaze once more, and serve.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note">Sweet Baby Ray&#39;s original is dairy/egg-free; skip any butter on the corn — olive oil + seasoning works great.</p>
+  </article>
+<article class="recipe">
+    <div class="head">
+      <h2>Shrimp Tacos with Avocado-Lime Crema</h2>
+      <div class="facts">
+        <span>25 min</span><span>serves 4</span>
+        <span class="tag">quick</span><span class="tag">seafood</span>
+      </div>
+      <p class="blurb">Crispy or sautéed shrimp in crunchy taco shells with a dairy-free avocado crema standing in for sour cream.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>On sale this week</h3>
+        <ul class="sale">
+          <li><span class="store publix">Publix</span> Publix Medium Shrimp Platter (or Gorton&#39;s Shrimp) <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store publix">Publix</span> Old El Paso Taco Shells or Tortillas <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store publix">Publix</span> Publix Red Seedless Watermelon Chunks <span class="deal">Buy 1 Get 1 FREE</span></li>
+        </ul>
+        <h3>From the pantry</h3>
+        <ul class="pantry"><li>avocado</li><li>lime</li><li>cilantro</li><li>shredded cabbage or lettuce</li><li>chili powder</li><li>cumin</li></ul>
+      </div>
+      <div>
+        <h3>Steps</h3>
+        <ol class="steps">
+          <li>Blend one avocado with the juice of a lime, a handful of cilantro, and a pinch of salt until smooth — that&#39;s the crema.</li>
+          <li>Toss shrimp with chili powder and cumin, then sauté 2–3 min per side (or bake breaded shrimp per the box).</li>
+          <li>Warm the shells, fill with cabbage, shrimp, and crema. Serve with watermelon on the side.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note">Plain shrimp is safe; if you go with Gorton&#39;s breaded shrimp, check the label — some breaded varieties contain dairy.</p>
+  </article>
+<article class="recipe">
+    <div class="head">
+      <h2>Smoky Kielbasa &amp; Tomato Rice Skillet</h2>
+      <div class="facts">
+        <span>35 min</span><span>serves 4</span>
+        <span class="tag">one-pan</span>
+      </div>
+      <p class="blurb">One-pan browned kielbasa simmered with tomatoes, peppers, and rice.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>On sale this week</h3>
+        <ul class="sale">
+          <li><span class="store publix">Publix</span> Hillshire Farm Smoked Sausage or Polska Kielbasa <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store publix">Publix</span> SMT Tomatoes (28-oz can) <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store publix">Publix</span> Pompeian Imported Olive Oil <span class="deal">Buy 1 Get 1 FREE</span></li>
+        </ul>
+        <h3>From the pantry</h3>
+        <ul class="pantry"><li>long-grain rice</li><li>onion</li><li>bell pepper</li><li>garlic</li><li>smoked paprika</li><li>chicken broth or water</li></ul>
+      </div>
+      <div>
+        <h3>Steps</h3>
+        <ol class="steps">
+          <li>Slice kielbasa into coins and brown in olive oil; set aside.</li>
+          <li>Sauté onion, pepper, and garlic in the same pan. Stir in 1 cup rice and a teaspoon of smoked paprika.</li>
+          <li>Add the can of tomatoes plus 1½ cups broth, return the kielbasa, cover, and simmer ~20 min until the rice is tender.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note">Stick with the original smoked sausage — skip the cheddar variety.</p>
+  </article>
+<article class="recipe">
+    <div class="head">
+      <h2>Backyard Burger Night</h2>
+      <div class="facts">
+        <span>30 min</span><span>serves 4</span>
+        <span class="tag">grill</span>
+      </div>
+      <p class="blurb">Classic grilled burgers with grillin&#39; beans and corn — condiments are on sale too.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>On sale this week</h3>
+        <ul class="sale">
+          <li><span class="store kroger">Kroger</span> Kroger 80% Lean Ground Beef <span class="deal">$4.99/lb (3-lb pkg $14.97)</span></li>
+          <li><span class="store publix">Publix</span> Nature&#39;s Own Hamburger Buns <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store kroger">Kroger</span> Bush&#39;s Best Baked or Grillin&#39; Beans <span class="deal">Buy 2 Get 1 FREE</span></li>
+          <li><span class="store kroger">Kroger</span> Kroger Sweet Corn <span class="deal">$2.99 / 4 ct</span></li>
+          <li><span class="store publix">Publix</span> Heinz Tomato Ketchup <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store publix">Publix</span> Mt. Olive Relish or Pickles <span class="deal">Buy 1 Get 1 FREE</span></li>
+        </ul>
+        <h3>From the pantry</h3>
+        <ul class="pantry"><li>salt &amp; pepper</li><li>onion</li><li>lettuce</li><li>tomato</li><li>mustard</li></ul>
+      </div>
+      <div>
+        <h3>Steps</h3>
+        <ol class="steps">
+          <li>Form ¼-lb patties, season generously, and press a dimple into the center of each.</li>
+          <li>Grill 3–4 min per side. Warm the beans in a pot on the side of the grill and char the corn.</li>
+          <li>Toast the buns, build with lettuce, tomato, onion, pickles — skip cheese and mayo.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note">Nature&#39;s Own classic buns are typically dairy/egg-free, but check the label on the variety you grab. Veggie swap: Actual Veggies Black Bean Burgers are also BOGO at Publix this week.</p>
+  </article>
+<article class="recipe">
+    <div class="head">
+      <h2>Sticky BBQ Ribs with Corn &amp; Watermelon</h2>
+      <div class="facts">
+        <span>2.5–3 hrs (mostly hands-off)</span><span>serves 4</span>
+        <span class="tag">weekend</span><span class="tag">hands-off</span>
+      </div>
+      <p class="blurb">Low-effort oven ribs (they come pre-seasoned in the bag) finished with a sticky glaze.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>On sale this week</h3>
+        <ul class="sale">
+          <li><span class="store publix">Publix</span> Publix St. Louis Style Pork Spareribs (frozen, in-bag) <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store publix">Publix</span> Kosmos Q Rub or BBQ Sauce <span class="deal">Buy 1 Get 1 FREE</span></li>
+          <li><span class="store kroger">Kroger</span> Kroger Sweet Corn <span class="deal">$2.99 / 4 ct</span></li>
+          <li><span class="store kroger">Kroger</span> Whole Seedless Watermelon <span class="deal">$3.99 (save $2)</span></li>
+        </ul>
+        <h3>From the pantry</h3>
+        <ul class="pantry"><li>foil</li></ul>
+      </div>
+      <div>
+        <h3>Steps</h3>
+        <ol class="steps">
+          <li>Thaw ribs overnight in the fridge. Add extra rub if you like, wrap tightly in foil, and bake at 300°F for ~2½ hours until tender.</li>
+          <li>Unwrap, brush with BBQ sauce, and broil (or grill) 5 min until sticky and caramelized.</li>
+          <li>Serve with charred corn and cold watermelon.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note">The Prairie Fresh pre-seasoned ribs (also BOGO) work identically — glance at the marinade ingredients to confirm no dairy.</p>
+  </article>
+</main>
+<p class="allergy">Built for a dairy/egg-free household. Product formulations change — always confirm labels on packaged items.</p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "dietaryRestrictions": ["dairy-free", "egg-free"],
+  "allergyNotes": "Household dairy and egg allergy. Recipes must not include dairy or egg ingredients. Never use a sale item that commonly contains dairy/egg (mayo, creamy dressings, most baked desserts) without a 'check the label' warning. Standard dry pasta is fine; fresh/egg pasta is not.",
+  "recipesPerWeek": 5,
+  "defaultServings": 4,
+  "favoriteStaples": [],
+  "cuisinePreferences": [],
+  "avoidIngredients": [],
+  "stores": {
+    "publix": { "pinned": false, "note": "geolocated default store; BOGOs are consistent chain-wide" },
+    "kroger": { "pinned": false, "note": "geolocated default store; deals vary by division" }
+  }
+}

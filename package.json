@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "refresh:publix": "node bogo.js && node build-html.js && cp bogo.html index.html",
+    "refresh:kroger": "node kroger.js && node build-kroger-html.js && cp kroger.html kroger/index.html",
+    "build:recipes": "node build-recipes-html.js && cp recipes.html recipes/index.html",
+    "refresh": "npm run refresh:publix && npm run refresh:kroger"
   },
   "keywords": [],
   "author": "",
