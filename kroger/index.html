@@ -105,6 +105,14 @@
   }
   .deal-tag.bogo { background: var(--bogo-bg); color: var(--bogo); text-transform: uppercase; font-size: 11px; letter-spacing: .04em; }
   .save { color: #fbbf24; font-size: 13px; font-weight: 500; }
+  .card.watched { border-color: #fbbf24; }
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .watch-tag, .new-tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: .03em; padding: 2px 7px; border-radius: 4px;
+  }
+  .watch-tag { color: #fbbf24; background: #2b1d05; }
+  .new-tag { color: #a78bfa; background: #1d1533; }
   .desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
   .fine { color: var(--muted); font-size: 11px; margin: 2px 0 0; opacity: .8; }
   .meta { margin-top: auto; padding-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
@@ -125,14 +133,16 @@
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>
+    
     <span class="chip" data-dept="Deli/Bake">Deli/Bake</span><span class="chip" data-dept="Drug/Gm">Drug/Gm</span><span class="chip" data-dept="Gm">Gm</span><span class="chip" data-dept="Grocery">Grocery</span><span class="chip" data-dept="Liquor">Liquor</span><span class="chip" data-dept="Meat">Meat</span><span class="chip" data-dept="Produce">Produce</span>
   </div>
 </header>
 <main id="grid">
-<article class="card" data-dept="Produce" data-search="whole seedless watermelon limit 5 produce this week&amp;#39;s best deals">
+<article class="card" data-dept="Produce" data-watched="" data-search="whole seedless watermelon limit 5 produce this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_405421.png" alt="Whole Seedless Watermelon"></div>
     <div class="body">
       <h3>Whole Seedless Watermelon</h3>
+      
       <div class="deal-tag">$3.99/ea</div>
       <div class="save">save $2</div>
       <p class="desc">Limit 5</p>
@@ -140,10 +150,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Produce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Grocery" data-search="coca-cola, pepsi or canada dry select varieties, 12-pack, 12 fl oz cans, limit 10 grocery this week&amp;#39;s best deals">
+<article class="card" data-dept="Grocery" data-watched="" data-search="coca-cola, pepsi or canada dry select varieties, 12-pack, 12 fl oz cans, limit 10 grocery this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_469522_476046_491127.png" alt="Coca-Cola, Pepsi or Canada Dry"></div>
     <div class="body">
       <h3>Coca-Cola, Pepsi or Canada Dry</h3>
+      
       <div class="deal-tag bogo">Buy 2 Get 3 FREE</div>
       
       <p class="desc">Select Varieties, 12-Pack, 12 fl oz Cans, Limit 10</p>
@@ -151,10 +162,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="fresh perdue boneless chicken sale select varieties, no antibiotics ever meat this week&amp;#39;s best deals">
+<article class="card" data-dept="Meat" data-watched="" data-search="fresh perdue boneless chicken sale select varieties, no antibiotics ever meat this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_455387_517918.png" alt="Fresh Perdue Boneless Chicken Sale"></div>
     <div class="body">
       <h3>Fresh Perdue Boneless Chicken Sale</h3>
+      
       <div class="deal-tag bogo">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Select Varieties, No Antibiotics Ever</p>
@@ -162,10 +174,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="kroger 80% lean ground beef sold in a 3 lb package for $14.97 meat this week&amp;#39;s best deals">
+<article class="card" data-dept="Meat" data-watched="" data-search="kroger 80% lean ground beef sold in a 3 lb package for $14.97 meat this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_489725_530978.png" alt="Kroger 80% Lean Ground Beef"></div>
     <div class="body">
       <h3>Kroger 80% Lean Ground Beef</h3>
+      
       <div class="deal-tag">$4.99/lb</div>
       
       <p class="desc">Sold in a 3 lb Package for $14.97</p>
@@ -173,10 +186,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Produce" data-search="kroger sweet corn or baker russet potatoes 4 ct produce this week&amp;#39;s best deals">
+<article class="card" data-dept="Produce" data-watched="" data-search="kroger sweet corn or baker russet potatoes 4 ct produce this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_395631_468831.png" alt="Kroger Sweet Corn or Baker Russet Potatoes"></div>
     <div class="body">
       <h3>Kroger Sweet Corn or Baker Russet Potatoes</h3>
+      
       <div class="deal-tag">$2.99</div>
       
       <p class="desc">4 ct</p>
@@ -184,10 +198,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Produce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Deli/Bake" data-search="bakery fresh cherry pie or other varieties, 8&quot; or mini cupcakes, select varieties, 12 ct deli/bake this week&amp;#39;s best deals">
+<article class="card" data-dept="Deli/Bake" data-watched="" data-search="bakery fresh cherry pie or other varieties, 8&quot; or mini cupcakes, select varieties, 12 ct deli/bake this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_392020_473479.png" alt="Bakery Fresh Cherry Pie"></div>
     <div class="body">
       <h3>Bakery Fresh Cherry Pie</h3>
+      
       <div class="deal-tag">$5</div>
       
       <p class="desc">or Other Varieties, 8&quot; or Mini Cupcakes, Select Varieties, 12 ct</p>
@@ -195,10 +210,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Deli/Bake</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="blue bell ice cream select varieties, 64 fl oz drug/gm, grocery this week&amp;#39;s best deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="blue bell ice cream select varieties, 64 fl oz drug/gm, grocery this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_530422_533415.png" alt="Blue Bell Ice Cream"></div>
     <div class="body">
       <h3>Blue Bell Ice Cream</h3>
+      
       <div class="deal-tag">$6.99/ea</div>
       
       <p class="desc">Select Varieties, 64 fl oz</p>
@@ -206,10 +222,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="doritos 9-10.75 oz tostitos, 9.5-14.43 oz or ruffles 8-8.5 oz; select varieties drug/gm, grocery this week&amp;#39;s best deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="doritos 9-10.75 oz tostitos, 9.5-14.43 oz or ruffles 8-8.5 oz; select varieties drug/gm, grocery this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_404984_533689_502808.png" alt="Doritos"></div>
     <div class="body">
       <h3>Doritos</h3>
+      
       <div class="deal-tag bogo">Buy 2 Get 3 FREE</div>
       
       <p class="desc">9-10.75 oz Tostitos, 9.5-14.43 oz or Ruffles 8-8.5 oz; Select Varieties</p>
@@ -217,10 +234,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Liquor" data-search="bush&#39;s best baked or grillin&#39; beans select varieties, 21.7-28 oz liquor this week&amp;#39;s best deals">
+<article class="card" data-dept="Liquor" data-watched="" data-search="bush&#39;s best baked or grillin&#39; beans select varieties, 21.7-28 oz liquor this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_459823_489001.png" alt="Bush&#39;s Best Baked or Grillin&#39; Beans"></div>
     <div class="body">
       <h3>Bush&#39;s Best Baked or Grillin&#39; Beans</h3>
+      
       <div class="deal-tag bogo">Buy 2 Get 1 FREE</div>
       
       <p class="desc">Select Varieties, 21.7-28 oz</p>
@@ -228,10 +246,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Liquor</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="kroger sour cream, cottage cheese or dip select varieties, 16 oz drug/gm, grocery this week&amp;#39;s best deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="kroger sour cream, cottage cheese or dip select varieties, 16 oz drug/gm, grocery this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_534341_534498.png" alt="Kroger Sour Cream, Cottage Cheese or Dip"></div>
     <div class="body">
       <h3>Kroger Sour Cream, Cottage Cheese or Dip</h3>
+      
       <div class="deal-tag">3 for $5</div>
       
       <p class="desc">Select Varieties, 16 oz</p>
@@ -239,10 +258,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="powerade 28 fl oz or body armor, 16 fl oz; select varieties drug/gm, grocery this week&amp;#39;s best deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="powerade 28 fl oz or body armor, 16 fl oz; select varieties drug/gm, grocery this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_495993_515996.png" alt="Powerade"></div>
     <div class="body">
       <h3>Powerade</h3>
+      
       <div class="deal-tag">$0.88</div>
       
       <p class="desc">28 fl oz or Body Armor, 16 fl oz; Select Varieties</p>
@@ -250,10 +270,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="nabisco oreo or chips ahoy family size cookies select varieties, 8-20 oz drug/gm, grocery this week&amp;#39;s best deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="nabisco oreo or chips ahoy family size cookies select varieties, 8-20 oz drug/gm, grocery this week&amp;#39;s best deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_472238_522367.png" alt="Nabisco Oreo or Chips Ahoy Family Size Cookies"></div>
     <div class="body">
       <h3>Nabisco Oreo or Chips Ahoy Family Size Cookies</h3>
+      
       <div class="deal-tag">3 for $10</div>
       
       <p class="desc">Select Varieties, 8-20 oz</p>
@@ -261,10 +282,11 @@
       <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Grocery" data-search="land o lakes butter select varieties, 16 oz grocery buy 5 save $5">
+<article class="card" data-dept="Grocery" data-watched="" data-search="land o lakes butter select varieties, 16 oz grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_502498_514331.png" alt="Land O Lakes Butter"></div>
     <div class="body">
       <h3>Land O Lakes Butter</h3>
+      
       <div class="deal-tag">$2.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 16 oz</p>
@@ -272,10 +294,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="nabisco snack crackers 3.5-8.5 oz or ritz crackers, 3-13.7 oz; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="nabisco snack crackers 3.5-8.5 oz or ritz crackers, 3-13.7 oz; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_490480_514704.png" alt="Nabisco Snack Crackers"></div>
     <div class="body">
       <h3>Nabisco Snack Crackers</h3>
+      
       <div class="deal-tag">$2.49/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">3.5-8.5 oz or Ritz Crackers, 3-13.7 oz; Select Varieties</p>
@@ -283,10 +306,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Grocery" data-search="simply fruit drink or ade 52 fl oz or kroger juice cocktail, 64 fl oz; select varieties grocery buy 5 save $5">
+<article class="card" data-dept="Grocery" data-watched="" data-search="simply fruit drink or ade 52 fl oz or kroger juice cocktail, 64 fl oz; select varieties grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_400410_502322.png" alt="Simply Fruit Drink or Ade"></div>
     <div class="body">
       <h3>Simply Fruit Drink or Ade</h3>
+      
       <div class="deal-tag">$1.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">52 fl oz or Kroger Juice Cocktail, 64 fl oz; Select Varieties</p>
@@ -294,10 +318,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Grocery" data-search="pepperidge farm goldfish 4.8-8 oz or kraft salad dressing, 14-16 fl oz; select varieties grocery buy 5 save $5">
+<article class="card" data-dept="Grocery" data-watched="" data-search="pepperidge farm goldfish 4.8-8 oz or kraft salad dressing, 14-16 fl oz; select varieties grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_473867_528787.png" alt="Pepperidge Farm Goldfish"></div>
     <div class="body">
       <h3>Pepperidge Farm Goldfish</h3>
+      
       <div class="deal-tag">$1.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">4.8-8 oz or Kraft Salad Dressing, 14-16 fl oz; Select Varieties</p>
@@ -305,10 +330,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Grocery" data-search="marie callender&#39;s pie select varieties, 25-42 oz grocery buy 5 save $5">
+<article class="card" data-dept="Grocery" data-watched="" data-search="marie callender&#39;s pie select varieties, 25-42 oz grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_402345_482696.png" alt="Marie Callender&#39;s Pie"></div>
     <div class="body">
       <h3>Marie Callender&#39;s Pie</h3>
+      
       <div class="deal-tag">$5.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 25-42 oz</p>
@@ -316,10 +342,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Grocery" data-search="kroger alkaline water 24-pack, 16.9 fl oz grocery weekly digital deals">
+<article class="card" data-dept="Grocery" data-watched="" data-search="kroger alkaline water 24-pack, 16.9 fl oz grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_528139.png" alt="Kroger Alkaline Water"></div>
     <div class="body">
       <h3>Kroger Alkaline Water</h3>
+      
       <div class="deal-tag">$3.99/ea</div>
       
       <p class="desc">24-Pack, 16.9 fl oz</p>
@@ -327,10 +354,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Produce" data-search="2 lb strawberries or blueberries, 18 oz package produce weekly digital deals">
+<article class="card" data-dept="Produce" data-watched="" data-search="2 lb strawberries or blueberries, 18 oz package produce weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_405036.png" alt="2 lb Strawberries"></div>
     <div class="body">
       <h3>2 lb Strawberries</h3>
+      
       <div class="deal-tag">$3.99/ea</div>
       
       <p class="desc">or Blueberries, 18 oz Package</p>
@@ -338,10 +366,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Produce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="johnsonville dinner sausage select varieties, 12-19 oz meat weekly digital deals">
+<article class="card" data-dept="Meat" data-watched="" data-search="johnsonville dinner sausage select varieties, 12-19 oz meat weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_528685_533622.png" alt="Johnsonville Dinner Sausage"></div>
     <div class="body">
       <h3>Johnsonville Dinner Sausage</h3>
+      
       <div class="deal-tag">$3.99/ea</div>
       
       <p class="desc">Select Varieties, 12-19 oz</p>
@@ -349,10 +378,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Grocery" data-search="kroger frozen dairy dessert sandwiches select varieties, 6-16 ct grocery weekly digital deals">
+<article class="card" data-dept="Grocery" data-watched="" data-search="kroger frozen dairy dessert sandwiches select varieties, 6-16 ct grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_528854_533624.png" alt="Kroger Frozen Dairy Dessert Sandwiches"></div>
     <div class="body">
       <h3>Kroger Frozen Dairy Dessert Sandwiches</h3>
+      
       <div class="deal-tag">$1.99/ea</div>
       
       <p class="desc">Select Varieties, 6-16 ct</p>
@@ -360,10 +390,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="häagen-dazs ice cream 14 fl oz or bars, 3-6 ct; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="häagen-dazs ice cream 14 fl oz or bars, 3-6 ct; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_469754_514447.png" alt="Häagen-Dazs Ice Cream"></div>
     <div class="body">
       <h3>Häagen-Dazs Ice Cream</h3>
+      
       <div class="deal-tag">$3.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">14 fl oz or Bars, 3-6 ct; Select Varieties</p>
@@ -371,10 +402,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="ball park buns 8 ct or utz pretzels, 14-16 oz; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="ball park buns 8 ct or utz pretzels, 14-16 oz; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_398881_535871.png" alt="Ball Park Buns"></div>
     <div class="body">
       <h3>Ball Park Buns</h3>
+      
       <div class="deal-tag">$2.49/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">8 ct or Utz Pretzels, 14-16 oz; Select Varieties</p>
@@ -382,10 +414,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="chex mix 7-8 oz or pringles party stack, 6.8-7.1 oz; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="chex mix 7-8 oz or pringles party stack, 6.8-7.1 oz; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_430122_528811.png" alt="Chex Mix"></div>
     <div class="body">
       <h3>Chex Mix</h3>
+      
       <div class="deal-tag">$1.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">7-8 oz or Pringles Party Stack, 6.8-7.1 oz; Select Varieties</p>
@@ -393,10 +426,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Grocery" data-search="general mills cereal 9-14 oz or jif peanut butter, 16 oz; select varieties grocery buy 5 save $5">
+<article class="card" data-dept="Grocery" data-watched="" data-search="general mills cereal 9-14 oz or jif peanut butter, 16 oz; select varieties grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_518180_531847.png" alt="General Mills Cereal"></div>
     <div class="body">
       <h3>General Mills Cereal</h3>
+      
       <div class="deal-tag">$1.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">9-14 oz or Jif Peanut Butter, 16 oz; Select Varieties</p>
@@ -404,10 +438,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="post premier protein cereal or granola, 9 oz; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="post premier protein cereal or granola, 9 oz; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_535885_535886.png" alt="Post Premier Protein Cereal"></div>
     <div class="body">
       <h3>Post Premier Protein Cereal</h3>
+      
       <div class="deal-tag">$3.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">or Granola, 9 oz; Select Varieties</p>
@@ -415,10 +450,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="vitaminwater select varieties, 20 fl oz drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="vitaminwater select varieties, 20 fl oz drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_486233_486596.png" alt="Vitaminwater"></div>
     <div class="body">
       <h3>Vitaminwater</h3>
+      
       <div class="deal-tag">$0.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 20 fl oz</p>
@@ -426,10 +462,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="pop-tarts 8 ct or velveeta shells &amp; cheese, 9.4-12 oz; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="pop-tarts 8 ct or velveeta shells &amp; cheese, 9.4-12 oz; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_473680_535067.png" alt="Pop-Tarts"></div>
     <div class="body">
       <h3>Pop-Tarts</h3>
+      
       <div class="deal-tag">$1.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">8 ct or Velveeta Shells &amp; Cheese, 9.4-12 oz; Select Varieties</p>
@@ -437,10 +474,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="ball park meat franks select varieties, 15 oz meat buy 5 save $5">
+<article class="card" data-dept="Meat" data-watched="" data-search="ball park meat franks select varieties, 15 oz meat buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_516307_519869.png" alt="Ball Park Meat Franks"></div>
     <div class="body">
       <h3>Ball Park Meat Franks</h3>
+      
       <div class="deal-tag">$2.49/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 15 oz</p>
@@ -448,10 +486,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="rao&#39;s pasta sauce 15-24 oz or perdue frozen chicken, 27-29 oz; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="rao&#39;s pasta sauce 15-24 oz or perdue frozen chicken, 27-29 oz; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_532657_535022.png" alt="Rao&#39;s Pasta Sauce"></div>
     <div class="body">
       <h3>Rao&#39;s Pasta Sauce</h3>
+      
       <div class="deal-tag">$6.49/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">15-24 oz or Perdue Frozen Chicken, 27-29 oz; Select Varieties</p>
@@ -459,10 +498,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="dawn dish soap 24-30.8 fl oz or powerwash dish spray, 16 fl oz; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="dawn dish soap 24-30.8 fl oz or powerwash dish spray, 16 fl oz; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_483703_518833.png" alt="Dawn Dish Soap"></div>
     <div class="body">
       <h3>Dawn Dish Soap</h3>
+      
       <div class="deal-tag">$3.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">24-30.8 fl oz or Powerwash Dish Spray, 16 fl oz; Select Varieties</p>
@@ -470,10 +510,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="kroger family size appetizers 16-33 oz or clif builders bars, 6-10 ct; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="kroger family size appetizers 16-33 oz or clif builders bars, 6-10 ct; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_478517_532347.png" alt="Kroger Family Size Appetizers"></div>
     <div class="body">
       <h3>Kroger Family Size Appetizers</h3>
+      
       <div class="deal-tag">$8.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">16-33 oz or Clif Builders Bars, 6-10 ct; Select Varieties</p>
@@ -481,10 +522,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="ken&#39;s salad dressing 14-16 fl oz or pillsbury crescent rolls, 8 ct; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="ken&#39;s salad dressing 14-16 fl oz or pillsbury crescent rolls, 8 ct; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_376610_534491.png" alt="Ken&#39;s Salad Dressing"></div>
     <div class="body">
       <h3>Ken&#39;s Salad Dressing</h3>
+      
       <div class="deal-tag">$2.49/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">14-16 fl oz or Pillsbury Crescent Rolls, 8 ct; Select Varieties</p>
@@ -492,10 +534,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="smucker&#39;s uncrustables 8-10 ct or peet&#39;s coffee, 10-12 oz bag; select varieties drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="smucker&#39;s uncrustables 8-10 ct or peet&#39;s coffee, 10-12 oz bag; select varieties drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_493273_532034.png" alt="Smucker&#39;s Uncrustables"></div>
     <div class="body">
       <h3>Smucker&#39;s Uncrustables</h3>
+      
       <div class="deal-tag">$9.99/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">8-10 ct or Peet&#39;s Coffee, 10-12 oz Bag; Select Varieties</p>
@@ -503,10 +546,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="dixie paper plates or bowls select varieties, 25-90 ct drug/gm, grocery buy 5 save $5">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="dixie paper plates or bowls select varieties, 25-90 ct drug/gm, grocery buy 5 save $5">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_483727_527098.png" alt="Dixie Paper Plates or Bowls"></div>
     <div class="body">
       <h3>Dixie Paper Plates or Bowls</h3>
+      
       <div class="deal-tag">$5.49/ea*</div>
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 25-90 ct</p>
@@ -514,10 +558,11 @@
       <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="nathan&#39;s beef franks 12 oz or smithfield bacon, 12-16 oz; select varieties meat weekly digital deals">
+<article class="card" data-dept="Meat" data-watched="" data-search="nathan&#39;s beef franks 12 oz or smithfield bacon, 12-16 oz; select varieties meat weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_355326_534400_508617.png" alt="Nathan&#39;s Beef Franks"></div>
     <div class="body">
       <h3>Nathan&#39;s Beef Franks</h3>
+      
       <div class="deal-tag">$3.99/ea</div>
       
       <p class="desc">12 oz or Smithfield Bacon, 12-16 oz; Select Varieties</p>
@@ -525,10 +570,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Produce" data-search="washington red cherries  produce weekly digital deals">
+<article class="card" data-dept="Produce" data-watched="" data-search="washington red cherries  produce weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_407492.png" alt="Washington Red Cherries"></div>
     <div class="body">
       <h3>Washington Red Cherries</h3>
+      
       <div class="deal-tag">$2.99/lb</div>
       
       
@@ -536,10 +582,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Produce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="32 oz kroger cheese select varieties drug/gm, grocery weekly digital deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="32 oz kroger cheese select varieties drug/gm, grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_464152_488319.png" alt="32 oz Kroger Cheese"></div>
     <div class="body">
       <h3>32 oz Kroger Cheese</h3>
+      
       <div class="deal-tag">$4.99/ea</div>
       
       <p class="desc">Select Varieties</p>
@@ -547,10 +594,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="private selection wide pan bread 24 oz or buns, 8 ct; select varieties drug/gm, grocery weekly digital deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="private selection wide pan bread 24 oz or buns, 8 ct; select varieties drug/gm, grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_480750_488370.png" alt="Private Selection Wide Pan Bread"></div>
     <div class="body">
       <h3>Private Selection Wide Pan Bread</h3>
+      
       <div class="deal-tag">$1.99/ea</div>
       
       <p class="desc">24 oz or Buns, 8 ct; Select Varieties</p>
@@ -558,10 +606,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Deli/Bake" data-search="sabra hummus 8 oz or stacy’s pita chips, 7.33 oz; select varieties deli/bake weekly digital deals">
+<article class="card" data-dept="Deli/Bake" data-watched="" data-search="sabra hummus 8 oz or stacy’s pita chips, 7.33 oz; select varieties deli/bake weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_531408_532894.png?rev=1" alt="Sabra Hummus"></div>
     <div class="body">
       <h3>Sabra Hummus</h3>
+      
       <div class="deal-tag">$2.49/ea</div>
       
       <p class="desc">8 oz or Stacy’s Pita Chips, 7.33 oz; Select Varieties</p>
@@ -569,10 +618,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Deli/Bake</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Gm, Grocery" data-search="kroger ice cream select varieties, 48 fl oz drug/gm, gm, grocery weekly digital deals">
+<article class="card" data-dept="Drug/Gm, Gm, Grocery" data-watched="" data-search="kroger ice cream select varieties, 48 fl oz drug/gm, gm, grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_531993_534827.png" alt="Kroger Ice Cream"></div>
     <div class="body">
       <h3>Kroger Ice Cream</h3>
+      
       <div class="deal-tag">$1.99/ea</div>
       
       <p class="desc">Select Varieties, 48 fl oz</p>
@@ -580,10 +630,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="gatorade 12-pack, 12 fl oz or pure leaf tea, 6-pack, 16.9-18.5 fl oz; select varieties drug/gm, grocery weekly digital deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="gatorade 12-pack, 12 fl oz or pure leaf tea, 6-pack, 16.9-18.5 fl oz; select varieties drug/gm, grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_385347_530694.png" alt="Gatorade"></div>
     <div class="body">
       <h3>Gatorade</h3>
+      
       <div class="deal-tag">$4.99/ea</div>
       
       <p class="desc">12-Pack, 12 fl oz or Pure Leaf Tea, 6-Pack, 16.9-18.5 fl oz; Select Varieties</p>
@@ -591,10 +642,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="outshine fruit bars 6 ct or oreo frozen dairy dessert sandwiches, 4 ct; select varieties drug/gm, grocery weekly digital deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="outshine fruit bars 6 ct or oreo frozen dairy dessert sandwiches, 4 ct; select varieties drug/gm, grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_467257_491781.png?rev=1" alt="Outshine Fruit Bars"></div>
     <div class="body">
       <h3>Outshine Fruit Bars</h3>
+      
       <div class="deal-tag">$2.99/ea</div>
       
       <p class="desc">6 ct or Oreo Frozen Dairy Dessert Sandwiches, 4 ct; Select Varieties</p>
@@ -602,10 +654,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="lay&#39;s potato chips 5-8 oz or kettle brand potato chips, 6-7.5 oz; select varieties drug/gm, grocery weekly digital deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="lay&#39;s potato chips 5-8 oz or kettle brand potato chips, 6-7.5 oz; select varieties drug/gm, grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_466374_527122.png" alt="Lay&#39;s Potato Chips"></div>
     <div class="body">
       <h3>Lay&#39;s Potato Chips</h3>
+      
       <div class="deal-tag">$1.99/ea</div>
       
       <p class="desc">5-8 oz or Kettle Brand Potato Chips, 6-7.5 oz; Select Varieties</p>
@@ -613,10 +666,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="starbucks coffee 10-12 oz bag or k-cups, 10 ct; select varieties drug/gm, grocery weekly digital deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="starbucks coffee 10-12 oz bag or k-cups, 10 ct; select varieties drug/gm, grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_456296_518387.png?rev=1" alt="Starbucks Coffee"></div>
     <div class="body">
       <h3>Starbucks Coffee</h3>
+      
       <div class="deal-tag">$8.99/ea</div>
       
       <p class="desc">10-12 oz Bag or K-Cups, 10 ct; Select Varieties</p>
@@ -624,10 +678,11 @@
       <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
     </div>
   </article>
-<article class="card" data-dept="Drug/Gm, Grocery" data-search="hellmann&#39;s mayonnaise select varieties, 20-30 fl oz drug/gm, grocery weekly digital deals">
+<article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="hellmann&#39;s mayonnaise select varieties, 20-30 fl oz drug/gm, grocery weekly digital deals">
     <div class="img-wrap"><img loading="lazy" src="https://www.krogercdn.com/weeklyads/images/Kroger/Montages/M_534700_535777.png" alt="Hellmann&#39;s Mayonnaise"></div>
     <div class="body">
       <h3>Hellmann&#39;s Mayonnaise</h3>
+      
       <div class="deal-tag">$3.49/ea</div>
       
       <p class="desc">Select Varieties, 20-30 fl oz</p>
@@ -649,7 +704,7 @@
     const term = q.value.trim().toLowerCase();
     let visible = 0;
     for (const c of cards) {
-      const matchDept = !activeDept || c.dataset.dept.split(', ').includes(activeDept);
+      const matchDept = !activeDept || (activeDept === '__watched' ? !!c.dataset.watched : c.dataset.dept.split(', ').includes(activeDept));
       const matchText = !term || c.dataset.search.includes(term);
       const show = matchDept && matchText;
       c.classList.toggle('hidden', !show);

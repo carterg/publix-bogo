@@ -17,23 +17,49 @@ const decode = s => (s || '')
   .replace(/&#39;/g, "'")
   .replace(/&lt;/g, '<')
   .replace(/&gt;/g, '>')
+  .replace(/&eacute;/g, 'é')
+  .replace(/&egrave;/g, 'è')
+  .replace(/&ntilde;/g, 'ñ')
+  .replace(/&uacute;/g, 'ú')
+  .replace(/&aacute;/g, 'á')
+  .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n))
   .trim();
 
 const esc = s => (s || '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 
-const departments = [...new Set(bogo.map(i => i.department).filter(Boolean))].sort();
+// Watchlist: favoriteStaples from preferences.json (case-insensitive substring match)
+let staples = [];
+try { staples = (JSON.parse(fs.readFileSync('preferences.json', 'utf8')).favoriteStaples || []).map(s => s.toLowerCase()); } catch {}
+const isWatched = i => staples.some(s => (decode(i.title) + ' ' + decode(i.description)).toLowerCase().includes(s));
+
+// "New this week": compare against the most recent earlier snapshot in data/
+let prevTitles = null;
+try {
+  const curStart = bogo[0].wa_startDate.slice(0, 10);
+  const prev = fs.readdirSync('data')
+    .filter(f => /^publix-\d{4}-\d{2}-\d{2}\.json$/.test(f) && f < `publix-${curStart}.json`)
+    .sort().pop();
+  if (prev) prevTitles = new Set(JSON.parse(fs.readFileSync('data/' + prev, 'utf8')).items.map(i => i.title.toLowerCase()));
+} catch {}
+const isNew = i => prevTitles ? !prevTitles.has(decode(i.title).toLowerCase()) : false;
+
+const departments = [...new Set(bogo.map(i => decode(i.department)).filter(Boolean))].sort();
 const validRange = bogo[0] ? `${bogo[0].wa_startDateFormatted} – ${bogo[0].wa_endDateFormatted}` : '';
+
+bogo.sort((a, b) => isWatched(b) - isWatched(a));
 
 const cards = bogo.map(i => {
   const title = esc(decode(i.title));
   const desc = esc(decode(i.description));
   const save = esc(decode(i.additionalSavings || i.additionalDealInfo || ''));
-  const dept = esc(i.department || '');
+  const dept = esc(decode(i.department));
   const img = esc(i.enhancedImageUrl || i.imageUrl || '');
-  return `<article class="card" data-dept="${dept}" data-search="${esc((title + ' ' + desc + ' ' + dept).toLowerCase())}">
+  const watched = isWatched(i);
+  return `<article class="card${watched ? ' watched' : ''}" data-dept="${dept}" data-watched="${watched ? 1 : ''}" data-search="${esc((title + ' ' + desc + ' ' + dept).toLowerCase())}">
     <div class="img-wrap">${img ? `<img loading="lazy" src="${img}" alt="${title}">` : ''}</div>
     <div class="body">
       <h3>${title}</h3>
+      ${watched || isNew(i) ? `<div class="tag-row">${watched ? '<span class="watch-tag">★ Watchlist</span>' : ''}${isNew(i) ? '<span class="new-tag">New this week</span>' : ''}</div>` : ''}
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       ${save ? `<div class="save">${save}</div>` : ''}
       ${desc ? `<p class="desc">${desc}</p>` : ''}
@@ -147,6 +173,14 @@ const html = `<!doctype html>
     padding: 3px 8px; border-radius: 4px;
   }
   .save { color: #fbbf24; font-size: 13px; font-weight: 500; }
+  .card.watched { border-color: #fbbf24; }
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .watch-tag, .new-tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: .03em; padding: 2px 7px; border-radius: 4px;
+  }
+  .watch-tag { color: #fbbf24; background: #2b1d05; }
+  .new-tag { color: #a78bfa; background: #1d1533; }
   .desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
   .meta { margin-top: auto; padding-top: 6px; }
   .dept {
@@ -166,6 +200,7 @@ const html = `<!doctype html>
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>
+    ${staples.length ? '<span class="chip" data-dept="__watched">★ Watchlist</span>' : ''}
     ${departments.map(d => `<span class="chip" data-dept="${esc(d)}">${esc(d)}</span>`).join('')}
   </div>
 </header>
@@ -185,7 +220,7 @@ ${cards}
     const term = q.value.trim().toLowerCase();
     let visible = 0;
     for (const c of cards) {
-      const matchDept = !activeDept || c.dataset.dept === activeDept;
+      const matchDept = !activeDept || (activeDept === '__watched' ? !!c.dataset.watched : c.dataset.dept === activeDept);
       const matchText = !term || c.dataset.search.includes(term);
       const show = matchDept && matchText;
       c.classList.toggle('hidden', !show);

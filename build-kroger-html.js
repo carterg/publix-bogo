@@ -21,6 +21,24 @@ for (const g of data.adGroups || []) {
   for (const ref of g.ads) groupOf[ref.id] = g.shortDisplayName || g.name;
 }
 
+// Watchlist: favoriteStaples from preferences.json (case-insensitive substring match)
+let staples = [];
+try { staples = (JSON.parse(fs.readFileSync('preferences.json', 'utf8')).favoriteStaples || []).map(s => s.toLowerCase()); } catch {}
+const isWatched = a => staples.some(s => ((a.mainlineCopy || '') + ' ' + (a.underlineCopy || '')).toLowerCase().includes(s));
+
+// "New this week": compare against the most recent earlier snapshot in data/
+let prevTitles = null;
+try {
+  const curStart = ads[0].validFrom.slice(0, 10);
+  const prev = fs.readdirSync('data')
+    .filter(f => /^kroger-\d{4}-\d{2}-\d{2}\.json$/.test(f) && f < `kroger-${curStart}.json`)
+    .sort().pop();
+  if (prev) prevTitles = new Set(JSON.parse(fs.readFileSync('data/' + prev, 'utf8')).items.map(i => i.title.toLowerCase()));
+} catch {}
+const isNew = a => prevTitles ? !prevTitles.has((a.mainlineCopy || '').toLowerCase()) : false;
+
+ads.sort((a, b) => isWatched(b) - isWatched(a));
+
 function dealText(a) {
   const t = a.pricingTemplate || '';
   if (t.includes('BOGO')) return `Buy ${a.buyQuantity || 1} Get ${a.getQuantity || 1} FREE`;
@@ -51,10 +69,12 @@ const cards = ads.map(a => {
   const dept = esc((a.departments || []).map(d => titleCase(d.department)).join(', '));
   const group = esc(groupOf[a.id] || '');
   const img = esc((a.images || [])[0]?.url || '');
-  return `<article class="card" data-dept="${dept}" data-search="${esc((a.mainlineCopy + ' ' + (a.underlineCopy||'') + ' ' + dept + ' ' + group).toLowerCase())}">
+  const watched = isWatched(a);
+  return `<article class="card${watched ? ' watched' : ''}" data-dept="${dept}" data-watched="${watched ? 1 : ''}" data-search="${esc((a.mainlineCopy + ' ' + (a.underlineCopy||'') + ' ' + dept + ' ' + group).toLowerCase())}">
     <div class="img-wrap">${img ? `<img loading="lazy" src="${img}" alt="${title}">` : ''}</div>
     <div class="body">
       <h3>${title}</h3>
+      ${watched || isNew(a) ? `<div class="tag-row">${watched ? '<span class="watch-tag">★ Watchlist</span>' : ''}${isNew(a) ? '<span class="new-tag">New this week</span>' : ''}</div>` : ''}
       ${deal ? `<div class="deal-tag${isBogo ? ' bogo' : ''}">${esc(deal)}</div>` : ''}
       ${save ? `<div class="save">${save}</div>` : ''}
       ${desc ? `<p class="desc">${desc}</p>` : ''}
@@ -171,6 +191,14 @@ const html = `<!doctype html>
   }
   .deal-tag.bogo { background: var(--bogo-bg); color: var(--bogo); text-transform: uppercase; font-size: 11px; letter-spacing: .04em; }
   .save { color: #fbbf24; font-size: 13px; font-weight: 500; }
+  .card.watched { border-color: #fbbf24; }
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .watch-tag, .new-tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: .03em; padding: 2px 7px; border-radius: 4px;
+  }
+  .watch-tag { color: #fbbf24; background: #2b1d05; }
+  .new-tag { color: #a78bfa; background: #1d1533; }
   .desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
   .fine { color: var(--muted); font-size: 11px; margin: 2px 0 0; opacity: .8; }
   .meta { margin-top: auto; padding-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
@@ -191,6 +219,7 @@ const html = `<!doctype html>
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>
+    ${staples.length ? '<span class="chip" data-dept="__watched">★ Watchlist</span>' : ''}
     ${departments.map(d => `<span class="chip" data-dept="${esc(d)}">${esc(d)}</span>`).join('')}
   </div>
 </header>
@@ -210,7 +239,7 @@ ${cards}
     const term = q.value.trim().toLowerCase();
     let visible = 0;
     for (const c of cards) {
-      const matchDept = !activeDept || c.dataset.dept.split(', ').includes(activeDept);
+      const matchDept = !activeDept || (activeDept === '__watched' ? !!c.dataset.watched : c.dataset.dept.split(', ').includes(activeDept));
       const matchText = !term || c.dataset.search.includes(term);
       const show = matchDept && matchText;
       c.classList.toggle('hidden', !show);

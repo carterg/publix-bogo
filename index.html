@@ -103,6 +103,14 @@
     padding: 3px 8px; border-radius: 4px;
   }
   .save { color: #fbbf24; font-size: 13px; font-weight: 500; }
+  .card.watched { border-color: #fbbf24; }
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .watch-tag, .new-tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: .03em; padding: 2px 7px; border-radius: 4px;
+  }
+  .watch-tag { color: #fbbf24; background: #2b1d05; }
+  .new-tag { color: #a78bfa; background: #1d1533; }
   .desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
   .meta { margin-top: auto; padding-top: 6px; }
   .dept {
@@ -122,2044 +130,2249 @@
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>
-    <span class="chip" data-dept="Baby Food">Baby Food</span><span class="chip" data-dept="Bathroom Tissue">Bathroom Tissue</span><span class="chip" data-dept="Bread">Bread</span><span class="chip" data-dept="Butter &amp;amp; Margarine">Butter &amp;amp; Margarine</span><span class="chip" data-dept="Cake Mixes">Cake Mixes</span><span class="chip" data-dept="Candles">Candles</span><span class="chip" data-dept="Candy">Candy</span><span class="chip" data-dept="Canned Vegetables">Canned Vegetables</span><span class="chip" data-dept="Cereal">Cereal</span><span class="chip" data-dept="Charcoal">Charcoal</span><span class="chip" data-dept="Cheese">Cheese</span><span class="chip" data-dept="Coffee &amp;amp; Tea">Coffee &amp;amp; Tea</span><span class="chip" data-dept="Condiments &amp;amp; Sauces">Condiments &amp;amp; Sauces</span><span class="chip" data-dept="Cookies">Cookies</span><span class="chip" data-dept="Cooking &amp;amp; Olive Oil">Cooking &amp;amp; Olive Oil</span><span class="chip" data-dept="Crackers">Crackers</span><span class="chip" data-dept="Cream Cheese">Cream Cheese</span><span class="chip" data-dept="Deli">Deli</span><span class="chip" data-dept="Desserts">Desserts</span><span class="chip" data-dept="Diapers">Diapers</span><span class="chip" data-dept="Dinners">Dinners</span><span class="chip" data-dept="Flavored Water Enhancers">Flavored Water Enhancers</span><span class="chip" data-dept="Foil Bakeware">Foil Bakeware</span><span class="chip" data-dept="Frozen Meat">Frozen Meat</span><span class="chip" data-dept="Fruit Drinks">Fruit Drinks</span><span class="chip" data-dept="Household Cleaners">Household Cleaners</span><span class="chip" data-dept="Household Supplies">Household Supplies</span><span class="chip" data-dept="Ice Cream">Ice Cream</span><span class="chip" data-dept="Insecticide">Insecticide</span><span class="chip" data-dept="International Foods - Mexican">International Foods - Mexican</span><span class="chip" data-dept="Juice">Juice</span><span class="chip" data-dept="Kitchen Utensils">Kitchen Utensils</span><span class="chip" data-dept="Laundry Detergent">Laundry Detergent</span><span class="chip" data-dept="Meat">Meat</span><span class="chip" data-dept="Meatless">Meatless</span><span class="chip" data-dept="Milk">Milk</span><span class="chip" data-dept="Non-Foods">Non-Foods</span><span class="chip" data-dept="Novelties">Novelties</span><span class="chip" data-dept="Nutritional Bars">Nutritional Bars</span><span class="chip" data-dept="Nuts">Nuts</span><span class="chip" data-dept="Paper Products">Paper Products</span><span class="chip" data-dept="Pasta &amp;amp; Pasta Sauce">Pasta &amp;amp; Pasta Sauce</span><span class="chip" data-dept="Peanut Butter &amp;amp; Jelly">Peanut Butter &amp;amp; Jelly</span><span class="chip" data-dept="Pet Food">Pet Food</span><span class="chip" data-dept="Pickles &amp;amp; Olives">Pickles &amp;amp; Olives</span><span class="chip" data-dept="Pizza">Pizza</span><span class="chip" data-dept="Plastic Bags">Plastic Bags</span><span class="chip" data-dept="Popcorn">Popcorn</span><span class="chip" data-dept="Potato Chips">Potato Chips</span><span class="chip" data-dept="Produce">Produce</span><span class="chip" data-dept="Salad Dressing">Salad Dressing</span><span class="chip" data-dept="Seafood">Seafood</span><span class="chip" data-dept="Snacks">Snacks</span><span class="chip" data-dept="Soft Drinks">Soft Drinks</span><span class="chip" data-dept="Soup &amp;amp; Broth">Soup &amp;amp; Broth</span><span class="chip" data-dept="Spices &amp;amp; Extract">Spices &amp;amp; Extract</span><span class="chip" data-dept="Sports Drinks">Sports Drinks</span><span class="chip" data-dept="Toothpaste">Toothpaste</span><span class="chip" data-dept="Vitamins">Vitamins</span><span class="chip" data-dept="Water">Water</span><span class="chip" data-dept="Yogurt">Yogurt</span>
+    
+    <span class="chip" data-dept="Baby Food">Baby Food</span><span class="chip" data-dept="Bathroom Tissue">Bathroom Tissue</span><span class="chip" data-dept="Bread">Bread</span><span class="chip" data-dept="Butter &amp; Margarine">Butter &amp; Margarine</span><span class="chip" data-dept="Cake Mixes">Cake Mixes</span><span class="chip" data-dept="Candles">Candles</span><span class="chip" data-dept="Candy">Candy</span><span class="chip" data-dept="Canned Vegetables">Canned Vegetables</span><span class="chip" data-dept="Cereal">Cereal</span><span class="chip" data-dept="Charcoal">Charcoal</span><span class="chip" data-dept="Cheese">Cheese</span><span class="chip" data-dept="Coffee &amp; Tea">Coffee &amp; Tea</span><span class="chip" data-dept="Condiments &amp; Sauces">Condiments &amp; Sauces</span><span class="chip" data-dept="Cookies">Cookies</span><span class="chip" data-dept="Cooking &amp; Olive Oil">Cooking &amp; Olive Oil</span><span class="chip" data-dept="Crackers">Crackers</span><span class="chip" data-dept="Cream Cheese">Cream Cheese</span><span class="chip" data-dept="Deli">Deli</span><span class="chip" data-dept="Desserts">Desserts</span><span class="chip" data-dept="Diapers">Diapers</span><span class="chip" data-dept="Dinners">Dinners</span><span class="chip" data-dept="Flavored Water Enhancers">Flavored Water Enhancers</span><span class="chip" data-dept="Foil Bakeware">Foil Bakeware</span><span class="chip" data-dept="Frozen Meat">Frozen Meat</span><span class="chip" data-dept="Fruit Drinks">Fruit Drinks</span><span class="chip" data-dept="Household Cleaners">Household Cleaners</span><span class="chip" data-dept="Household Supplies">Household Supplies</span><span class="chip" data-dept="Ice Cream">Ice Cream</span><span class="chip" data-dept="Insecticide">Insecticide</span><span class="chip" data-dept="International Foods - Mexican">International Foods - Mexican</span><span class="chip" data-dept="Juice">Juice</span><span class="chip" data-dept="Kitchen Utensils">Kitchen Utensils</span><span class="chip" data-dept="Laundry Detergent">Laundry Detergent</span><span class="chip" data-dept="Meat">Meat</span><span class="chip" data-dept="Meatless">Meatless</span><span class="chip" data-dept="Milk">Milk</span><span class="chip" data-dept="Non-Foods">Non-Foods</span><span class="chip" data-dept="Novelties">Novelties</span><span class="chip" data-dept="Nutritional Bars">Nutritional Bars</span><span class="chip" data-dept="Nuts">Nuts</span><span class="chip" data-dept="Paper Products">Paper Products</span><span class="chip" data-dept="Pasta &amp; Pasta Sauce">Pasta &amp; Pasta Sauce</span><span class="chip" data-dept="Peanut Butter &amp; Jelly">Peanut Butter &amp; Jelly</span><span class="chip" data-dept="Pet Food">Pet Food</span><span class="chip" data-dept="Pickles &amp; Olives">Pickles &amp; Olives</span><span class="chip" data-dept="Pizza">Pizza</span><span class="chip" data-dept="Plastic Bags">Plastic Bags</span><span class="chip" data-dept="Popcorn">Popcorn</span><span class="chip" data-dept="Potato Chips">Potato Chips</span><span class="chip" data-dept="Produce">Produce</span><span class="chip" data-dept="Salad Dressing">Salad Dressing</span><span class="chip" data-dept="Seafood">Seafood</span><span class="chip" data-dept="Snacks">Snacks</span><span class="chip" data-dept="Soft Drinks">Soft Drinks</span><span class="chip" data-dept="Soup &amp; Broth">Soup &amp; Broth</span><span class="chip" data-dept="Spices &amp; Extract">Spices &amp; Extract</span><span class="chip" data-dept="Sports Drinks">Sports Drinks</span><span class="chip" data-dept="Toothpaste">Toothpaste</span><span class="chip" data-dept="Vitamins">Vitamins</span><span class="chip" data-dept="Water">Water</span><span class="chip" data-dept="Yogurt">Yogurt</span>
   </div>
 </header>
 <main id="grid">
-<article class="card" data-dept="Deli" data-search="publix tea or lemonade free item of equal or lesser price. 1-gal bot. deli">
+<article class="card" data-dept="Deli" data-watched="" data-search="publix tea or lemonade free item of equal or lesser price. 1-gal bot. deli">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_01_Feature_01_99993_254812.jpg" alt="Publix Tea or Lemonade"></div>
     <div class="body">
       <h3>Publix Tea or Lemonade</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.19</div>
       <p class="desc">Free item of equal or lesser price. 1-gal bot.</p>
       <div class="meta"><span class="dept">Deli</span></div>
     </div>
   </article>
-<article class="card" data-dept="Coffee &amp;amp; Tea" data-search="donut shop k-cup coffee free item of equal or lesser price. 10-ct. box or lavazza ground or whole bean coffee, 10.5 or 12-oz bag coffee &amp;amp;amp; tea">
+<article class="card" data-dept="Coffee &amp; Tea" data-watched="" data-search="donut shop k-cup coffee free item of equal or lesser price. 10-ct. box or lavazza ground or whole bean coffee, 10.5 or 12-oz bag coffee &amp;amp; tea">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Donut_Shop_KCup_Coffee.jpg" alt="Donut Shop K-Cup Coffee"></div>
     <div class="body">
       <h3>Donut Shop K-Cup Coffee</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $16.99</div>
       <p class="desc">Free item of equal or lesser price. 10-ct. box or Lavazza Ground or Whole Bean Coffee, 10.5 or 12-oz bag</p>
-      <div class="meta"><span class="dept">Coffee &amp;amp; Tea</span></div>
+      <div class="meta"><span class="dept">Coffee &amp; Tea</span></div>
     </div>
   </article>
-<article class="card" data-dept="Bread" data-search="pepperidge farm swirl bread free item of equal or lesser price. or bagels, 14 to 21-oz pkg. bread">
+<article class="card" data-dept="Bread" data-watched="" data-search="pepperidge farm swirl bread free item of equal or lesser price. or bagels, 14 to 21-oz pkg. bread">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_05_300482_261846.jpg" alt="Pepperidge Farm Swirl Bread"></div>
     <div class="body">
       <h3>Pepperidge Farm Swirl Bread</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.39</div>
       <p class="desc">Free item of equal or lesser price. Or Bagels, 14 to 21-oz pkg.</p>
       <div class="meta"><span class="dept">Bread</span></div>
     </div>
   </article>
-<article class="card" data-dept="Condiments &amp;amp; Sauces" data-search="hellmann&amp;#39;s mayonnaise free item of equal or lesser price. 30-oz jar condiments &amp;amp;amp; sauces">
+<article class="card" data-dept="Condiments &amp; Sauces" data-watched="" data-search="hellmann&amp;#39;s mayonnaise free item of equal or lesser price. 30-oz jar condiments &amp;amp; sauces">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Hellmans_Mayo_30oz.jpg" alt="Hellmann&#39;s Mayonnaise"></div>
     <div class="body">
       <h3>Hellmann&#39;s Mayonnaise</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.99</div>
       <p class="desc">Free item of equal or lesser price. 30-oz jar</p>
-      <div class="meta"><span class="dept">Condiments &amp;amp; Sauces</span></div>
+      <div class="meta"><span class="dept">Condiments &amp; Sauces</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cereal" data-search="general mills cheerios cereal free item of equal or lesser price. 8.9, 10.8, 20, or 27.2-oz, or lucky charms, 10.5 or 26.1-oz, or cinnamon toast crunch, 12 or 27-oz box cereal">
+<article class="card" data-dept="Cereal" data-watched="" data-search="general mills cheerios cereal free item of equal or lesser price. 8.9, 10.8, 20, or 27.2-oz, or lucky charms, 10.5 or 26.1-oz, or cinnamon toast crunch, 12 or 27-oz box cereal">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_General_Mills_Cheerios_Cereal.jpg" alt="General Mills Cheerios Cereal"></div>
     <div class="body">
       <h3>General Mills Cheerios Cereal</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save $1.00</div>
       <p class="desc">Free item of equal or lesser price. 8.9, 10.8, 20, or 27.2-oz, or Lucky Charms, 10.5 or 26.1-oz, or Cinnamon Toast Crunch, 12 or 27-oz box</p>
       <div class="meta"><span class="dept">Cereal</span></div>
     </div>
   </article>
-<article class="card" data-dept="Bread" data-search="artesano bread free item of equal or lesser price. or buns or rolls, 15 to 20-oz pkg. bread">
+<article class="card" data-dept="Bread" data-watched="" data-search="artesano bread free item of equal or lesser price. or buns or rolls, 15 to 20-oz pkg. bread">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_04_218833_261746.jpg" alt="Artesano Bread"></div>
     <div class="body">
       <h3>Artesano Bread</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.09</div>
       <p class="desc">Free item of equal or lesser price. Or Buns or Rolls, 15 to 20-oz pkg.</p>
       <div class="meta"><span class="dept">Bread</span></div>
     </div>
   </article>
-<article class="card" data-dept="Salad Dressing" data-search="ken&amp;#39;s steak house dressing &amp;amp; marinade free item of equal or lesser price. or dressing, 16-oz bot. salad dressing">
+<article class="card" data-dept="Salad Dressing" data-watched="" data-search="ken&amp;#39;s steak house dressing &amp;amp; marinade free item of equal or lesser price. or dressing, 16-oz bot. salad dressing">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_012_124745_261346.jpg" alt="Ken&#39;s Steak House Dressing &amp; Marinade"></div>
     <div class="body">
       <h3>Ken&#39;s Steak House Dressing &amp; Marinade</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.69</div>
       <p class="desc">Free item of equal or lesser price. Or Dressing, 16-oz bot.</p>
       <div class="meta"><span class="dept">Salad Dressing</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cake Mixes" data-search="duncan hines cake mix free item of equal or lesser price. or brownie, cookie, muffin, or cornbread, 8.5 to 18.3-oz box cake mixes">
+<article class="card" data-dept="Cake Mixes" data-watched="" data-search="duncan hines cake mix free item of equal or lesser price. or brownie, cookie, muffin, or cornbread, 8.5 to 18.3-oz box cake mixes">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Duncan_Hines_Yellow_Cake_Mix_15_25oz.jpg" alt="Duncan Hines Cake Mix"></div>
     <div class="body">
       <h3>Duncan Hines Cake Mix</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.49</div>
       <p class="desc">Free item of equal or lesser price. Or Brownie, Cookie, Muffin, or Cornbread, 8.5 to 18.3-oz box</p>
       <div class="meta"><span class="dept">Cake Mixes</span></div>
     </div>
   </article>
-<article class="card" data-dept="Pasta &amp;amp; Pasta Sauce" data-search="rag&amp;amp;uacute; sauce free item of equal or lesser price. 14 to 66-oz jar pasta &amp;amp;amp; pasta sauce">
-    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_03_4500_261646.jpg" alt="Rag&amp;uacute; Sauce"></div>
+<article class="card" data-dept="Pasta &amp; Pasta Sauce" data-watched="" data-search="ragú sauce free item of equal or lesser price. 14 to 66-oz jar pasta &amp;amp; pasta sauce">
+    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_03_4500_261646.jpg" alt="Ragú Sauce"></div>
     <div class="body">
-      <h3>Rag&amp;uacute; Sauce</h3>
+      <h3>Ragú Sauce</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.19</div>
       <p class="desc">Free item of equal or lesser price. 14 to 66-oz jar</p>
-      <div class="meta"><span class="dept">Pasta &amp;amp; Pasta Sauce</span></div>
+      <div class="meta"><span class="dept">Pasta &amp; Pasta Sauce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Soup &amp;amp; Broth" data-search="campbell&amp;#39;s soup free item of equal or lesser price. chunky or homestyle, 16.1 to 18.8-oz can or 15.25-oz bowl soup &amp;amp;amp; broth">
+<article class="card" data-dept="Soup &amp; Broth" data-watched="" data-search="campbell&amp;#39;s soup free item of equal or lesser price. chunky or homestyle, 16.1 to 18.8-oz can or 15.25-oz bowl soup &amp;amp; broth">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_07_4337_262034.jpg" alt="Campbell&#39;s Soup"></div>
     <div class="body">
       <h3>Campbell&#39;s Soup</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.63</div>
       <p class="desc">Free item of equal or lesser price. Chunky or Homestyle, 16.1 to 18.8-oz can or 15.25-oz bowl</p>
-      <div class="meta"><span class="dept">Soup &amp;amp; Broth</span></div>
+      <div class="meta"><span class="dept">Soup &amp; Broth</span></div>
     </div>
   </article>
-<article class="card" data-dept="Candy" data-search="hershey&amp;#39;s chocolate candy bars free item of equal or lesser price. or reese&amp;#39;s peanut butter cups or big cup, or kit kat crisp wafers, 6-ct. pkg.; or jet-puffed marshmallows, 16 or 21-oz bag candy">
+<article class="card" data-dept="Candy" data-watched="" data-search="hershey&amp;#39;s chocolate candy bars free item of equal or lesser price. or reese&amp;#39;s peanut butter cups or big cup, or kit kat crisp wafers, 6-ct. pkg.; or jet-puffed marshmallows, 16 or 21-oz bag candy">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Hersheys_6_Pack_Candy_Bars.jpg" alt="Hershey&#39;s Chocolate Candy Bars"></div>
     <div class="body">
       <h3>Hershey&#39;s Chocolate Candy Bars</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $7.99</div>
       <p class="desc">Free item of equal or lesser price. Or Reese&#39;s Peanut Butter Cups or Big Cup, or Kit Kat Crisp Wafers, 6-ct. pkg.; or Jet-Puffed Marshmallows, 16 or 21-oz bag</p>
       <div class="meta"><span class="dept">Candy</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cookies" data-search="pepperidge farm goldfish snack crackers free item of equal or lesser price. or goldfish graham snacks, 5.9 to 8-oz bag cookies">
+<article class="card" data-dept="Cookies" data-watched="" data-search="pepperidge farm goldfish snack crackers free item of equal or lesser price. or goldfish graham snacks, 5.9 to 8-oz bag cookies">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Feature_05_311241_262972.jpg" alt="Pepperidge Farm Goldfish Snack Crackers"></div>
     <div class="body">
       <h3>Pepperidge Farm Goldfish Snack Crackers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.35</div>
       <p class="desc">Free item of equal or lesser price. Or Goldfish Graham Snacks, 5.9 to 8-oz bag</p>
       <div class="meta"><span class="dept">Cookies</span></div>
     </div>
   </article>
-<article class="card" data-dept="Sports Drinks" data-search="gatorade thirst quencher free item of equal or lesser price. 8-pk. 20-oz bot.; or gatorlyte or gatorade lyte sports drink, 20-oz bot. sports drinks">
+<article class="card" data-dept="Sports Drinks" data-watched="" data-search="gatorade thirst quencher free item of equal or lesser price. 8-pk. 20-oz bot.; or gatorlyte or gatorade lyte sports drink, 20-oz bot. sports drinks">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Feature_08_12412_263260.jpg" alt="Gatorade Thirst Quencher"></div>
     <div class="body">
       <h3>Gatorade Thirst Quencher</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $11.49</div>
       <p class="desc">Free item of equal or lesser price. 8-pk. 20-oz bot.; or Gatorlyte or Gatorade Lyte Sports Drink, 20-oz bot.</p>
       <div class="meta"><span class="dept">Sports Drinks</span></div>
     </div>
   </article>
-<article class="card" data-dept="Water" data-search="la croix sparkling water free item of equal or lesser price. 12-pk. 12-oz can water">
+<article class="card" data-dept="Water" data-watched="" data-search="la croix sparkling water free item of equal or lesser price. 12-pk. 12-oz can water">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Feature_06_4635_263066.jpg" alt="La Croix Sparkling Water"></div>
     <div class="body">
       <h3>La Croix Sparkling Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.79</div>
       <p class="desc">Free item of equal or lesser price. 12-pk. 12-oz can</p>
       <div class="meta"><span class="dept">Water</span></div>
     </div>
   </article>
-<article class="card" data-dept="Nuts" data-search="planters peanuts free item of equal or lesser price. 12 or 12.5-oz can, cashew or nut duos, 5-oz bag, or trail mix, 5 or 6-oz bag nuts">
+<article class="card" data-dept="Nuts" data-watched="" data-search="planters peanuts free item of equal or lesser price. 12 or 12.5-oz can, cashew or nut duos, 5-oz bag, or trail mix, 5 or 6-oz bag nuts">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Planters_Peanuts_12_oz.jpg" alt="Planters Peanuts"></div>
     <div class="body">
       <h3>Planters Peanuts</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.59</div>
       <p class="desc">Free item of equal or lesser price. 12 or 12.5-oz can, Cashew or Nut Duos, 5-oz bag, or Trail Mix, 5 or 6-oz bag</p>
       <div class="meta"><span class="dept">Nuts</span></div>
     </div>
   </article>
-<article class="card" data-dept="Potato Chips" data-search="kettle brand potato chips free item of equal or lesser price. 6.5 to 8.5-oz bag; or late july tortilla chips, 6 to 7.8-oz bag potato chips">
+<article class="card" data-dept="Potato Chips" data-watched="" data-search="kettle brand potato chips free item of equal or lesser price. 6.5 to 8.5-oz bag; or late july tortilla chips, 6 to 7.8-oz bag potato chips">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a3_Kettle_Brand_Potato_Chips.jpg" alt="Kettle Brand Potato Chips"></div>
     <div class="body">
       <h3>Kettle Brand Potato Chips</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.79</div>
       <p class="desc">Free item of equal or lesser price. 6.5 to 8.5-oz bag; or Late July Tortilla Chips, 6 to 7.8-oz bag</p>
       <div class="meta"><span class="dept">Potato Chips</span></div>
     </div>
   </article>
-<article class="card" data-dept="Butter &amp;amp; Margarine" data-search="sweet loren&amp;#39;s cookie dough free item of equal or lesser price. gluten free, 12-ct. pkg. or puff pastry, 8.5-oz pkg. butter &amp;amp;amp; margarine">
+<article class="card" data-dept="Butter &amp; Margarine" data-watched="" data-search="sweet loren&amp;#39;s cookie dough free item of equal or lesser price. gluten free, 12-ct. pkg. or puff pastry, 8.5-oz pkg. butter &amp;amp; margarine">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Sweet_Lorens_Choc_Chunk_12oz.jpg" alt="Sweet Loren&#39;s Cookie Dough"></div>
     <div class="body">
       <h3>Sweet Loren&#39;s Cookie Dough</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.99</div>
       <p class="desc">Free item of equal or lesser price. Gluten Free, 12-ct. pkg. or Puff Pastry, 8.5-oz pkg.</p>
-      <div class="meta"><span class="dept">Butter &amp;amp; Margarine</span></div>
+      <div class="meta"><span class="dept">Butter &amp; Margarine</span></div>
     </div>
   </article>
-<article class="card" data-dept="Novelties" data-search="klondike bars or ice cream sandwiches free item of equal or lesser price. 16 to 27-oz box novelties">
+<article class="card" data-dept="Novelties" data-watched="" data-search="klondike bars or ice cream sandwiches free item of equal or lesser price. 16 to 27-oz box novelties">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_03_64333_264060.jpg" alt="Klondike Bars or Ice Cream Sandwiches"></div>
     <div class="body">
       <h3>Klondike Bars or Ice Cream Sandwiches</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.59</div>
       <p class="desc">Free item of equal or lesser price. 16 to 27-oz box</p>
       <div class="meta"><span class="dept">Novelties</span></div>
     </div>
   </article>
-<article class="card" data-dept="Ice Cream" data-search="breyers ice cream free item of equal or lesser price. or frozen dairy dessert, 1.5-qt or ice cream bars or cups, 18 or 36-oz pkg. ice cream">
+<article class="card" data-dept="Ice Cream" data-watched="" data-search="breyers ice cream free item of equal or lesser price. or frozen dairy dessert, 1.5-qt or ice cream bars or cups, 18 or 36-oz pkg. ice cream">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Breyers_vanilla_48oz.jpg" alt="Breyers Ice Cream"></div>
     <div class="body">
       <h3>Breyers Ice Cream</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.69</div>
       <p class="desc">Free item of equal or lesser price. Or Frozen Dairy Dessert, 1.5-qt or Ice Cream Bars or Cups, 18 or 36-oz pkg.</p>
       <div class="meta"><span class="dept">Ice Cream</span></div>
     </div>
   </article>
-<article class="card" data-dept="Seafood" data-search="gorton&amp;#39;s shrimp free item of equal or lesser price. 8 to 14-oz box; or ore-ida potatoes, 19 to 48-oz pkg.  (excluding ore-ida tots) seafood">
+<article class="card" data-dept="Seafood" data-watched="" data-search="gorton&amp;#39;s shrimp free item of equal or lesser price. 8 to 14-oz box; or ore-ida potatoes, 19 to 48-oz pkg.  (excluding ore-ida tots) seafood">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_07_124856_264460.jpg" alt="Gorton&#39;s Shrimp"></div>
     <div class="body">
       <h3>Gorton&#39;s Shrimp</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $10.79</div>
       <p class="desc">Free item of equal or lesser price. 8 to 14-oz box; or Ore-Ida Potatoes, 19 to 48-oz pkg.  (Excluding Ore-Ida Tots)</p>
       <div class="meta"><span class="dept">Seafood</span></div>
     </div>
   </article>
-<article class="card" data-dept="Yogurt" data-search="noosa finest yoghurt free item of equal or lesser price. 4-pk. 4-oz or 8 or 24-oz cup yogurt">
+<article class="card" data-dept="Yogurt" data-watched="" data-search="noosa finest yoghurt free item of equal or lesser price. 4-pk. 4-oz or 8 or 24-oz cup yogurt">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_06_222923_264360.jpg" alt="Noosa Finest Yoghurt"></div>
     <div class="body">
       <h3>Noosa Finest Yoghurt</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.99</div>
       <p class="desc">Free item of equal or lesser price. 4-pk. 4-oz or 8 or 24-oz cup</p>
       <div class="meta"><span class="dept">Yogurt</span></div>
     </div>
   </article>
-<article class="card" data-dept="Milk" data-search="starbucks iced coffee free item of equal or lesser price. or iced espresso or cold brew, 40 or 48-oz bot. milk">
+<article class="card" data-dept="Milk" data-watched="" data-search="starbucks iced coffee free item of equal or lesser price. or iced espresso or cold brew, 40 or 48-oz bot. milk">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_04_220793_264160.jpg" alt="Starbucks Iced Coffee"></div>
     <div class="body">
       <h3>Starbucks Iced Coffee</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.99</div>
       <p class="desc">Free item of equal or lesser price. Or Iced Espresso or Cold Brew, 40 or 48-oz bot.</p>
       <div class="meta"><span class="dept">Milk</span></div>
     </div>
   </article>
-<article class="card" data-dept="Ice Cream" data-search="ben &amp;amp; jerry&amp;#39;s ice cream free item of equal or lesser price. or non-dairy frozen dessert, 1-pt ctn. ice cream">
+<article class="card" data-dept="Ice Cream" data-watched="" data-search="ben &amp;amp; jerry&amp;#39;s ice cream free item of equal or lesser price. or non-dairy frozen dessert, 1-pt ctn. ice cream">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Ben_Jerrys_Half_Baked_1pt.jpg" alt="Ben &amp; Jerry&#39;s Ice Cream"></div>
     <div class="body">
       <h3>Ben &amp; Jerry&#39;s Ice Cream</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.49</div>
       <p class="desc">Free item of equal or lesser price. Or Non-Dairy Frozen Dessert, 1-pt ctn.</p>
       <div class="meta"><span class="dept">Ice Cream</span></div>
     </div>
   </article>
-<article class="card" data-dept="Desserts" data-search="marie callender&amp;#39;s pie free item of equal or lesser price. 25 to 42-oz; or mrs. smith&amp;#39;s flaky crust pie, 35 or 37-oz; or edwards pie, 24 to 32-oz box desserts">
+<article class="card" data-dept="Desserts" data-watched="" data-search="marie callender&amp;#39;s pie free item of equal or lesser price. 25 to 42-oz; or mrs. smith&amp;#39;s flaky crust pie, 35 or 37-oz; or edwards pie, 24 to 32-oz box desserts">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Marie_Callenders_38oz.jpg" alt="Marie Callender&#39;s Pie"></div>
     <div class="body">
       <h3>Marie Callender&#39;s Pie</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $9.79</div>
       <p class="desc">Free item of equal or lesser price. 25 to 42-oz; or Mrs. Smith&#39;s Flaky Crust Pie, 35 or 37-oz; or Edwards Pie, 24 to 32-oz box</p>
       <div class="meta"><span class="dept">Desserts</span></div>
     </div>
   </article>
-<article class="card" data-dept="Toothpaste" data-search="arm &amp;amp; hammer toothpaste free item of equal or lesser price. 4.3 to 6-oz box toothpaste">
+<article class="card" data-dept="Toothpaste" data-watched="" data-search="arm &amp;amp; hammer toothpaste free item of equal or lesser price. 4.3 to 6-oz box toothpaste">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_15_Feature_03_34645_265354.jpg" alt="Arm &amp; Hammer Toothpaste"></div>
     <div class="body">
       <h3>Arm &amp; Hammer Toothpaste</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. 4.3 to 6-oz box</p>
       <div class="meta"><span class="dept">Toothpaste</span></div>
     </div>
   </article>
-<article class="card" data-dept="Toothpaste" data-search="colgate optic white stain fighter toothpaste free item of equal or lesser price. 3.8-oz or total, 3.3-oz box toothpaste">
+<article class="card" data-dept="Toothpaste" data-watched="" data-search="colgate optic white stain fighter toothpaste free item of equal or lesser price. 3.8-oz or total, 3.3-oz box toothpaste">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_15_Feature_02_243318_265304.jpg" alt="Colgate Optic White Stain Fighter Toothpaste"></div>
     <div class="body">
       <h3>Colgate Optic White Stain Fighter Toothpaste</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save $3.00</div>
       <p class="desc">Free item of equal or lesser price. 3.8-oz or Total, 3.3-oz box</p>
       <div class="meta"><span class="dept">Toothpaste</span></div>
     </div>
   </article>
-<article class="card" data-dept="Nutritional Bars" data-search="honey stinger energy waffle free item of equal or lesser price. 6-ct. box; or wilde protein chips, 1.34-oz bag nutritional bars">
+<article class="card" data-dept="Nutritional Bars" data-watched="" data-search="honey stinger energy waffle free item of equal or lesser price. 6-ct. box; or wilde protein chips, 1.34-oz bag nutritional bars">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_15_Feature_05_282502_265454.jpg" alt="Honey Stinger Energy Waffle"></div>
     <div class="body">
       <h3>Honey Stinger Energy Waffle</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.99</div>
       <p class="desc">Free item of equal or lesser price. 6-ct. box; or Wilde Protein Chips, 1.34-oz bag</p>
       <div class="meta"><span class="dept">Nutritional Bars</span></div>
     </div>
   </article>
-<article class="card" data-dept="Bathroom Tissue" data-search="angel soft bathroom tissue free item of equal or lesser price. mega rolls, soft &amp;amp; strong, 4-roll pkg. bathroom tissue">
+<article class="card" data-dept="Bathroom Tissue" data-watched="" data-search="angel soft bathroom tissue free item of equal or lesser price. mega rolls, soft &amp;amp; strong, 4-roll pkg. bathroom tissue">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Feature_01_267344_265854.jpg" alt="Angel Soft Bathroom Tissue"></div>
     <div class="body">
       <h3>Angel Soft Bathroom Tissue</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save $0.50</div>
       <p class="desc">Free item of equal or lesser price. Mega Rolls, Soft &amp; Strong, 4-roll pkg.</p>
       <div class="meta"><span class="dept">Bathroom Tissue</span></div>
     </div>
   </article>
-<article class="card" data-dept="Paper Products" data-search="chinet classic white plates free item of equal or lesser price. or bowls, 24 to 70-ct. pkg. paper products">
+<article class="card" data-dept="Paper Products" data-watched="" data-search="chinet classic white plates free item of equal or lesser price. or bowls, 24 to 70-ct. pkg. paper products">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Feature_04_853658_266104.jpg" alt="Chinet Classic White Plates"></div>
     <div class="body">
       <h3>Chinet Classic White Plates</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.63</div>
       <p class="desc">Free item of equal or lesser price. Or Bowls, 24 to 70-ct. pkg.</p>
       <div class="meta"><span class="dept">Paper Products</span></div>
     </div>
   </article>
-<article class="card" data-dept="Charcoal" data-search="royal oak charcoal free item of equal or lesser price. briquets, 10 to 14.6-lb.; or pit boss bbq hardwood pellets, 20-lb; or lump charcoal, 8.8-lb bag charcoal">
+<article class="card" data-dept="Charcoal" data-watched="" data-search="royal oak charcoal free item of equal or lesser price. briquets, 10 to 14.6-lb.; or pit boss bbq hardwood pellets, 20-lb; or lump charcoal, 8.8-lb bag charcoal">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Feature_05_289426_266204.jpg" alt="Royal Oak Charcoal"></div>
     <div class="body">
       <h3>Royal Oak Charcoal</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $14.99</div>
       <p class="desc">Free item of equal or lesser price. Briquets, 10 to 14.6-lb.; or Pit Boss BBQ Hardwood Pellets, 20-lb; or Lump Charcoal, 8.8-lb bag</p>
       <div class="meta"><span class="dept">Charcoal</span></div>
     </div>
   </article>
-<article class="card" data-dept="Laundry Detergent" data-search="arm &amp;amp; hammer laundry detergent free item of equal or lesser price. 75 to 110-oz or paks, 32 or 42-ct., or sheets, 35-ct. pkg. laundry detergent">
+<article class="card" data-dept="Laundry Detergent" data-watched="" data-search="arm &amp;amp; hammer laundry detergent free item of equal or lesser price. 75 to 110-oz or paks, 32 or 42-ct., or sheets, 35-ct. pkg. laundry detergent">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Feature_03_134526_266054.jpg" alt="Arm &amp; Hammer Laundry Detergent"></div>
     <div class="body">
       <h3>Arm &amp; Hammer Laundry Detergent</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $12.39</div>
       <p class="desc">Free item of equal or lesser price. 75 to 110-oz or Paks, 32 or 42-ct., or Sheets, 35-ct. pkg.</p>
       <div class="meta"><span class="dept">Laundry Detergent</span></div>
     </div>
   </article>
-<article class="card" data-dept="Laundry Detergent" data-search="purex laundry detergent free item of equal or lesser price. 59 to 66-oz or 28 or 35-ct. pkg. laundry detergent">
+<article class="card" data-dept="Laundry Detergent" data-watched="" data-search="purex laundry detergent free item of equal or lesser price. 59 to 66-oz or 28 or 35-ct. pkg. laundry detergent">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Feature_07_128635_266304.jpg" alt="Purex Laundry Detergent"></div>
     <div class="body">
       <h3>Purex Laundry Detergent</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.29</div>
       <p class="desc">Free item of equal or lesser price. 59 to 66-oz or 28 or 35-ct. pkg.</p>
       <div class="meta"><span class="dept">Laundry Detergent</span></div>
     </div>
   </article>
-<article class="card" data-dept="Foil Bakeware" data-search="ez foil pans free item of equal or lesser price. all purpose, cake, casserole, pasta, lasagna, pie, pizza, loaf, roaster, or oblong; or serving tray or cookie sheet, 1 to 5-ct. pkg. foil bakeware">
+<article class="card" data-dept="Foil Bakeware" data-watched="" data-search="ez foil pans free item of equal or lesser price. all purpose, cake, casserole, pasta, lasagna, pie, pizza, loaf, roaster, or oblong; or serving tray or cookie sheet, 1 to 5-ct. pkg. foil bakeware">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_17_Feature_05_51369_267054.jpg" alt="EZ Foil Pans"></div>
     <div class="body">
       <h3>EZ Foil Pans</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.99</div>
       <p class="desc">Free item of equal or lesser price. All Purpose, Cake, Casserole, Pasta, Lasagna, Pie, Pizza, Loaf, Roaster, or Oblong; or Serving Tray or Cookie Sheet, 1 to 5-ct. pkg.</p>
       <div class="meta"><span class="dept">Foil Bakeware</span></div>
     </div>
   </article>
-<article class="card" data-dept="Pet Food" data-search="sheba perfect portions cat food free item of equal or lesser price. 48-pk. 1.32-oz box pet food">
+<article class="card" data-dept="Pet Food" data-watched="" data-search="sheba perfect portions cat food free item of equal or lesser price. 48-pk. 1.32-oz box pet food">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Sheba_Perfect_Portions_Cat_Food.jpg" alt="Sheba Perfect Portions Cat Food"></div>
     <div class="body">
       <h3>Sheba Perfect Portions Cat Food</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $28.39</div>
       <p class="desc">Free item of equal or lesser price. 48-pk. 1.32-oz box</p>
       <div class="meta"><span class="dept">Pet Food</span></div>
     </div>
   </article>
-<article class="card" data-dept="Pet Food" data-search="caledon farms dog treats free item of equal or lesser price. 3.9 to 9.3-oz pouch pet food">
+<article class="card" data-dept="Pet Food" data-watched="" data-search="caledon farms dog treats free item of equal or lesser price. 3.9 to 9.3-oz pouch pet food">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Caledon_Dog_Treats.jpg" alt="Caledon Farms Dog Treats"></div>
     <div class="body">
       <h3>Caledon Farms Dog Treats</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $7.49</div>
       <p class="desc">Free item of equal or lesser price. 3.9 to 9.3-oz pouch</p>
       <div class="meta"><span class="dept">Pet Food</span></div>
     </div>
   </article>
-<article class="card" data-dept="Candles" data-search="yankee candle free item of equal or lesser price. 14.25-oz jar candles">
+<article class="card" data-dept="Candles" data-watched="" data-search="yankee candle free item of equal or lesser price. 14.25-oz jar candles">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_17_Feature_03_980271_266904.jpg" alt="Yankee Candle"></div>
     <div class="body">
       <h3>Yankee Candle</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $19.99</div>
       <p class="desc">Free item of equal or lesser price. 14.25-oz jar</p>
       <div class="meta"><span class="dept">Candles</span></div>
     </div>
   </article>
-<article class="card" data-dept="Baby Food" data-search="enfamil neuropure infant formula free item of equal or lesser price. ready to feed; or neuropro gentlease, ready to use, 12-oz ctn. baby food">
+<article class="card" data-dept="Baby Food" data-watched="" data-search="enfamil neuropure infant formula free item of equal or lesser price. ready to feed; or neuropro gentlease, ready to use, 12-oz ctn. baby food">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_17_Feature_06_242731_267104.jpg" alt="Enfamil Neuropure Infant Formula"></div>
     <div class="body">
       <h3>Enfamil Neuropure Infant Formula</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $12.15</div>
       <p class="desc">Free item of equal or lesser price. Ready to Feed; or Neuropro Gentlease, Ready to Use, 12-oz ctn.</p>
       <div class="meta"><span class="dept">Baby Food</span></div>
     </div>
   </article>
-<article class="card" data-dept="Baby Food" data-search="happy baby organics nutty blends free item of equal or lesser price. 3-oz pouch baby food">
+<article class="card" data-dept="Baby Food" data-watched="" data-search="happy baby organics nutty blends free item of equal or lesser price. 3-oz pouch baby food">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_17_Feature_08_343912_267204.jpg" alt="Happy Baby Organics Nutty Blends"></div>
     <div class="body">
       <h3>Happy Baby Organics Nutty Blends</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $2.19</div>
       <p class="desc">Free item of equal or lesser price. 3-oz pouch</p>
       <div class="meta"><span class="dept">Baby Food</span></div>
     </div>
   </article>
-<article class="card" data-dept="Seafood" data-search="publix swai fillets free item of equal or lesser price.  responsibly sourced, farmed, frozen, 24-oz pkg. seafood">
+<article class="card" data-dept="Seafood" data-watched="" data-search="publix swai fillets free item of equal or lesser price.  responsibly sourced, farmed, frozen, 24-oz pkg. seafood">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_18_Feature_04_182547_267454.jpg" alt="Publix Swai Fillets"></div>
     <div class="body">
       <h3>Publix Swai Fillets</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $10.99</div>
       <p class="desc">Free item of equal or lesser price.  Responsibly Sourced, Farmed, Frozen, 24-oz pkg.</p>
       <div class="meta"><span class="dept">Seafood</span></div>
     </div>
   </article>
-<article class="card" data-dept="Deli" data-search="publix southern-style potato salad free item of equal or lesser price. located in the deli, 16-oz pkg. deli">
+<article class="card" data-dept="Deli" data-watched="" data-search="publix southern-style potato salad free item of equal or lesser price. located in the deli, 16-oz pkg. deli">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_04-1_Feature_04_72526_252152.jpg" alt="Publix Southern-Style Potato Salad"></div>
     <div class="body">
       <h3>Publix Southern-Style Potato Salad</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.29</div>
       <p class="desc">Free item of equal or lesser price. Located in the Deli, 16-oz pkg.</p>
       <div class="meta"><span class="dept">Deli</span></div>
     </div>
   </article>
-<article class="card" data-dept="Kitchen Utensils" data-search="rubbermaid containers free item of equal or lesser price.  or food storage, 1 to 16-ct. pkg. kitchen utensils">
+<article class="card" data-dept="Kitchen Utensils" data-watched="" data-search="rubbermaid containers free item of equal or lesser price.  or food storage, 1 to 16-ct. pkg. kitchen utensils">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_10-1_Feature_04_127648_253352.jpg" alt="Rubbermaid Containers"></div>
     <div class="body">
       <h3>Rubbermaid Containers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $16.39</div>
       <p class="desc">Free item of equal or lesser price.  Or Food Storage, 1 to 16-ct. pkg.</p>
       <div class="meta"><span class="dept">Kitchen Utensils</span></div>
     </div>
   </article>
-<article class="card" data-dept="Coffee &amp;amp; Tea" data-search="juan valdez coffee free item of equal or lesser price. classic or decaf, 3.5-oz jar coffee &amp;amp;amp; tea">
+<article class="card" data-dept="Coffee &amp; Tea" data-watched="" data-search="juan valdez coffee free item of equal or lesser price. classic or decaf, 3.5-oz jar coffee &amp;amp; tea">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_09-1_Feature_08_337240_253152.jpg" alt="Juan Valdez Coffee"></div>
     <div class="body">
       <h3>Juan Valdez Coffee</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">new, SAVE UP TO $11.99</div>
       <p class="desc">Free item of equal or lesser price. Classic or Decaf, 3.5-oz jar</p>
-      <div class="meta"><span class="dept">Coffee &amp;amp; Tea</span></div>
+      <div class="meta"><span class="dept">Coffee &amp; Tea</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cereal" data-search="general mills chex mix snack free item of equal or lesser price. or bugles or gardetto&amp;#39;s, 7.5 to 8.6-oz bag cereal">
+<article class="card" data-dept="Cereal" data-watched="" data-search="general mills chex mix snack free item of equal or lesser price. or bugles or gardetto&amp;#39;s, 7.5 to 8.6-oz bag cereal">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_12-1_Feature_12_19128_254702.jpg" alt="General Mills Chex Mix Snack"></div>
     <div class="body">
       <h3>General Mills Chex Mix Snack</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.99</div>
       <p class="desc">Free item of equal or lesser price. Or Bugles or Gardetto&#39;s, 7.5 to 8.6-oz bag</p>
       <div class="meta"><span class="dept">Cereal</span></div>
     </div>
   </article>
-<article class="card" data-dept="Candy" data-search="alter eco dark chocolate truffles free item of equal or lesser price. classic, sea salt, or salted caramel, 4.2-oz bag candy">
+<article class="card" data-dept="Candy" data-watched="" data-search="alter eco dark chocolate truffles free item of equal or lesser price. classic, sea salt, or salted caramel, 4.2-oz bag candy">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_09-1_Feature_07_245332_253102.jpg" alt="Alter Eco Dark Chocolate Truffles"></div>
     <div class="body">
       <h3>Alter Eco Dark Chocolate Truffles</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">new, SAVE UP TO $9.99</div>
       <p class="desc">Free item of equal or lesser price. Classic, Sea Salt, or Salted Caramel, 4.2-oz bag</p>
       <div class="meta"><span class="dept">Candy</span></div>
     </div>
   </article>
-<article class="card" data-dept="Popcorn" data-search="jolly time popcorn free item of equal or lesser price. 6-pk. 18 or 19.2-oz box popcorn">
+<article class="card" data-dept="Popcorn" data-watched="" data-search="jolly time popcorn free item of equal or lesser price. 6-pk. 18 or 19.2-oz box popcorn">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_12-1_Feature_06_25987_254402.jpg" alt="Jolly Time Popcorn"></div>
     <div class="body">
       <h3>Jolly Time Popcorn</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.99</div>
       <p class="desc">Free item of equal or lesser price. 6-pk. 18 or 19.2-oz box</p>
       <div class="meta"><span class="dept">Popcorn</span></div>
     </div>
   </article>
-<article class="card" data-dept="Candy" data-search="hu chocolate cashew butter bar free item of equal or lesser price. or dark chocolate salty or chocolate hazelnut almond, 2.1-oz bar candy">
+<article class="card" data-dept="Candy" data-watched="" data-search="hu chocolate cashew butter bar free item of equal or lesser price. or dark chocolate salty or chocolate hazelnut almond, 2.1-oz bar candy">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_09-1_Feature_06_272170_253052.jpg" alt="Hu Chocolate Cashew Butter Bar"></div>
     <div class="body">
       <h3>Hu Chocolate Cashew Butter Bar</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">new, SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. Or Dark Chocolate Salty or Chocolate Hazelnut Almond, 2.1-oz bar</p>
       <div class="meta"><span class="dept">Candy</span></div>
     </div>
   </article>
-<article class="card" data-dept="Charcoal" data-search="bic multi-purpose lighter free item of equal or lesser price.  regular or long reach or flex wand, 1-ct.; or combo pack: 1 flexible wand and 1 fixed wand, 2-ct. pkg. charcoal">
+<article class="card" data-dept="Charcoal" data-watched="" data-search="bic multi-purpose lighter free item of equal or lesser price.  regular or long reach or flex wand, 1-ct.; or combo pack: 1 flexible wand and 1 fixed wand, 2-ct. pkg. charcoal">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_10-1_Feature_05_53324_253402.jpg" alt="Bic Multi-Purpose Lighter"></div>
     <div class="body">
       <h3>Bic Multi-Purpose Lighter</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $9.99</div>
       <p class="desc">Free item of equal or lesser price.  Regular or Long Reach or Flex Wand, 1-ct.; or Combo Pack: 1 Flexible Wand and 1 Fixed Wand, 2-ct. pkg.</p>
       <div class="meta"><span class="dept">Charcoal</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cream Cheese" data-search="dean&amp;#39;s dip free item of equal or lesser price. 16-oz tub cream cheese">
+<article class="card" data-dept="Cream Cheese" data-watched="" data-search="dean&amp;#39;s dip free item of equal or lesser price. 16-oz tub cream cheese">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_12-1_Feature_03_68013_254252.jpg" alt="Dean&#39;s Dip"></div>
     <div class="body">
       <h3>Dean&#39;s Dip</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $2.99</div>
       <p class="desc">Free item of equal or lesser price. 16-oz tub</p>
       <div class="meta"><span class="dept">Cream Cheese</span></div>
     </div>
   </article>
-<article class="card" data-dept="Frozen Meat" data-search="perdue air fryer ready wings free item of equal or lesser price. or restaurant style crispy chicken bites or filets, sold frozen, 22 or 24-oz pkg. frozen meat">
+<article class="card" data-dept="Frozen Meat" data-watched="" data-search="perdue air fryer ready wings free item of equal or lesser price. or restaurant style crispy chicken bites or filets, sold frozen, 22 or 24-oz pkg. frozen meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_12-1_Feature_09_299000_254552.jpg" alt="Perdue Air Fryer Ready Wings"></div>
     <div class="body">
       <h3>Perdue Air Fryer Ready Wings</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $13.39</div>
       <p class="desc">Free item of equal or lesser price. Or Restaurant Style Crispy Chicken Bites or Filets, Sold Frozen, 22 or 24-oz pkg.</p>
       <div class="meta"><span class="dept">Frozen Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cookies" data-search="nabisco honey maid grahams crackers free item of equal or lesser price. or original grahams, 12.2 or 14.4-oz box cookies">
+<article class="card" data-dept="Cookies" data-watched="" data-search="nabisco honey maid grahams crackers free item of equal or lesser price. or original grahams, 12.2 or 14.4-oz box cookies">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_11-1_Feature_09_300544_253952.jpg" alt="Nabisco Honey Maid Grahams Crackers"></div>
     <div class="body">
       <h3>Nabisco Honey Maid Grahams Crackers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.27</div>
       <p class="desc">Free item of equal or lesser price. Or Original Grahams, 12.2 or 14.4-oz box</p>
       <div class="meta"><span class="dept">Cookies</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cheese" data-search="sargento natural american cheese slices free item of equal or lesser price. 8-oz pkg. cheese">
+<article class="card" data-dept="Cheese" data-watched="" data-search="sargento natural american cheese slices free item of equal or lesser price. 8-oz pkg. cheese">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_11-1_Feature_11_331854_254052.jpg" alt="Sargento Natural American Cheese Slices"></div>
     <div class="body">
       <h3>Sargento Natural American Cheese Slices</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. 8-oz pkg.</p>
       <div class="meta"><span class="dept">Cheese</span></div>
     </div>
   </article>
-<article class="card" data-dept="Paper Products" data-search="hefty party cups free item of equal or lesser price. plastic, 18-oz, 50-ct. pkg. paper products">
+<article class="card" data-dept="Paper Products" data-watched="" data-search="hefty party cups free item of equal or lesser price. plastic, 18-oz, 50-ct. pkg. paper products">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_10-1_Feature_01_318351_253202.jpg" alt="Hefty Party Cups"></div>
     <div class="body">
       <h3>Hefty Party Cups</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.99</div>
       <p class="desc">Free item of equal or lesser price. Plastic, 18-oz, 50-ct. pkg.</p>
       <div class="meta"><span class="dept">Paper Products</span></div>
     </div>
   </article>
-<article class="card" data-dept="Potato Chips" data-search="on the border tortilla chips free item of equal or lesser price. 8 to 11.5-oz bag potato chips">
+<article class="card" data-dept="Potato Chips" data-watched="" data-search="on the border tortilla chips free item of equal or lesser price. 8 to 11.5-oz bag potato chips">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_11-1_Feature_07_280977_253802.jpg" alt="On The Border Tortilla Chips"></div>
     <div class="body">
       <h3>On The Border Tortilla Chips</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.29</div>
       <p class="desc">Free item of equal or lesser price. 8 to 11.5-oz bag</p>
       <div class="meta"><span class="dept">Potato Chips</span></div>
     </div>
   </article>
-<article class="card" data-dept="Insecticide" data-search="bengal flying insect killer spray free item of equal or lesser price.  or roach spray, foaming wasp &amp;amp; hornet killer, or yard &amp;amp; patio mosquito fogger, 9 to 17-oz can insecticide">
+<article class="card" data-dept="Insecticide" data-watched="" data-search="bengal flying insect killer spray free item of equal or lesser price.  or roach spray, foaming wasp &amp;amp; hornet killer, or yard &amp;amp; patio mosquito fogger, 9 to 17-oz can insecticide">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_10-1_Feature_06_323569_253452.jpg" alt="Bengal Flying Insect Killer Spray"></div>
     <div class="body">
       <h3>Bengal Flying Insect Killer Spray</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $9.99</div>
       <p class="desc">Free item of equal or lesser price.  Or Roach Spray, Foaming Wasp &amp; Hornet Killer, or Yard &amp; Patio Mosquito Fogger, 9 to 17-oz can</p>
       <div class="meta"><span class="dept">Insecticide</span></div>
     </div>
   </article>
-<article class="card" data-dept="Condiments &amp;amp; Sauces" data-search="lawry&amp;#39;s 15 minute marinade free item of equal or lesser price. 12-oz bot. condiments &amp;amp;amp; sauces">
+<article class="card" data-dept="Condiments &amp; Sauces" data-watched="" data-search="lawry&amp;#39;s 15 minute marinade free item of equal or lesser price. 12-oz bot. condiments &amp;amp; sauces">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_11-1_Feature_12_351938_254102.jpg" alt="Lawry&#39;s 15 Minute Marinade"></div>
     <div class="body">
       <h3>Lawry&#39;s 15 Minute Marinade</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.67</div>
       <p class="desc">Free item of equal or lesser price. 12-oz bot.</p>
-      <div class="meta"><span class="dept">Condiments &amp;amp; Sauces</span></div>
+      <div class="meta"><span class="dept">Condiments &amp; Sauces</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cooking &amp;amp; Olive Oil" data-search="pompeian imported olive oil free item of equal or lesser price. 16-oz bot. cooking &amp;amp;amp; olive oil">
+<article class="card" data-dept="Cooking &amp; Olive Oil" data-watched="" data-search="pompeian imported olive oil free item of equal or lesser price. 16-oz bot. cooking &amp;amp; olive oil">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_11-1_Feature_03_131078_253602.jpg" alt="Pompeian Imported Olive Oil"></div>
     <div class="body">
       <h3>Pompeian Imported Olive Oil</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $13.49</div>
       <p class="desc">Free item of equal or lesser price. 16-oz bot.</p>
-      <div class="meta"><span class="dept">Cooking &amp;amp; Olive Oil</span></div>
+      <div class="meta"><span class="dept">Cooking &amp; Olive Oil</span></div>
     </div>
   </article>
-<article class="card" data-dept="Snacks" data-search="quest tortilla style protein chips free item of equal or lesser price. chili lime, nacho, loaded taco, or spicy sweet chili, 4-oz bag snacks">
+<article class="card" data-dept="Snacks" data-watched="" data-search="quest tortilla style protein chips free item of equal or lesser price. chili lime, nacho, loaded taco, or spicy sweet chili, 4-oz bag snacks">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_09-1_Feature_04_330583_252952.jpg" alt="Quest Tortilla Style Protein Chips"></div>
     <div class="body">
       <h3>Quest Tortilla Style Protein Chips</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">new, SAVE UP TO $7.89</div>
       <p class="desc">Free item of equal or lesser price. Chili Lime, Nacho, Loaded Taco, or Spicy Sweet Chili, 4-oz bag</p>
       <div class="meta"><span class="dept">Snacks</span></div>
     </div>
   </article>
-<article class="card" data-dept="Paper Products" data-search="brawny paper towels free item of equal or lesser price.  triple rolls, tear-a-square, white, 2-roll pkg. paper products">
+<article class="card" data-dept="Paper Products" data-watched="" data-search="brawny paper towels free item of equal or lesser price.  triple rolls, tear-a-square, white, 2-roll pkg. paper products">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_10-1_Feature_03_326793_253302.jpg" alt="Brawny Paper Towels"></div>
     <div class="body">
       <h3>Brawny Paper Towels</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.99</div>
       <p class="desc">Free item of equal or lesser price.  Triple Rolls, Tear-A-Square, White, 2-roll pkg.</p>
       <div class="meta"><span class="dept">Paper Products</span></div>
     </div>
   </article>
-<article class="card" data-dept="Condiments &amp;amp; Sauces" data-search="hellmann&amp;#39;s mayonnaise free item of equal or lesser price. or dressing, dip &amp;amp; spread, or dressing &amp;amp; spread, 11.5-oz bot. condiments &amp;amp;amp; sauces">
+<article class="card" data-dept="Condiments &amp; Sauces" data-watched="" data-search="hellmann&amp;#39;s mayonnaise free item of equal or lesser price. or dressing, dip &amp;amp; spread, or dressing &amp;amp; spread, 11.5-oz bot. condiments &amp;amp; sauces">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_12-1_Feature_08_207405_254502.jpg" alt="Hellmann&#39;s Mayonnaise"></div>
     <div class="body">
       <h3>Hellmann&#39;s Mayonnaise</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.49</div>
       <p class="desc">Free item of equal or lesser price. Or Dressing, Dip &amp; Spread, or Dressing &amp; Spread, 11.5-oz bot.</p>
-      <div class="meta"><span class="dept">Condiments &amp;amp; Sauces</span></div>
+      <div class="meta"><span class="dept">Condiments &amp; Sauces</span></div>
     </div>
   </article>
-<article class="card" data-dept="Spices &amp;amp; Extract" data-search="fire &amp;amp; smoke seasoning free item of equal or lesser price. 5.1 to 11.9-oz bot.; or crispy coatings, 5.3 or 10.8-oz box spices &amp;amp;amp; extract">
+<article class="card" data-dept="Spices &amp; Extract" data-watched="" data-search="fire &amp;amp; smoke seasoning free item of equal or lesser price. 5.1 to 11.9-oz bot.; or crispy coatings, 5.3 or 10.8-oz box spices &amp;amp; extract">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_12-1_Feature_05_293670_254352.jpg" alt="Fire &amp; Smoke Seasoning"></div>
     <div class="body">
       <h3>Fire &amp; Smoke Seasoning</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.99</div>
       <p class="desc">Free item of equal or lesser price. 5.1 to 11.9-oz bot.; or Crispy Coatings, 5.3 or 10.8-oz box</p>
-      <div class="meta"><span class="dept">Spices &amp;amp; Extract</span></div>
+      <div class="meta"><span class="dept">Spices &amp; Extract</span></div>
     </div>
   </article>
-<article class="card" data-dept="Water" data-search="glac&amp;amp;eacute;au smartwater free item of equal or lesser price. 6-pk. 1-l bot. water">
-    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_11-1_Feature_08_822178_253902.jpg" alt="Glac&amp;eacute;au Smartwater"></div>
+<article class="card" data-dept="Water" data-watched="" data-search="glacéau smartwater free item of equal or lesser price. 6-pk. 1-l bot. water">
+    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_11-1_Feature_08_822178_253902.jpg" alt="Glacéau Smartwater"></div>
     <div class="body">
-      <h3>Glac&amp;eacute;au Smartwater</h3>
+      <h3>Glacéau Smartwater</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $15.69</div>
       <p class="desc">Free item of equal or lesser price. 6-pk. 1-L bot.</p>
       <div class="meta"><span class="dept">Water</span></div>
     </div>
   </article>
-<article class="card" data-dept="Canned Vegetables" data-search="smt tomatoes free item of equal or lesser price. gluten free, 28-oz can canned vegetables">
+<article class="card" data-dept="Canned Vegetables" data-watched="" data-search="smt tomatoes free item of equal or lesser price. gluten free, 28-oz can canned vegetables">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_12-1_Feature_04_322272_254302.jpg" alt="SMT Tomatoes"></div>
     <div class="body">
       <h3>SMT Tomatoes</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. Gluten Free, 28-oz can</p>
       <div class="meta"><span class="dept">Canned Vegetables</span></div>
     </div>
   </article>
-<article class="card" data-dept="Paper Products" data-search="vanity fair napkins free item of equal or lesser price. everyday: casual, 100-ct. or extra absorbent, 80-ct.; or entertain, 40-ct. pkg. paper products">
+<article class="card" data-dept="Paper Products" data-watched="" data-search="vanity fair napkins free item of equal or lesser price. everyday: casual, 100-ct. or extra absorbent, 80-ct.; or entertain, 40-ct. pkg. paper products">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Vanity_Fair_Everyday_Napkins_100_ct.jpg" alt="Vanity Fair Napkins"></div>
     <div class="body">
       <h3>Vanity Fair Napkins</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.99</div>
       <p class="desc">Free item of equal or lesser price. Everyday: Casual, 100-ct. or Extra Absorbent, 80-ct.; or Entertain, 40-ct. pkg.</p>
       <div class="meta"><span class="dept">Paper Products</span></div>
     </div>
   </article>
-<article class="card" data-dept="Seafood" data-search="publix medium shrimp platter free item of equal or lesser price. includes sauce, previously frozen or frozen, net weight 18-oz tray seafood">
+<article class="card" data-dept="Seafood" data-watched="" data-search="publix medium shrimp platter free item of equal or lesser price. includes sauce, previously frozen or frozen, net weight 18-oz tray seafood">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_04_Feature_03_84094_256496.jpg" alt="Publix Medium Shrimp Platter"></div>
     <div class="body">
       <h3>Publix Medium Shrimp Platter</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $22.99</div>
       <p class="desc">Free item of equal or lesser price. Includes Sauce, Previously Frozen or Frozen, Net Weight 18-oz tray</p>
       <div class="meta"><span class="dept">Seafood</span></div>
     </div>
   </article>
-<article class="card" data-dept="Spices &amp;amp; Extract" data-search="kosmos q rub free item of equal or lesser price. 5.4 to 6.75-oz or bbq sauce, 14 or 15.5-oz bot. spices &amp;amp;amp; extract">
+<article class="card" data-dept="Spices &amp; Extract" data-watched="" data-search="kosmos q rub free item of equal or lesser price. 5.4 to 6.75-oz or bbq sauce, 14 or 15.5-oz bot. spices &amp;amp; extract">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_04_Feature_012_319130_256346_PackageShot.jpg" alt="Kosmos Q Rub"></div>
     <div class="body">
       <h3>Kosmos Q Rub</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $7.49</div>
       <p class="desc">Free item of equal or lesser price. 5.4 to 6.75-oz or BBQ Sauce, 14 or 15.5-oz bot.</p>
-      <div class="meta"><span class="dept">Spices &amp;amp; Extract</span></div>
+      <div class="meta"><span class="dept">Spices &amp; Extract</span></div>
     </div>
   </article>
-<article class="card" data-dept="Seafood" data-search="margaritaville shrimp appetizers free item of equal or lesser price. cooks in minutes, frozen, 8 or 10-oz box seafood">
+<article class="card" data-dept="Seafood" data-watched="" data-search="margaritaville shrimp appetizers free item of equal or lesser price. cooks in minutes, frozen, 8 or 10-oz box seafood">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_04_Feature_04_140359_256546.jpg" alt="Margaritaville Shrimp Appetizers"></div>
     <div class="body">
       <h3>Margaritaville Shrimp Appetizers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $11.99</div>
       <p class="desc">Free item of equal or lesser price. Cooks in Minutes, Frozen, 8 or 10-oz box</p>
       <div class="meta"><span class="dept">Seafood</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="springer mountain farms chicken breast strips free item of equal or lesser price. fully cooked, 8-oz pkg. meat">
+<article class="card" data-dept="Meat" data-watched="" data-search="springer mountain farms chicken breast strips free item of equal or lesser price. fully cooked, 8-oz pkg. meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Feature_06_263900_257846.jpg" alt="Springer Mountain Farms Chicken Breast Strips"></div>
     <div class="body">
       <h3>Springer Mountain Farms Chicken Breast Strips</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. Fully Cooked, 8-oz pkg.</p>
       <div class="meta"><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Frozen Meat" data-search="prairie fresh pork st. louis style spareribs free item of equal or lesser price. hickory bbq seasoned, whole in the bag, frozen frozen meat">
+<article class="card" data-dept="Frozen Meat" data-watched="" data-search="prairie fresh pork st. louis style spareribs free item of equal or lesser price. hickory bbq seasoned, whole in the bag, frozen frozen meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Feature_03_93772_257546.jpg" alt="Prairie Fresh Pork St. Louis Style Spareribs"></div>
     <div class="body">
       <h3>Prairie Fresh Pork St. Louis Style Spareribs</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.49 LB</div>
       <p class="desc">Free item of equal or lesser price. Hickory BBQ Seasoned, Whole In the Bag, Frozen</p>
       <div class="meta"><span class="dept">Frozen Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="farmer focus chicken party wings free item of equal or lesser price. organic &amp;amp; free range meat">
+<article class="card" data-dept="Meat" data-watched="" data-search="farmer focus chicken party wings free item of equal or lesser price. organic &amp;amp; free range meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Feature_012_97577_257296_PackageShot.jpg" alt="Farmer Focus Chicken Party Wings"></div>
     <div class="body">
       <h3>Farmer Focus Chicken Party Wings</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.49 LB</div>
       <p class="desc">Free item of equal or lesser price. Organic &amp; Free Range</p>
       <div class="meta"><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Produce" data-search="publix red seedless watermelon chunks free item of equal or lesser price. made fresh in-store daily, small, medium, or large size cont. produce">
+<article class="card" data-dept="Produce" data-watched="" data-search="publix red seedless watermelon chunks free item of equal or lesser price. made fresh in-store daily, small, medium, or large size cont. produce">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Watermelon_Chunks.jpg" alt="Publix Red Seedless Watermelon Chunks"></div>
     <div class="body">
       <h3>Publix Red Seedless Watermelon Chunks</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.99 LB</div>
       <p class="desc">Free item of equal or lesser price. Made Fresh In-Store Daily, Small, Medium, or Large Size cont.</p>
       <div class="meta"><span class="dept">Produce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Produce" data-search="marie&amp;#39;s dressing free item of equal or lesser price. or vinaigrette, 11.5 or 12-oz cont. produce">
+<article class="card" data-dept="Produce" data-watched="" data-search="marie&amp;#39;s dressing free item of equal or lesser price. or vinaigrette, 11.5 or 12-oz cont. produce">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_07_Feature_06_24633_259496.jpg" alt="Marie&#39;s Dressing"></div>
     <div class="body">
       <h3>Marie&#39;s Dressing</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. Or Vinaigrette, 11.5 or 12-oz cont.</p>
       <div class="meta"><span class="dept">Produce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Deli" data-search="publix limited edition white cheddar cheese free item of equal or lesser price. with blue cheese and red pepper flakes, located in the deli specialty cheese section, 5-oz pkg. deli">
+<article class="card" data-dept="Deli" data-watched="" data-search="publix limited edition white cheddar cheese free item of equal or lesser price. with blue cheese and red pepper flakes, located in the deli specialty cheese section, 5-oz pkg. deli">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_08_Feature_06_324930_260296.jpg" alt="Publix Limited Edition White Cheddar Cheese"></div>
     <div class="body">
       <h3>Publix Limited Edition White Cheddar Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.99</div>
       <p class="desc">Free item of equal or lesser price. With Blue Cheese and Red Pepper Flakes, Located in the Deli Specialty Cheese Section, 5-oz pkg.</p>
       <div class="meta"><span class="dept">Deli</span></div>
     </div>
   </article>
-<article class="card" data-dept="Deli" data-search="sabra hummus free item of equal or lesser price. located in the deli, 8-oz pkg. deli">
+<article class="card" data-dept="Deli" data-watched="" data-search="sabra hummus free item of equal or lesser price. located in the deli, 8-oz pkg. deli">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Sabra_Hummus_Classic_8_oz.jpg" alt="Sabra Hummus"></div>
     <div class="body">
       <h3>Sabra Hummus</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.29</div>
       <p class="desc">Free item of equal or lesser price. Located in the Deli, 8-oz pkg.</p>
       <div class="meta"><span class="dept">Deli</span></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="organic strawberries free item of equal or lesser price. 16-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="organic strawberries free item of equal or lesser price. 16-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/25000/025499-600x600-A.jpg" alt="Organic Strawberries"></div>
     <div class="body">
       <h3>Organic Strawberries</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.99</div>
       <p class="desc">Free item of equal or lesser price. 16-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="la banderita flour tortillas free item of equal or lesser price. soft taco, 10-ct. 16-oz bag; or organic soft flour tortillas, 6-ct. 9.5-oz bag ">
+<article class="card" data-dept="" data-watched="" data-search="la banderita flour tortillas free item of equal or lesser price. soft taco, 10-ct. 16-oz bag; or organic soft flour tortillas, 6-ct. 9.5-oz bag ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/450000/450399-600x600-A.jpg" alt="La Banderita Flour Tortillas"></div>
     <div class="body">
       <h3>La Banderita Flour Tortillas</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $3.89</div>
       <p class="desc">Free item of equal or lesser price. Soft Taco, 10-ct. 16-oz bag; or Organic Soft Flour Tortillas, 6-ct. 9.5-oz bag</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="belgioioso fresh mozzarella cheese free item of equal or lesser price. or pearls, 16-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="belgioioso fresh mozzarella cheese free item of equal or lesser price. or pearls, 16-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/130000/131772-600x600-A.jpg" alt="Belgioioso Fresh Mozzarella Cheese"></div>
     <div class="body">
       <h3>Belgioioso Fresh Mozzarella Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $10.29</div>
       <p class="desc">Free item of equal or lesser price. Or Pearls, 16-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="publix peanut butter pretzels free item of equal or lesser price. 16-oz bag ">
+<article class="card" data-dept="" data-watched="" data-search="publix peanut butter pretzels free item of equal or lesser price. 16-oz bag ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/935000/935979-600x600-A.jpg" alt="Publix Peanut Butter Pretzels"></div>
     <div class="body">
       <h3>Publix Peanut Butter Pretzels</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.19</div>
       <p class="desc">Free item of equal or lesser price. 16-oz bag</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="minute rice free item of equal or lesser price. 8.8-oz cup ">
+<article class="card" data-dept="" data-watched="" data-search="minute rice free item of equal or lesser price. 8.8-oz cup ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/955000/956065-600x600-A.jpg" alt="Minute Rice"></div>
     <div class="body">
       <h3>Minute Rice</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $3.29</div>
       <p class="desc">Free item of equal or lesser price. 8.8-oz cup</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="lindsay california ripe pitted olives free item of equal or lesser price. or black ripe pitted medium mild &amp;amp; nutty olives, 6-oz can (excluding low sodium, natural, and crafted) ">
+<article class="card" data-dept="" data-watched="" data-search="lindsay california ripe pitted olives free item of equal or lesser price. or black ripe pitted medium mild &amp;amp; nutty olives, 6-oz can (excluding low sodium, natural, and crafted) ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/5000/005158-600x600-A.jpg" alt="Lindsay California Ripe Pitted Olives"></div>
     <div class="body">
       <h3>Lindsay California Ripe Pitted Olives</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $3.15</div>
       <p class="desc">Free item of equal or lesser price. Or Black Ripe Pitted Medium Mild &amp; Nutty Olives, 6-oz can (Excluding Low Sodium, Natural, and Crafted)</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="mission tortilla chips free item of equal or lesser price. restaurant style: strips, rounds, or triangles, 11-oz bag; or thin &amp;amp; crispy, 9-oz bag ">
+<article class="card" data-dept="" data-watched="" data-search="mission tortilla chips free item of equal or lesser price. restaurant style: strips, rounds, or triangles, 11-oz bag; or thin &amp;amp; crispy, 9-oz bag ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/340000/340723-600x600-A.jpg" alt="Mission Tortilla Chips"></div>
     <div class="body">
       <h3>Mission Tortilla Chips</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.25</div>
       <p class="desc">Free item of equal or lesser price. Restaurant Style: Strips, Rounds, or Triangles, 11-oz bag; or Thin &amp; Crispy, 9-oz bag</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="reser&amp;#39;s main st bistro signature sides free item of equal or lesser price. 20 or 24-oz pkg. (excluding reser&amp;#39;s baked sides) ">
+<article class="card" data-dept="" data-watched="" data-search="reser&amp;#39;s main st bistro signature sides free item of equal or lesser price. 20 or 24-oz pkg. (excluding reser&amp;#39;s baked sides) ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/215000/215228-600x600-A.jpg" alt="Reser&#39;s Main St Bistro Signature Sides"></div>
     <div class="body">
       <h3>Reser&#39;s Main St Bistro Signature Sides</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $5.15</div>
       <p class="desc">Free item of equal or lesser price. 20 or 24-oz pkg. (Excluding Reser&#39;s Baked Sides)</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="tastykake mini donuts free item of equal or lesser price. 9.5 to 11.5-oz bag ">
+<article class="card" data-dept="" data-watched="" data-search="tastykake mini donuts free item of equal or lesser price. 9.5 to 11.5-oz bag ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/310000/314334-600x600-A.jpg" alt="Tastykake Mini Donuts"></div>
     <div class="body">
       <h3>Tastykake Mini Donuts</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $3.49</div>
       <p class="desc">Free item of equal or lesser price. 9.5 to 11.5-oz bag</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="harmless harvest organic coconut water free item of equal or lesser price. 16-oz cont. ">
+<article class="card" data-dept="" data-watched="" data-search="harmless harvest organic coconut water free item of equal or lesser price. 16-oz cont. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/210000/211137-600x600-A.jpg" alt="Harmless Harvest Organic Coconut Water"></div>
     <div class="body">
       <h3>Harmless Harvest Organic Coconut Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.19</div>
       <p class="desc">Free item of equal or lesser price. 16-oz cont.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="entenmann&amp;#39;s mini cakes free item of equal or lesser price. or mini snack cakes, pies, brownies, danish, cupcakes, or powdered donuts, 8.25 to 17-oz box ">
+<article class="card" data-dept="" data-watched="" data-search="entenmann&amp;#39;s mini cakes free item of equal or lesser price. or mini snack cakes, pies, brownies, danish, cupcakes, or powdered donuts, 8.25 to 17-oz box ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/310000/313844-600x600-A.jpg" alt="Entenmann&#39;s Mini Cakes"></div>
     <div class="body">
       <h3>Entenmann&#39;s Mini Cakes</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $5.49</div>
       <p class="desc">Free item of equal or lesser price. Or Mini Snack Cakes, Pies, Brownies, Danish, Cupcakes, or Powdered Donuts, 8.25 to 17-oz box</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="queso-melt cheese dip free item of equal or lesser price. 10-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="queso-melt cheese dip free item of equal or lesser price. 10-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/120000/123330-600x600-A.jpg" alt="Queso-Melt Cheese Dip"></div>
     <div class="body">
       <h3>Queso-Melt Cheese Dip</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.99</div>
       <p class="desc">Free item of equal or lesser price. 10-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="fiji natural artesian water free item of equal or lesser price. 6-pk. 500-ml bot. ">
+<article class="card" data-dept="" data-watched="" data-search="fiji natural artesian water free item of equal or lesser price. 6-pk. 500-ml bot. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/800000/803448-600x600-A.jpg" alt="Fiji Natural Artesian Water"></div>
     <div class="body">
       <h3>Fiji Natural Artesian Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $9.29</div>
       <p class="desc">Free item of equal or lesser price. 6-pk. 500-mL bot.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="stonefire naan dippers free item of equal or lesser price. or flatbread, located in the deli, 7.05 or 8.8-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="stonefire naan dippers free item of equal or lesser price. or flatbread, located in the deli, 7.05 or 8.8-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/210000/210127-600x600-A.jpg" alt="Stonefire Naan Dippers"></div>
     <div class="body">
       <h3>Stonefire Naan Dippers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.99</div>
       <p class="desc">Free item of equal or lesser price. or Flatbread, Located in the Deli, 7.05 or 8.8-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="hatfield bacon free item of equal or lesser price. stack pack, 24-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="hatfield bacon free item of equal or lesser price. stack pack, 24-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/290000/290311-600x600-A.jpg" alt="Hatfield Bacon"></div>
     <div class="body">
       <h3>Hatfield Bacon</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $12.39</div>
       <p class="desc">Free item of equal or lesser price. Stack Pack, 24-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="gulden&amp;#39;s mustard free item of equal or lesser price. spicy brown or stone ground dijon, squeeze, 12-oz bot. ">
+<article class="card" data-dept="" data-watched="" data-search="gulden&amp;#39;s mustard free item of equal or lesser price. spicy brown or stone ground dijon, squeeze, 12-oz bot. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/5000/005848-600x600-A.jpg" alt="Gulden&#39;s Mustard"></div>
     <div class="body">
       <h3>Gulden&#39;s Mustard</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $2.39</div>
       <p class="desc">Free item of equal or lesser price. Spicy Brown or Stone Ground Dijon, Squeeze, 12-oz bot.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="silver floss sauerkraut free item of equal or lesser price. krrrrisp kraut, barrel-cured, 16-oz bag ">
+<article class="card" data-dept="" data-watched="" data-search="silver floss sauerkraut free item of equal or lesser price. krrrrisp kraut, barrel-cured, 16-oz bag ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/70000/070099-600x600-A.jpg" alt="Silver Floss Sauerkraut"></div>
     <div class="body">
       <h3>Silver Floss Sauerkraut</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $2.69</div>
       <p class="desc">Free item of equal or lesser price. Krrrrisp Kraut, Barrel-Cured, 16-oz bag</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="castleberry&amp;#39;s hot dog chili sauce free item of equal or lesser price. original, 10-oz can ">
+<article class="card" data-dept="" data-watched="" data-search="castleberry&amp;#39;s hot dog chili sauce free item of equal or lesser price. original, 10-oz can ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/135000/138120-600x600-A.jpg" alt="Castleberry&#39;s Hot Dog Chili Sauce"></div>
     <div class="body">
       <h3>Castleberry&#39;s Hot Dog Chili Sauce</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $1.59</div>
       <p class="desc">Free item of equal or lesser price. Original, 10-oz can</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="la mexicana salsa free item of equal or lesser price. medium, mild, hot, cantina style, or peach mango, 14 or 16-oz cont. ">
+<article class="card" data-dept="" data-watched="" data-search="la mexicana salsa free item of equal or lesser price. medium, mild, hot, cantina style, or peach mango, 14 or 16-oz cont. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/25000/025785-600x600-A.jpg" alt="La Mexicana Salsa"></div>
     <div class="body">
       <h3>La Mexicana Salsa</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $5.65</div>
       <p class="desc">Free item of equal or lesser price. Medium, Mild, Hot, Cantina Style, or Peach Mango, 14 or 16-oz cont.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="vita coco coconut water free item of equal or lesser price. farmers organic, 1-l pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="vita coco coconut water free item of equal or lesser price. farmers organic, 1-l pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/280000/281355-600x600-A.jpg" alt="Vita Coco Coconut Water"></div>
     <div class="body">
       <h3>Vita Coco Coconut Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.99</div>
       <p class="desc">Free item of equal or lesser price. Farmers Organic, 1-L pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="pretzilla pretzel bites free item of equal or lesser price. located in the deli, 10.5 or 12.3-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="pretzilla pretzel bites free item of equal or lesser price. located in the deli, 10.5 or 12.3-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/265000/266140-600x600-A.jpg" alt="Pretzilla Pretzel Bites"></div>
     <div class="body">
       <h3>Pretzilla Pretzel Bites</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $7.99</div>
       <p class="desc">Free item of equal or lesser price. Located in the Deli, 10.5 or 12.3-oz Pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="ile de france paris toasts free item of equal or lesser price. 2.75-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="ile de france paris toasts free item of equal or lesser price. 2.75-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/215000/218937-600x600-A.jpg" alt="Ile de France Paris Toasts"></div>
     <div class="body">
       <h3>Ile de France Paris Toasts</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $2.09</div>
       <p class="desc">Free item of equal or lesser price. 2.75-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="7up products free item of equal or lesser price. 2-l bot. (excluding seltzer water) ">
+<article class="card" data-dept="" data-watched="" data-search="7up products free item of equal or lesser price. 2-l bot. (excluding seltzer water) ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/300000/303764-600x600-A.jpg" alt="7UP Products"></div>
     <div class="body">
       <h3>7UP Products</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $3.89</div>
       <p class="desc">Free item of equal or lesser price. 2-L bot. (Excluding Seltzer Water)</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="xochitl corn chips free item of equal or lesser price. or tortilla chips, 7.5 to 12-oz bag ">
+<article class="card" data-dept="" data-watched="" data-search="xochitl corn chips free item of equal or lesser price. or tortilla chips, 7.5 to 12-oz bag ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/370000/372146-600x600-A.jpg" alt="Xochitl Corn Chips"></div>
     <div class="body">
       <h3>Xochitl Corn Chips</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.49</div>
       <p class="desc">Free item of equal or lesser price. Or Tortilla Chips, 7.5 to 12-oz bag</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="publix chicken wingettes free item of equal or lesser price. sold frozen, 48-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="publix chicken wingettes free item of equal or lesser price. sold frozen, 48-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/80000/081436-600x600-A.jpg" alt="Publix Chicken Wingettes"></div>
     <div class="body">
       <h3>Publix Chicken Wingettes</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $12.99</div>
       <p class="desc">Free item of equal or lesser price. Sold Frozen, 48-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="reser&amp;#39;s salads free item of equal or lesser price. located in the deli, 15 or 16-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="reser&amp;#39;s salads free item of equal or lesser price. located in the deli, 15 or 16-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/320000/324263-600x600-A.jpg" alt="Reser&#39;s Salads"></div>
     <div class="body">
       <h3>Reser&#39;s Salads</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save $0.75</div>
       <p class="desc">Free item of equal or lesser price. Located in the Deli, 15 or 16-oz Pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="publix tzatziki dip free item of equal or lesser price. 10-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="publix tzatziki dip free item of equal or lesser price. 10-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/330000/333350-600x600-A.jpg" alt="Publix Tzatziki Dip"></div>
     <div class="body">
       <h3>Publix Tzatziki Dip</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.45</div>
       <p class="desc">Free item of equal or lesser price. 10-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="so good so you probiotic shot free item of equal or lesser price. organic, immunity, 4-ct. 1.7-oz cont. ">
+<article class="card" data-dept="" data-watched="" data-search="so good so you probiotic shot free item of equal or lesser price. organic, immunity, 4-ct. 1.7-oz cont. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/265000/266693-600x600-A.jpg" alt="So Good So You Probiotic Shot"></div>
     <div class="body">
       <h3>So Good So You Probiotic Shot</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $12.39</div>
       <p class="desc">Free item of equal or lesser price. Organic, Immunity, 4-ct. 1.7-oz cont.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="calypso lemonade free item of equal or lesser price. 16-oz bot. ">
+<article class="card" data-dept="" data-watched="" data-search="calypso lemonade free item of equal or lesser price. 16-oz bot. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/985000/986054-600x600-A.jpg" alt="Calypso Lemonade"></div>
     <div class="body">
       <h3>Calypso Lemonade</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $2.49</div>
       <p class="desc">Free item of equal or lesser price. 16-oz bot.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="simply mints free item of equal or lesser price. spearmint, 1.1-oz can ">
+<article class="card" data-dept="" data-watched="" data-search="simply mints free item of equal or lesser price. spearmint, 1.1-oz can ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/315000/317845-600x600-A.jpg" alt="Simply Mints"></div>
     <div class="body">
       <h3>Simply Mints</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $3.19</div>
       <p class="desc">Free item of equal or lesser price. Spearmint, 1.1-oz can</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="la bonne vie brie cheese free item of equal or lesser price. 8-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="la bonne vie brie cheese free item of equal or lesser price. 8-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/455000/456883-600x600-A.jpg" alt="La Bonne Vie Brie Cheese"></div>
     <div class="body">
       <h3>La Bonne Vie Brie Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $8.45</div>
       <p class="desc">Free item of equal or lesser price. 8-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="sabra guacamole free item of equal or lesser price. classic or spicy, located in the deli, 7-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="sabra guacamole free item of equal or lesser price. classic or spicy, located in the deli, 7-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/285000/287265-600x600-A.jpg" alt="Sabra Guacamole"></div>
     <div class="body">
       <h3>Sabra Guacamole</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $5.15</div>
       <p class="desc">Free item of equal or lesser price. Classic or Spicy, Located in the Deli, 7-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="philly gourmet sandwich steaks free item of equal or lesser price. 21-oz pkg.; or 100% pure beef sliced steak, 31.5-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="philly gourmet sandwich steaks free item of equal or lesser price. 21-oz pkg.; or 100% pure beef sliced steak, 31.5-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/80000/080130-600x600-A.jpg" alt="Philly Gourmet Sandwich Steaks"></div>
     <div class="body">
       <h3>Philly Gourmet Sandwich Steaks</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $15.19</div>
       <p class="desc">Free item of equal or lesser price. 21-oz pkg.; or 100% Pure Beef Sliced Steak, 31.5-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="magic mind mental performance shot free item of equal or lesser price. original or maxx, 2-oz cont. ">
+<article class="card" data-dept="" data-watched="" data-search="magic mind mental performance shot free item of equal or lesser price. original or maxx, 2-oz cont. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/330000/331227-600x600-A.jpg" alt="Magic Mind Mental Performance Shot"></div>
     <div class="body">
       <h3>Magic Mind Mental Performance Shot</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.15</div>
       <p class="desc">Free item of equal or lesser price. Original or Maxx, 2-oz cont.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="la panzanella mini croccantini crackers free item of equal or lesser price. 6-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="la panzanella mini croccantini crackers free item of equal or lesser price. 6-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/950000/954052-600x600-A.jpg" alt="La Panzanella Mini Croccantini Crackers"></div>
     <div class="body">
       <h3>La Panzanella Mini Croccantini Crackers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.19</div>
       <p class="desc">Free item of equal or lesser price. 6-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="pretzilla soft pretzel burger buns free item of equal or lesser price. 12.8-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="pretzilla soft pretzel burger buns free item of equal or lesser price. 12.8-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/265000/266135-600x600-A.jpg" alt="Pretzilla Soft Pretzel Burger Buns"></div>
     <div class="body">
       <h3>Pretzilla Soft Pretzel Burger Buns</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $3.00</div>
       <p class="desc">Free item of equal or lesser price. 12.8-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="yucatan guacamole free item of equal or lesser price. restaurant-style medium; mild or authentic, 16-oz cont. ">
+<article class="card" data-dept="" data-watched="" data-search="yucatan guacamole free item of equal or lesser price. restaurant-style medium; mild or authentic, 16-oz cont. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/20000/023661-600x600-A.jpg" alt="Yucatan Guacamole"></div>
     <div class="body">
       <h3>Yucatan Guacamole</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $7.19</div>
       <p class="desc">Free item of equal or lesser price. Restaurant-Style Medium; Mild or Authentic, 16-oz cont.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="belgioioso marinated fresh mozzarella cheese free item of equal or lesser price. 12-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="belgioioso marinated fresh mozzarella cheese free item of equal or lesser price. 12-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/265000/268750-600x600-A.jpg" alt="Belgioioso Marinated Fresh Mozzarella Cheese"></div>
     <div class="body">
       <h3>Belgioioso Marinated Fresh Mozzarella Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $7.19</div>
       <p class="desc">Free item of equal or lesser price. 12-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="kool-aid jammers juice drink free item of equal or lesser price. 10-pk. 6-oz box ">
+<article class="card" data-dept="" data-watched="" data-search="kool-aid jammers juice drink free item of equal or lesser price. 10-pk. 6-oz box ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/10000/012594-600x600-A.jpg" alt="Kool-Aid Jammers Juice Drink"></div>
     <div class="body">
       <h3>Kool-Aid Jammers Juice Drink</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.15</div>
       <p class="desc">Free item of equal or lesser price. 10-pk. 6-oz box</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="good foods avocado salsa free item of equal or lesser price. 12-oz cont. ">
+<article class="card" data-dept="" data-watched="" data-search="good foods avocado salsa free item of equal or lesser price. 12-oz cont. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/235000/235231-600x600-A.jpg" alt="Good Foods Avocado Salsa"></div>
     <div class="body">
       <h3>Good Foods Avocado Salsa</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $5.15</div>
       <p class="desc">Free item of equal or lesser price. 12-oz cont.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="ole cheese dip free item of equal or lesser price. 15 to 16-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="ole cheese dip free item of equal or lesser price. 15 to 16-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/170000/173182-600x600-A.jpg" alt="Ole Cheese Dip"></div>
     <div class="body">
       <h3>Ole Cheese Dip</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.99</div>
       <p class="desc">Free item of equal or lesser price. 15 to 16-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="wellington water crackers free item of equal or lesser price. traditional or toasted sesame, perfect for cheese spreads, 4.4-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="wellington water crackers free item of equal or lesser price. traditional or toasted sesame, perfect for cheese spreads, 4.4-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/145000/148761-600x600-A.jpg" alt="Wellington Water Crackers"></div>
     <div class="body">
       <h3>Wellington Water Crackers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.99</div>
       <p class="desc">Free item of equal or lesser price. Traditional or Toasted Sesame, Perfect for Cheese Spreads, 4.4-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="tortiller&amp;amp;iacute;a mi ni&amp;amp;ntilde;a tortilla chips free item of equal or lesser price. organic tortilla chips, located in the deli, 12-oz pkg. ">
-    <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/290000/294043-600x600-A.jpg" alt="Tortiller&amp;iacute;a Mi Ni&amp;ntilde;a Tortilla Chips"></div>
+<article class="card" data-dept="" data-watched="" data-search="tortiller&amp;amp;iacute;a mi niña tortilla chips free item of equal or lesser price. organic tortilla chips, located in the deli, 12-oz pkg. ">
+    <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/290000/294043-600x600-A.jpg" alt="Tortiller&amp;iacute;a Mi Niña Tortilla Chips"></div>
     <div class="body">
-      <h3>Tortiller&amp;iacute;a Mi Ni&amp;ntilde;a Tortilla Chips</h3>
+      <h3>Tortiller&amp;iacute;a Mi Niña Tortilla Chips</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.19</div>
       <p class="desc">Free item of equal or lesser price. Organic Tortilla Chips, Located in the Deli, 12-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="tabla fresca farmstand salsa free item of equal or lesser price. mild, medium, or cantina; or pico de gallo, 16-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="tabla fresca farmstand salsa free item of equal or lesser price. mild, medium, or cantina; or pico de gallo, 16-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/265000/269174-600x600-A.jpg" alt="Tabla Fresca Farmstand Salsa"></div>
     <div class="body">
       <h3>Tabla Fresca Farmstand Salsa</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $5.55</div>
       <p class="desc">Free item of equal or lesser price. Mild, Medium, or Cantina; or Pico de Gallo, 16-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="comfort cuisine chicken salad free item of equal or lesser price. cranberry pecan, 8-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="comfort cuisine chicken salad free item of equal or lesser price. cranberry pecan, 8-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/335000/335346-600x600-A.jpg" alt="Comfort Cuisine Chicken Salad"></div>
     <div class="body">
       <h3>Comfort Cuisine Chicken Salad</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $5.89</div>
       <p class="desc">Free item of equal or lesser price. Cranberry Pecan, 8-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="summ! gyoza dumplings free item of equal or lesser price. sesame ginger chicken, pork &amp;amp; shiitake, or vegetable; or thai basil chicken spring rolls, located in the deli, 8.8 or 12.35-oz tray ">
+<article class="card" data-dept="" data-watched="" data-search="summ! gyoza dumplings free item of equal or lesser price. sesame ginger chicken, pork &amp;amp; shiitake, or vegetable; or thai basil chicken spring rolls, located in the deli, 8.8 or 12.35-oz tray ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/320000/322434-600x600-A.jpg" alt="Summ! Gyoza Dumplings"></div>
     <div class="body">
       <h3>Summ! Gyoza Dumplings</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.49</div>
       <p class="desc">Free item of equal or lesser price. Sesame Ginger Chicken, Pork &amp; Shiitake, or Vegetable; or Thai Basil Chicken Spring Rolls, Located in the Deli, 8.8 or 12.35-oz tray</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="sundate dates free item of equal or lesser price. premium: deglet noor pitted or chopped california, 10-oz cont. ">
+<article class="card" data-dept="" data-watched="" data-search="sundate dates free item of equal or lesser price. premium: deglet noor pitted or chopped california, 10-oz cont. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/25000/025108-600x600-A.jpg" alt="Sundate Dates"></div>
     <div class="body">
       <h3>Sundate Dates</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $3.99</div>
       <p class="desc">Free item of equal or lesser price. Premium: Deglet Noor Pitted or Chopped California, 10-oz cont.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="fresh cravings five layer dip free item of equal or lesser price. savory black bean, 15-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="fresh cravings five layer dip free item of equal or lesser price. savory black bean, 15-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/980000/982863-600x600-A.jpg" alt="Fresh Cravings Five Layer Dip"></div>
     <div class="body">
       <h3>Fresh Cravings Five Layer Dip</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $7.19</div>
       <p class="desc">Free item of equal or lesser price. Savory Black Bean, 15-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="la bonne vie goat cheese free item of equal or lesser price. crumbled, 4-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="la bonne vie goat cheese free item of equal or lesser price. crumbled, 4-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/455000/456682-600x600-A.jpg" alt="La Bonne Vie Goat Cheese"></div>
     <div class="body">
       <h3>La Bonne Vie Goat Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.19</div>
       <p class="desc">Free item of equal or lesser price. Crumbled, 4-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="liquid death flavored sparkling water free item of equal or lesser price. 6-pk. 12-oz can ">
+<article class="card" data-dept="" data-watched="" data-search="liquid death flavored sparkling water free item of equal or lesser price. 6-pk. 12-oz can ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/320000/323719-600x600-A.jpg" alt="Liquid Death Flavored Sparkling Water"></div>
     <div class="body">
       <h3>Liquid Death Flavored Sparkling Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $8.25</div>
       <p class="desc">Free item of equal or lesser price. 6-pk. 12-oz can</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="filippo berio olive oil free item of equal or lesser price. 25.3-oz bot. ">
+<article class="card" data-dept="" data-watched="" data-search="filippo berio olive oil free item of equal or lesser price. 25.3-oz bot. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/10000/010030-600x600-A.jpg" alt="Filippo Berio Olive Oil"></div>
     <div class="body">
       <h3>Filippo Berio Olive Oil</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $17.99</div>
       <p class="desc">Free item of equal or lesser price. 25.3-oz bot.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="motrin ibuprofen medicine free item of equal or lesser price. 80 or 100-ct. pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="motrin ibuprofen medicine free item of equal or lesser price. 80 or 100-ct. pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/35000/037893-600x600-A.jpg" alt="Motrin Ibuprofen Medicine"></div>
     <div class="body">
       <h3>Motrin Ibuprofen Medicine</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $16.99</div>
       <p class="desc">Free item of equal or lesser price. 80 or 100-ct. pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="publix premium single-serve coffee free item of equal or lesser price. or hot cocoa, 12-ct. box ">
+<article class="card" data-dept="" data-watched="" data-search="publix premium single-serve coffee free item of equal or lesser price. or hot cocoa, 12-ct. box ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/960000/961975-600x600-A.jpg" alt="Publix Premium Single-Serve Coffee"></div>
     <div class="body">
       <h3>Publix Premium Single-Serve Coffee</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $12.39</div>
       <p class="desc">Free item of equal or lesser price. Or Hot Cocoa, 12-ct. box</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="o&amp;#39;doughs bagel thins free item of equal or lesser price. or sandwich thins or hamburger buns, 10.58 to 18-oz bag ">
+<article class="card" data-dept="" data-watched="" data-search="o&amp;#39;doughs bagel thins free item of equal or lesser price. or sandwich thins or hamburger buns, 10.58 to 18-oz bag ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/825000/828034-600x600-A.jpg" alt="O&#39;Doughs Bagel Thins"></div>
     <div class="body">
       <h3>O&#39;Doughs Bagel Thins</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $8.25</div>
       <p class="desc">Free item of equal or lesser price. Or Sandwich Thins or Hamburger Buns, 10.58 to 18-oz bag</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="tyson white premium chunk chicken breast free item of equal or lesser price. 12.5-oz can ">
+<article class="card" data-dept="" data-watched="" data-search="tyson white premium chunk chicken breast free item of equal or lesser price. 12.5-oz can ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/10000/014207-600x600-A.jpg" alt="Tyson White Premium Chunk Chicken Breast"></div>
     <div class="body">
       <h3>Tyson White Premium Chunk Chicken Breast</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $5.99</div>
       <p class="desc">Free item of equal or lesser price. 12.5-oz can</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="liquid death mountain water free item of equal or lesser price. sparkling, 6-pk. 12-oz can ">
+<article class="card" data-dept="" data-watched="" data-search="liquid death mountain water free item of equal or lesser price. sparkling, 6-pk. 12-oz can ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/320000/323718-600x600-A.jpg" alt="Liquid Death Mountain Water"></div>
     <div class="body">
       <h3>Liquid Death Mountain Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $7.19</div>
       <p class="desc">Free item of equal or lesser price. Sparkling, 6-pk. 12-oz can</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="nestl&amp;amp;eacute; nido dry whole milk free item of equal or lesser price. fortificada, 12.7-oz can ">
-    <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/790000/792916-600x600-A.jpg" alt="Nestl&amp;eacute; Nido Dry Whole Milk"></div>
+<article class="card" data-dept="" data-watched="" data-search="nestlé nido dry whole milk free item of equal or lesser price. fortificada, 12.7-oz can ">
+    <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/790000/792916-600x600-A.jpg" alt="Nestlé Nido Dry Whole Milk"></div>
     <div class="body">
-      <h3>Nestl&amp;eacute; Nido Dry Whole Milk</h3>
+      <h3>Nestlé Nido Dry Whole Milk</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $7.85</div>
       <p class="desc">Free item of equal or lesser price. Fortificada, 12.7-oz can</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="house-autry products free item of equal or lesser price. coating, breader, batter, or mix, 10 to 12-oz or 2-lb pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="house-autry products free item of equal or lesser price. coating, breader, batter, or mix, 10 to 12-oz or 2-lb pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/10000/014265-600x600-A.jpg" alt="House-Autry Products"></div>
     <div class="body">
       <h3>House-Autry Products</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.29</div>
       <p class="desc">Free item of equal or lesser price. Coating, Breader, Batter, or Mix, 10 to 12-oz or 2-lb pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="that&amp;#39;s it fruit bar free item of equal or lesser price. 5-ct. box ">
+<article class="card" data-dept="" data-watched="" data-search="that&amp;#39;s it fruit bar free item of equal or lesser price. 5-ct. box ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/315000/317872-600x600-A.jpg" alt="That&#39;s It Fruit Bar"></div>
     <div class="body">
       <h3>That&#39;s It Fruit Bar</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $8.29</div>
       <p class="desc">Free item of equal or lesser price. 5-ct. box</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="dodoni greek feta cheese free item of equal or lesser price. in brine, 200g pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="dodoni greek feta cheese free item of equal or lesser price. in brine, 200g pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/340000/342197-600x600-A.jpg" alt="Dodoni Greek Feta Cheese"></div>
     <div class="body">
       <h3>Dodoni Greek Feta Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $8.75</div>
       <p class="desc">Free item of equal or lesser price. In Brine, 200g pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="sol-ti superade free item of equal or lesser price. blue spirulina, chlorophyll aloe, or lavender magnesium, 14.9-oz cont. ">
+<article class="card" data-dept="" data-watched="" data-search="sol-ti superade free item of equal or lesser price. blue spirulina, chlorophyll aloe, or lavender magnesium, 14.9-oz cont. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/260000/261720-600x600-A.jpg" alt="Sol-ti Superade"></div>
     <div class="body">
       <h3>Sol-ti Superade</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.15</div>
       <p class="desc">Free item of equal or lesser price. Blue Spirulina, Chlorophyll Aloe, or Lavender Magnesium, 14.9-oz cont.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="statesboro cheese free item of equal or lesser price. 4-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="statesboro cheese free item of equal or lesser price. 4-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/320000/323138-600x600-A.jpg" alt="Statesboro Cheese"></div>
     <div class="body">
       <h3>Statesboro Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $4.99</div>
       <p class="desc">Free item of equal or lesser price. 4-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="beehive cheese free item of equal or lesser price. american artisan cheese maker, world cheese awards silver medal winner in 2021, located in the specialty cheese section, 4-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="beehive cheese free item of equal or lesser price. american artisan cheese maker, world cheese awards silver medal winner in 2021, located in the specialty cheese section, 4-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/280000/282355-600x600-A.jpg" alt="Beehive Cheese"></div>
     <div class="body">
       <h3>Beehive Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $7.19</div>
       <p class="desc">Free item of equal or lesser price. American Artisan Cheese Maker, World Cheese Awards Silver Medal Winner in 2021, Located in the Specialty Cheese Section, 4-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="Frozen Meat" data-search="barber foods stuffed chicken breasts free item of equal or lesser price. sold frozen, 10-oz pkg.; or tyson breaded &amp;amp; stuffed chicken, 10-oz pkg. frozen meat">
+<article class="card" data-dept="Frozen Meat" data-watched="" data-search="barber foods stuffed chicken breasts free item of equal or lesser price. sold frozen, 10-oz pkg.; or tyson breaded &amp;amp; stuffed chicken, 10-oz pkg. frozen meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Line_Item_09_80347_265004.jpg" alt="Barber Foods Stuffed Chicken Breasts"></div>
     <div class="body">
       <h3>Barber Foods Stuffed Chicken Breasts</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. Sold Frozen, 10-oz pkg.; or Tyson Breaded &amp; Stuffed Chicken, 10-oz pkg.</p>
       <div class="meta"><span class="dept">Frozen Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Novelties" data-search="ben &amp;amp; jerry&amp;#39;s ice cream bars free item of equal or lesser price. 4-ct. box novelties">
+<article class="card" data-dept="Novelties" data-watched="" data-search="ben &amp;amp; jerry&amp;#39;s ice cream bars free item of equal or lesser price. 4-ct. box novelties">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_012_336699_UL_263861.jpg" alt="Ben &amp; Jerry&#39;s Ice Cream Bars"></div>
     <div class="body">
       <h3>Ben &amp; Jerry&#39;s Ice Cream Bars</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 4-ct. box</p>
       <div class="meta"><span class="dept">Novelties</span></div>
     </div>
   </article>
-<article class="card" data-dept="Insecticide" data-search="bite me not! insect repellent spray lotion free item of equal or lesser price. repels mosquitoes, 7-oz cnstr. insecticide">
+<article class="card" data-dept="Insecticide" data-watched="" data-search="bite me not! insect repellent spray lotion free item of equal or lesser price. repels mosquitoes, 7-oz cnstr. insecticide">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Line_Item_05_323566_266654.jpg" alt="Bite Me Not! Insect Repellent Spray Lotion"></div>
     <div class="body">
       <h3>Bite Me Not! Insect Repellent Spray Lotion</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.49</div>
       <p class="desc">Free item of equal or lesser price. Repels Mosquitoes, 7-oz cnstr.</p>
       <div class="meta"><span class="dept">Insecticide</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cheese" data-search="borden cheese singles free item of equal or lesser price. or cheese melts, 12-oz pkg. cheese">
+<article class="card" data-dept="Cheese" data-watched="" data-search="borden cheese singles free item of equal or lesser price. or cheese melts, 12-oz pkg. cheese">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Line_Item_06_71543_258196.jpg" alt="Borden Cheese Singles"></div>
     <div class="body">
       <h3>Borden Cheese Singles</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. Or Cheese Melts, 12-oz pkg.</p>
       <div class="meta"><span class="dept">Cheese</span></div>
     </div>
   </article>
-<article class="card" data-dept="Peanut Butter &amp;amp; Jelly" data-search="braswell&amp;#39;s jelly, preserves, jam, marmalade, or butter free item of equal or lesser price. 9.5 to 10.5-oz jar peanut butter &amp;amp;amp; jelly">
+<article class="card" data-dept="Peanut Butter &amp; Jelly" data-watched="" data-search="braswell&amp;#39;s jelly, preserves, jam, marmalade, or butter free item of equal or lesser price. 9.5 to 10.5-oz jar peanut butter &amp;amp; jelly">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_05_304704_UL_261847.jpg" alt="Braswell&#39;s Jelly, Preserves, Jam, Marmalade, or Butter"></div>
     <div class="body">
       <h3>Braswell&#39;s Jelly, Preserves, Jam, Marmalade, or Butter</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 9.5 to 10.5-oz jar</p>
-      <div class="meta"><span class="dept">Peanut Butter &amp;amp; Jelly</span></div>
+      <div class="meta"><span class="dept">Peanut Butter &amp; Jelly</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cheese" data-search="cabot cheese bar free item of equal or lesser price. or shredded, 6 or 8-oz pkg. cheese">
+<article class="card" data-dept="Cheese" data-watched="" data-search="cabot cheese bar free item of equal or lesser price. or shredded, 6 or 8-oz pkg. cheese">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Line_Item_05_2236_258146.jpg" alt="Cabot Cheese Bar"></div>
     <div class="body">
       <h3>Cabot Cheese Bar</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.09</div>
       <p class="desc">Free item of equal or lesser price. Or Shredded, 6 or 8-oz pkg.</p>
       <div class="meta"><span class="dept">Cheese</span></div>
     </div>
   </article>
-<article class="card" data-dept="Coffee &amp;amp; Tea" data-search="caf&amp;amp;eacute; bustelo k-cup coffee free item of equal or lesser price. 10 or 12-ct. box or ground coffee, 10 or 11-oz bag coffee &amp;amp;amp; tea">
-    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_09_202150_262528.jpg" alt="Caf&amp;eacute; Bustelo K-Cup Coffee"></div>
+<article class="card" data-dept="Coffee &amp; Tea" data-watched="" data-search="café bustelo k-cup coffee free item of equal or lesser price. 10 or 12-ct. box or ground coffee, 10 or 11-oz bag coffee &amp;amp; tea">
+    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_09_202150_262528.jpg" alt="Café Bustelo K-Cup Coffee"></div>
     <div class="body">
-      <h3>Caf&amp;eacute; Bustelo K-Cup Coffee</h3>
+      <h3>Café Bustelo K-Cup Coffee</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $11.99</div>
       <p class="desc">Free item of equal or lesser price. 10 or 12-ct. box or Ground Coffee, 10 or 11-oz bag</p>
-      <div class="meta"><span class="dept">Coffee &amp;amp; Tea</span></div>
+      <div class="meta"><span class="dept">Coffee &amp; Tea</span></div>
     </div>
   </article>
-<article class="card" data-dept="Fruit Drinks" data-search="caprisun hydrate drinks free item of equal or lesser price. 10-pk. 6-oz box fruit drinks">
+<article class="card" data-dept="Fruit Drinks" data-watched="" data-search="caprisun hydrate drinks free item of equal or lesser price. 10-pk. 6-oz box fruit drinks">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_09-1_Feature_01_343571_252802.jpg" alt="Caprisun Hydrate Drinks"></div>
     <div class="body">
       <h3>Caprisun Hydrate Drinks</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">new, SAVE UP TO $4.49</div>
       <p class="desc">Free item of equal or lesser price. 10-pk. 6-oz box</p>
       <div class="meta"><span class="dept">Fruit Drinks</span></div>
     </div>
   </article>
-<article class="card" data-dept="Household Cleaners" data-search="carbona laundry products free item of equal or lesser price. 1.7 or 8.4-oz or 15 or 30-ct. pkg. household cleaners">
+<article class="card" data-dept="Household Cleaners" data-watched="" data-search="carbona laundry products free item of equal or lesser price. 1.7 or 8.4-oz or 15 or 30-ct. pkg. household cleaners">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Feature_07_963564_UL_266305.jpg" alt="Carbona Laundry Products"></div>
     <div class="body">
       <h3>Carbona Laundry Products</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 1.7 or 8.4-oz or 15 or 30-ct. pkg.</p>
       <div class="meta"><span class="dept">Household Cleaners</span></div>
     </div>
   </article>
-<article class="card" data-dept="Crackers" data-search="cheez-it baked snack crackers free item of equal or lesser price. or snack mix, 6.5 to 12.4-oz box  (excluding items marked family size and gluten free) crackers">
+<article class="card" data-dept="Crackers" data-watched="" data-search="cheez-it baked snack crackers free item of equal or lesser price. or snack mix, 6.5 to 12.4-oz box  (excluding items marked family size and gluten free) crackers">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Line_Item_07_11069_263610.jpg" alt="Cheez-It Baked Snack Crackers"></div>
     <div class="body">
       <h3>Cheez-It Baked Snack Crackers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.07</div>
       <p class="desc">Free item of equal or lesser price. Or Snack Mix, 6.5 to 12.4-oz box  (Excluding Items Marked Family Size and Gluten Free)</p>
       <div class="meta"><span class="dept">Crackers</span></div>
     </div>
   </article>
-<article class="card" data-dept="Soft Drinks" data-search="6-pack coca-cola products free item of equal or lesser price. 8-oz bot. soft drinks">
+<article class="card" data-dept="Soft Drinks" data-watched="" data-search="6-pack coca-cola products free item of equal or lesser price. 8-oz bot. soft drinks">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_6_Pack_Coca_Cola_8_oz.jpg" alt="6-Pack Coca-Cola Products"></div>
     <div class="body">
       <h3>6-Pack Coca-Cola Products</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 8-oz bot.</p>
       <div class="meta"><span class="dept">Soft Drinks</span></div>
     </div>
   </article>
-<article class="card" data-dept="Desserts" data-search="cool whip whipped topping free item of equal or lesser price. 16-oz pkg. desserts">
+<article class="card" data-dept="Desserts" data-watched="" data-search="cool whip whipped topping free item of equal or lesser price. 16-oz pkg. desserts">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_05_41614_UL_264261.jpg" alt="Cool Whip Whipped Topping"></div>
     <div class="body">
       <h3>Cool Whip Whipped Topping</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 16-oz pkg.</p>
       <div class="meta"><span class="dept">Desserts</span></div>
     </div>
   </article>
-<article class="card" data-dept="Deli" data-search="crunchmaster crackers free item of equal or lesser price. 3.54 or 4-oz pkg. deli">
+<article class="card" data-dept="Deli" data-watched="" data-search="crunchmaster crackers free item of equal or lesser price. 3.54 or 4-oz pkg. deli">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_08_Feature_022_153752_UL_259997.jpg" alt="Crunchmaster Crackers"></div>
     <div class="body">
       <h3>Crunchmaster Crackers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 3.54 or 4-oz pkg.</p>
       <div class="meta"><span class="dept">Deli</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cake Mixes" data-search="duncan hines frosting free item of equal or lesser price. 16-oz tub cake mixes">
+<article class="card" data-dept="Cake Mixes" data-watched="" data-search="duncan hines frosting free item of equal or lesser price. 16-oz tub cake mixes">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_06_7399_UL_261941.jpg" alt="Duncan Hines Frosting"></div>
     <div class="body">
       <h3>Duncan Hines Frosting</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 16-oz tub</p>
       <div class="meta"><span class="dept">Cake Mixes</span></div>
     </div>
   </article>
-<article class="card" data-dept="Pet Food" data-search="evolve grain-free dog food free item of equal or lesser price.  3.5 or 4-lb bag pet food">
+<article class="card" data-dept="Pet Food" data-watched="" data-search="evolve grain-free dog food free item of equal or lesser price.  3.5 or 4-lb bag pet food">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_17_Feature_02_322171_UL_266805.jpg" alt="Evolve Grain-Free Dog Food"></div>
     <div class="body">
       <h3>Evolve Grain-Free Dog Food</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price.  3.5 or 4-lb bag</p>
       <div class="meta"><span class="dept">Pet Food</span></div>
     </div>
   </article>
-<article class="card" data-dept="Water" data-search="fiji natural artesian water free item of equal or lesser price. 6-pk. 500-ml bot. water">
+<article class="card" data-dept="Water" data-watched="" data-search="fiji natural artesian water free item of equal or lesser price. 6-pk. 500-ml bot. water">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Fiji_Water_6_Pack_500_mL.jpg" alt="Fiji Natural Artesian Water"></div>
     <div class="body">
       <h3>Fiji Natural Artesian Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 6-pk. 500-mL bot.</p>
       <div class="meta"><span class="dept">Water</span></div>
     </div>
   </article>
-<article class="card" data-dept="Potato Chips" data-search="frito lay party size snacks free item of equal or lesser price. 8.25 to 17-oz bag; or tostitos or lay&amp;#39;s dip, 15 or 15.75-oz pkg. potato chips">
+<article class="card" data-dept="Potato Chips" data-watched="" data-search="frito lay party size snacks free item of equal or lesser price. 8.25 to 17-oz bag; or tostitos or lay&amp;#39;s dip, 15 or 15.75-oz pkg. potato chips">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_01_Feature_08_275774_255287.jpg" alt="Frito Lay Party Size Snacks"></div>
     <div class="body">
       <h3>Frito Lay Party Size Snacks</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $7.29</div>
       <p class="desc">Free item of equal or lesser price. 8.25 to 17-oz bag; or Tostitos or Lay&#39;s Dip, 15 or 15.75-oz pkg.</p>
       <div class="meta"><span class="dept">Potato Chips</span></div>
     </div>
   </article>
-<article class="card" data-dept="Popcorn" data-search="g.h. cretors popcorn free item of equal or lesser price. 4.5 to 8-oz pkg. popcorn">
+<article class="card" data-dept="Popcorn" data-watched="" data-search="g.h. cretors popcorn free item of equal or lesser price. 4.5 to 8-oz pkg. popcorn">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Line_Item_04_285657_263460.jpg" alt="G.H. Cretors Popcorn"></div>
     <div class="body">
       <h3>G.H. Cretors Popcorn</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.99</div>
       <p class="desc">Free item of equal or lesser price. 4.5 to 8-oz pkg.</p>
       <div class="meta"><span class="dept">Popcorn</span></div>
     </div>
   </article>
-<article class="card" data-dept="Water" data-search="glac&amp;amp;eacute;au vitaminwater or propel electrolyte water free item of equal or lesser price. 20-oz bot. water">
-    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Feature_06_15384_UL_263067.jpg" alt="Glac&amp;eacute;au Vitaminwater or Propel Electrolyte Water"></div>
+<article class="card" data-dept="Water" data-watched="" data-search="glacéau vitaminwater or propel electrolyte water free item of equal or lesser price. 20-oz bot. water">
+    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Feature_06_15384_UL_263067.jpg" alt="Glacéau Vitaminwater or Propel Electrolyte Water"></div>
     <div class="body">
-      <h3>Glac&amp;eacute;au Vitaminwater or Propel Electrolyte Water</h3>
+      <h3>Glacéau Vitaminwater or Propel Electrolyte Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 20-oz bot.</p>
       <div class="meta"><span class="dept">Water</span></div>
     </div>
   </article>
-<article class="card" data-dept="Plastic Bags" data-search="glad cling&amp;#39;n seal clear food wrap free item of equal or lesser price. 200-sq ft box; or press&amp;#39;n seal multipurpose sealing wrap, 70-sq ft box plastic bags">
+<article class="card" data-dept="Plastic Bags" data-watched="" data-search="glad cling&amp;#39;n seal clear food wrap free item of equal or lesser price. 200-sq ft box; or press&amp;#39;n seal multipurpose sealing wrap, 70-sq ft box plastic bags">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Line_Item_01_87339_266454.jpg" alt="Glad Cling&#39;N Seal Clear Food Wrap"></div>
     <div class="body">
       <h3>Glad Cling&#39;N Seal Clear Food Wrap</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.49</div>
       <p class="desc">Free item of equal or lesser price. 200-sq ft box; or Press&#39;N Seal Multipurpose Sealing Wrap, 70-sq ft box</p>
       <div class="meta"><span class="dept">Plastic Bags</span></div>
     </div>
   </article>
-<article class="card" data-dept="Condiments &amp;amp; Sauces" data-search="heinz tomato ketchup free item of equal or lesser price. 31 or 32-oz bot. condiments &amp;amp;amp; sauces">
+<article class="card" data-dept="Condiments &amp; Sauces" data-watched="" data-search="heinz tomato ketchup free item of equal or lesser price. 31 or 32-oz bot. condiments &amp;amp; sauces">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Heinz_Ketchup_32oz.jpg" alt="Heinz Tomato Ketchup"></div>
     <div class="body">
       <h3>Heinz Tomato Ketchup</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 31 or 32-oz bot.</p>
-      <div class="meta"><span class="dept">Condiments &amp;amp; Sauces</span></div>
+      <div class="meta"><span class="dept">Condiments &amp; Sauces</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="hillshire farm smoked sausage free item of equal or lesser price. or polska kielbasa, 12 to 14-oz pkg. meat">
+<article class="card" data-dept="Meat" data-watched="" data-search="hillshire farm smoked sausage free item of equal or lesser price. or polska kielbasa, 12 to 14-oz pkg. meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Line_Item_01_784115_257946.jpg" alt="Hillshire Farm Smoked Sausage"></div>
     <div class="body">
       <h3>Hillshire Farm Smoked Sausage</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.49</div>
       <p class="desc">Free item of equal or lesser price. Or Polska Kielbasa, 12 to 14-oz pkg.</p>
       <div class="meta"><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Pizza" data-search="home run inn pizza free item of equal or lesser price. chicago&amp;#39;s premium pizzeria, 26 to 31-oz box pizza">
+<article class="card" data-dept="Pizza" data-watched="" data-search="home run inn pizza free item of equal or lesser price. chicago&amp;#39;s premium pizzeria, 26 to 31-oz box pizza">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Line_Item_03_181675_264704.jpg" alt="Home Run Inn Pizza"></div>
     <div class="body">
       <h3>Home Run Inn Pizza</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $10.54</div>
       <p class="desc">Free item of equal or lesser price. Chicago&#39;s Premium Pizzeria, 26 to 31-oz box</p>
       <div class="meta"><span class="dept">Pizza</span></div>
     </div>
   </article>
-<article class="card" data-dept="" data-search="jarlsberg cheese free item of equal or lesser price. protein lite, 6-oz pkg. ">
+<article class="card" data-dept="" data-watched="" data-search="jarlsberg cheese free item of equal or lesser price. protein lite, 6-oz pkg. ">
     <div class="img-wrap"><img loading="lazy" src="https://images.publixcdn.com/pct/images/products/340000/343386-600x600-A.jpg" alt="Jarlsberg Cheese"></div>
     <div class="body">
       <h3>Jarlsberg Cheese</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save Up To $6.19</div>
       <p class="desc">Free item of equal or lesser price. Protein Lite, 6-oz pkg.</p>
       <div class="meta"></div>
     </div>
   </article>
-<article class="card" data-dept="Cereal" data-search="kellogg&amp;#39;s frosted flakes family size cereal free item of equal or lesser price. 21.7-oz, or apple jacks or froot loops, 16.6-oz box cereal">
+<article class="card" data-dept="Cereal" data-watched="" data-search="kellogg&amp;#39;s frosted flakes family size cereal free item of equal or lesser price. 21.7-oz, or apple jacks or froot loops, 16.6-oz box cereal">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_06_15912_262378.jpg" alt="Kellogg&#39;s Frosted Flakes Family Size Cereal"></div>
     <div class="body">
       <h3>Kellogg&#39;s Frosted Flakes Family Size Cereal</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $7.99</div>
       <p class="desc">Free item of equal or lesser price. 21.7-oz, or Apple Jacks or Froot Loops, 16.6-oz box</p>
       <div class="meta"><span class="dept">Cereal</span></div>
     </div>
   </article>
-<article class="card" data-dept="Ice Cream" data-search="kinder bueno frozen dairy dessert or nutella ice cream free item of equal or lesser price. 14-oz ctn. ice cream">
+<article class="card" data-dept="Ice Cream" data-watched="" data-search="kinder bueno frozen dairy dessert or nutella ice cream free item of equal or lesser price. 14-oz ctn. ice cream">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_011_337539_UL_263761.jpg" alt="Kinder Bueno Frozen Dairy Dessert or Nutella Ice Cream"></div>
     <div class="body">
       <h3>Kinder Bueno Frozen Dairy Dessert or Nutella Ice Cream</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 14-oz ctn.</p>
       <div class="meta"><span class="dept">Ice Cream</span></div>
     </div>
   </article>
-<article class="card" data-dept="Soft Drinks" data-search="lipton tea free item of equal or lesser price. 12-pk. 16.9-oz bot. soft drinks">
+<article class="card" data-dept="Soft Drinks" data-watched="" data-search="lipton tea free item of equal or lesser price. 12-pk. 16.9-oz bot. soft drinks">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Feature_07_311813_UL_263167.jpg" alt="Lipton Tea"></div>
     <div class="body">
       <h3>Lipton Tea</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 12-pk. 16.9-oz bot.</p>
       <div class="meta"><span class="dept">Soft Drinks</span></div>
     </div>
   </article>
-<article class="card" data-dept="Flavored Water Enhancers" data-search="liquid i.v. hydration multiplier free item of equal or lesser price. or energy multiplier or water enhancer, 6-ct. ctn. flavored water enhancers">
+<article class="card" data-dept="Flavored Water Enhancers" data-watched="" data-search="liquid i.v. hydration multiplier free item of equal or lesser price. or energy multiplier or water enhancer, 6-ct. ctn. flavored water enhancers">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Line_Item_09_342180_263710.jpg" alt="Liquid I.V. Hydration Multiplier"></div>
     <div class="body">
       <h3>Liquid I.V. Hydration Multiplier</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $14.99</div>
       <p class="desc">Free item of equal or lesser price. Or Energy Multiplier or Water Enhancer, 6-ct. ctn.</p>
       <div class="meta"><span class="dept">Flavored Water Enhancers</span></div>
     </div>
   </article>
-<article class="card" data-dept="Pickles &amp;amp; Olives" data-search="mt. olive relish free item of equal or lesser price. or pickles, okra, or salad sweet cubes, 16-oz jar  (excluding organic and simply vidalia) pickles &amp;amp;amp; olives">
+<article class="card" data-dept="Pickles &amp; Olives" data-watched="" data-search="mt. olive relish free item of equal or lesser price. or pickles, okra, or salad sweet cubes, 16-oz jar  (excluding organic and simply vidalia) pickles &amp;amp; olives">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_08_2555_262478.jpg" alt="Mt. Olive Relish"></div>
     <div class="body">
       <h3>Mt. Olive Relish</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.49</div>
       <p class="desc">Free item of equal or lesser price. Or Pickles, Okra, or Salad Sweet Cubes, 16-oz jar  (Excluding Organic and Simply Vidalia)</p>
-      <div class="meta"><span class="dept">Pickles &amp;amp; Olives</span></div>
+      <div class="meta"><span class="dept">Pickles &amp; Olives</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cereal" data-search="nature valley granola free item of equal or lesser price. 11 to 17-oz bag cereal">
+<article class="card" data-dept="Cereal" data-watched="" data-search="nature valley granola free item of equal or lesser price. 11 to 17-oz bag cereal">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_022_197278_UL_261547.jpg" alt="Nature Valley Granola"></div>
     <div class="body">
       <h3>Nature Valley Granola</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 11 to 17-oz bag</p>
       <div class="meta"><span class="dept">Cereal</span></div>
     </div>
   </article>
-<article class="card" data-dept="Cereal" data-search="nature valley granola or wafer bars, or breakfast biscuits free item of equal or lesser price. 13 to 17.88-oz box cereal">
+<article class="card" data-dept="Cereal" data-watched="" data-search="nature valley granola or wafer bars, or breakfast biscuits free item of equal or lesser price. 13 to 17.88-oz box cereal">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_021_20441_UL_261447.jpg" alt="Nature Valley Granola or Wafer Bars, or Breakfast Biscuits"></div>
     <div class="body">
       <h3>Nature Valley Granola or Wafer Bars, or Breakfast Biscuits</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">Save $0.50</div>
       <p class="desc">Free item of equal or lesser price. 13 to 17.88-oz box</p>
       <div class="meta"><span class="dept">Cereal</span></div>
     </div>
   </article>
-<article class="card" data-dept="Bread" data-search="nature&amp;#39;s own hamburger buns free item of equal or lesser price. or hot dog, 8-ct. 15 or 16-oz bag bread">
+<article class="card" data-dept="Bread" data-watched="" data-search="nature&amp;#39;s own hamburger buns free item of equal or lesser price. or hot dog, 8-ct. 15 or 16-oz bag bread">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Natures_Own_Butter_Buns_16oz.jpg" alt="Nature&#39;s Own Hamburger Buns"></div>
     <div class="body">
       <h3>Nature&#39;s Own Hamburger Buns</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.59</div>
       <p class="desc">Free item of equal or lesser price. Or Hot Dog, 8-ct. 15 or 16-oz bag</p>
       <div class="meta"><span class="dept">Bread</span></div>
     </div>
   </article>
-<article class="card" data-dept="Juice" data-search="nature&amp;#39;s premium fruit bites free item of equal or lesser price. with pearls of frozen juice, 9.2-oz cup; or sambazon organic acai superfruit packs, 14 or 14.1-oz bag juice">
+<article class="card" data-dept="Juice" data-watched="" data-search="nature&amp;#39;s premium fruit bites free item of equal or lesser price. with pearls of frozen juice, 9.2-oz cup; or sambazon organic acai superfruit packs, 14 or 14.1-oz bag juice">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Line_Item_06_919902_264854.jpg" alt="Nature&#39;s Premium Fruit Bites"></div>
     <div class="body">
       <h3>Nature&#39;s Premium Fruit Bites</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.89</div>
       <p class="desc">Free item of equal or lesser price. With Pearls of Frozen Juice, 9.2-oz cup; or Sambazon Organic Acai Superfruit Packs, 14 or 14.1-oz bag</p>
       <div class="meta"><span class="dept">Juice</span></div>
     </div>
   </article>
-<article class="card" data-dept="Vitamins" data-search="nature&amp;#39;s truth supplements free item of equal or lesser price. or vitamins, 2 to 5.29-oz or 30 to 240-ct. pkg. vitamins">
+<article class="card" data-dept="Vitamins" data-watched="" data-search="nature&amp;#39;s truth supplements free item of equal or lesser price. or vitamins, 2 to 5.29-oz or 30 to 240-ct. pkg. vitamins">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_15_Line_Item_06_290788_265804.jpg" alt="Nature&#39;s Truth Supplements"></div>
     <div class="body">
       <h3>Nature&#39;s Truth Supplements</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $45.99</div>
       <p class="desc">Free item of equal or lesser price. Or Vitamins, 2 to 5.29-oz or 30 to 240-ct. pkg.</p>
       <div class="meta"><span class="dept">Vitamins</span></div>
     </div>
   </article>
-<article class="card" data-dept="Peanut Butter &amp;amp; Jelly" data-search="nutella hazelnut spread free item of equal or lesser price. with cocoa or peanut spread, 13-oz jar peanut butter &amp;amp;amp; jelly">
+<article class="card" data-dept="Peanut Butter &amp; Jelly" data-watched="" data-search="nutella hazelnut spread free item of equal or lesser price. with cocoa or peanut spread, 13-oz jar peanut butter &amp;amp; jelly">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Nutella_Nut_Spread_13oz.jpg" alt="Nutella Hazelnut Spread"></div>
     <div class="body">
       <h3>Nutella Hazelnut Spread</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. With Cocoa or Peanut Spread, 13-oz jar</p>
-      <div class="meta"><span class="dept">Peanut Butter &amp;amp; Jelly</span></div>
+      <div class="meta"><span class="dept">Peanut Butter &amp; Jelly</span></div>
     </div>
   </article>
-<article class="card" data-dept="International Foods - Mexican" data-search="old el paso taco shells free item of equal or lesser price. 8 to 18-ct. box, tortillas or tortilla bowl, 8 or 10-ct. pkg., or enchilada sauce, 10-oz can (excluding old el paso kit) international foods - mexican">
+<article class="card" data-dept="International Foods - Mexican" data-watched="" data-search="old el paso taco shells free item of equal or lesser price. 8 to 18-ct. box, tortillas or tortilla bowl, 8 or 10-ct. pkg., or enchilada sauce, 10-oz can (excluding old el paso kit) international foods - mexican">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_07_905231_262428.jpg" alt="Old El Paso Taco Shells"></div>
     <div class="body">
       <h3>Old El Paso Taco Shells</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. 8 to 18-ct. box, Tortillas or Tortilla Bowl, 8 or 10-ct. pkg., or Enchilada Sauce, 10-oz can (Excluding Old El Paso Kit)</p>
       <div class="meta"><span class="dept">International Foods - Mexican</span></div>
     </div>
   </article>
-<article class="card" data-dept="Soft Drinks" data-search="4-pack olipop prebiotic soda free item of equal or lesser price. 12-oz can soft drinks">
+<article class="card" data-dept="Soft Drinks" data-watched="" data-search="4-pack olipop prebiotic soda free item of equal or lesser price. 12-oz can soft drinks">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Line_Item_06_319419_263560.jpg" alt="4-Pack Olipop Prebiotic Soda"></div>
     <div class="body">
       <h3>4-Pack Olipop Prebiotic Soda</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.99</div>
       <p class="desc">Free item of equal or lesser price. 12-oz can</p>
       <div class="meta"><span class="dept">Soft Drinks</span></div>
     </div>
   </article>
-<article class="card" data-dept="Baby Food" data-search="once upon a farm tractor wheels bars, veggie puffs, or melts free item of equal or lesser price. 1 or 1.5-oz or 5-pk. .67-oz pkg. baby food">
+<article class="card" data-dept="Baby Food" data-watched="" data-search="once upon a farm tractor wheels bars, veggie puffs, or melts free item of equal or lesser price. 1 or 1.5-oz or 5-pk. .67-oz pkg. baby food">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_17_Feature_08_330732_UL_267205.jpg" alt="Once Upon a Farm Tractor Wheels Bars, Veggie Puffs, or Melts"></div>
     <div class="body">
       <h3>Once Upon a Farm Tractor Wheels Bars, Veggie Puffs, or Melts</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 1 or 1.5-oz or 5-pk. .67-oz pkg.</p>
       <div class="meta"><span class="dept">Baby Food</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="oscar mayer bacon free item of equal or lesser price. 12 or 16-oz pkg. meat">
+<article class="card" data-dept="Meat" data-watched="" data-search="oscar mayer bacon free item of equal or lesser price. 12 or 16-oz pkg. meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Line_Item_03_70064_258046.jpg" alt="Oscar Mayer Bacon"></div>
     <div class="body">
       <h3>Oscar Mayer Bacon</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $9.59</div>
       <p class="desc">Free item of equal or lesser price. 12 or 16-oz pkg.</p>
       <div class="meta"><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="oscar mayer franks free item of equal or lesser price. or wieners or smokies sausage, 14 to 16-oz pkg.; or stahl-meyer hot dogs, 8-ct. 12-oz pkg. meat">
+<article class="card" data-dept="Meat" data-watched="" data-search="oscar mayer franks free item of equal or lesser price. or wieners or smokies sausage, 14 to 16-oz pkg.; or stahl-meyer hot dogs, 8-ct. 12-oz pkg. meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Line_Item_02_70047_257996.jpg" alt="Oscar Mayer Franks"></div>
     <div class="body">
       <h3>Oscar Mayer Franks</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $8.89</div>
       <p class="desc">Free item of equal or lesser price. Or Wieners or Smokies Sausage, 14 to 16-oz pkg.; or Stahl-Meyer Hot Dogs, 8-ct. 12-oz pkg.</p>
       <div class="meta"><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Produce" data-search="dragon fruit free item of equal or lesser price. produce">
+<article class="card" data-dept="Produce" data-watched="" data-search="dragon fruit free item of equal or lesser price. produce">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_06_Feature_06_24049_UL_258797.jpg" alt="Dragon Fruit"></div>
     <div class="body">
       <h3>Dragon Fruit</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price.</p>
       <div class="meta"><span class="dept">Produce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meatless" data-search="actual veggies veggie burger free item of equal or lesser price. black bean, mushroom quinoa, california garden, or sweet potato, 12-oz box meatless">
+<article class="card" data-dept="Meatless" data-watched="" data-search="actual veggies veggie burger free item of equal or lesser price. black bean, mushroom quinoa, california garden, or sweet potato, 12-oz box meatless">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Line_Item_05_333165_264804.jpg" alt="Actual Veggies Veggie Burger"></div>
     <div class="body">
       <h3>Actual Veggies Veggie Burger</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.99</div>
       <p class="desc">Free item of equal or lesser price. Black Bean, Mushroom Quinoa, California Garden, or Sweet Potato, 12-oz box</p>
       <div class="meta"><span class="dept">Meatless</span></div>
     </div>
   </article>
-<article class="card" data-dept="Milk" data-search="malk organic almondmilk free item of equal or lesser price. unsweetened or vanilla; or original or vanilla oatmilk, 28-oz bot. milk">
+<article class="card" data-dept="Milk" data-watched="" data-search="malk organic almondmilk free item of equal or lesser price. unsweetened or vanilla; or original or vanilla oatmilk, 28-oz bot. milk">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Line_Item_01_278676_264604.jpg" alt="Malk Organic Almondmilk"></div>
     <div class="body">
       <h3>Malk Organic Almondmilk</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.99</div>
       <p class="desc">Free item of equal or lesser price. Unsweetened or Vanilla; or Original or Vanilla Oatmilk, 28-oz bot.</p>
       <div class="meta"><span class="dept">Milk</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meatless" data-search="tattooed chef entr&amp;amp;eacute;es free item of equal or lesser price. 8 or 9-oz box meatless">
-    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_09-1_Feature_03_343331_252902.jpg" alt="Tattooed Chef Entr&amp;eacute;es"></div>
+<article class="card" data-dept="Meatless" data-watched="" data-search="tattooed chef entrées free item of equal or lesser price. 8 or 9-oz box meatless">
+    <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Flex_Area_09-1_Feature_03_343331_252902.jpg" alt="Tattooed Chef Entrées"></div>
     <div class="body">
-      <h3>Tattooed Chef Entr&amp;eacute;es</h3>
+      <h3>Tattooed Chef Entrées</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">new, SAVE UP TO $5.99</div>
       <p class="desc">Free item of equal or lesser price. 8 or 9-oz box</p>
       <div class="meta"><span class="dept">Meatless</span></div>
     </div>
   </article>
-<article class="card" data-dept="Meat" data-search="demakes bros. skewers free item of equal or lesser price. beef or chicken, 16-oz pkg. meat">
+<article class="card" data-dept="Meat" data-watched="" data-search="demakes bros. skewers free item of equal or lesser price. beef or chicken, 16-oz pkg. meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_04_Line_Item_05_343387_256996.jpg" alt="Demakes Bros. Skewers"></div>
     <div class="body">
       <h3>Demakes Bros. Skewers</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $14.99</div>
       <p class="desc">Free item of equal or lesser price. Beef or Chicken, 16-oz pkg.</p>
       <div class="meta"><span class="dept">Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Novelties" data-search="the original bomb pop, or tr&amp;amp;uuml; fr&amp;amp;uuml; chocolate covered frozen fruit free item of equal or lesser price. 12-ct.; or 8-oz bag novelties">
+<article class="card" data-dept="Novelties" data-watched="" data-search="the original bomb pop, or tr&amp;amp;uuml; fr&amp;amp;uuml; chocolate covered frozen fruit free item of equal or lesser price. 12-ct.; or 8-oz bag novelties">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_The_Original_Bomb_Pop_12_ct.jpg" alt="The Original Bomb Pop, or Tr&amp;uuml; Fr&amp;uuml; Chocolate Covered Frozen Fruit"></div>
     <div class="body">
       <h3>The Original Bomb Pop, or Tr&amp;uuml; Fr&amp;uuml; Chocolate Covered Frozen Fruit</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 12-ct.; or 8-oz bag</p>
       <div class="meta"><span class="dept">Novelties</span></div>
     </div>
   </article>
-<article class="card" data-dept="Dinners" data-search="legacy foods skillet meals free item of equal or lesser price. shrimp, 21 or 26-oz bag dinners">
+<article class="card" data-dept="Dinners" data-watched="" data-search="legacy foods skillet meals free item of equal or lesser price. shrimp, 21 or 26-oz bag dinners">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Line_Item_04_281438_264754.jpg" alt="Legacy Foods Skillet Meals"></div>
     <div class="body">
       <h3>Legacy Foods Skillet Meals</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $12.69</div>
       <p class="desc">Free item of equal or lesser price. Shrimp, 21 or 26-oz bag</p>
       <div class="meta"><span class="dept">Dinners</span></div>
     </div>
   </article>
-<article class="card" data-dept="Popcorn" data-search="candy pop, cookie pop or pop popcorn free item of equal or lesser price. 5.25-oz bag popcorn">
+<article class="card" data-dept="Popcorn" data-watched="" data-search="candy pop, cookie pop or pop popcorn free item of equal or lesser price. 5.25-oz bag popcorn">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_01_Feature_08_273403_UL_255288.jpg" alt="Candy Pop, Cookie Pop or Pop Popcorn"></div>
     <div class="body">
       <h3>Candy Pop, Cookie Pop or Pop Popcorn</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 5.25-oz bag</p>
       <div class="meta"><span class="dept">Popcorn</span></div>
     </div>
   </article>
-<article class="card" data-dept="Diapers" data-search="pampers splashers swim pants free item of equal or lesser price. 10 to 12-ct. pkg. diapers">
+<article class="card" data-dept="Diapers" data-watched="" data-search="pampers splashers swim pants free item of equal or lesser price. 10 to 12-ct. pkg. diapers">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_a1_Pampers_Splashers_Swim_Diapers.jpg" alt="Pampers Splashers Swim Pants"></div>
     <div class="body">
       <h3>Pampers Splashers Swim Pants</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 10 to 12-ct. pkg.</p>
       <div class="meta"><span class="dept">Diapers</span></div>
     </div>
   </article>
-<article class="card" data-dept="Frozen Meat" data-search="prairie fresh pork loin back ribs, honey bbq seasoned free item of equal or lesser price. whole in the bag, frozen frozen meat">
+<article class="card" data-dept="Frozen Meat" data-watched="" data-search="prairie fresh pork loin back ribs, honey bbq seasoned free item of equal or lesser price. whole in the bag, frozen frozen meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_05_Feature_03_93779_UL_257547.jpg" alt="Prairie Fresh Pork Loin Back Ribs, Honey BBQ Seasoned"></div>
     <div class="body">
       <h3>Prairie Fresh Pork Loin Back Ribs, Honey BBQ Seasoned</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. Whole In the Bag, Frozen</p>
       <div class="meta"><span class="dept">Frozen Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Milk" data-search="promised land milk free item of equal or lesser price. 32-oz bot. milk">
+<article class="card" data-dept="Milk" data-watched="" data-search="promised land milk free item of equal or lesser price. 32-oz bot. milk">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_02_151407_UL_263961.jpg" alt="Promised Land Milk"></div>
     <div class="body">
       <h3>Promised Land Milk</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 32-oz bot.</p>
       <div class="meta"><span class="dept">Milk</span></div>
     </div>
   </article>
-<article class="card" data-dept="Produce" data-search="publix red seedless watermelon chunks free item of equal or lesser price. made fresh in-store daily, small, medium, or large size cont. produce">
+<article class="card" data-dept="Produce" data-watched="" data-search="publix red seedless watermelon chunks free item of equal or lesser price. made fresh in-store daily, small, medium, or large size cont. produce">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_01_Feature_02_25573_254862.jpg" alt="Publix Red Seedless Watermelon Chunks"></div>
     <div class="body">
       <h3>Publix Red Seedless Watermelon Chunks</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.99 LB</div>
       <p class="desc">Free item of equal or lesser price. Made Fresh In-Store Daily, Small, Medium, or Large Size cont.</p>
       <div class="meta"><span class="dept">Produce</span></div>
     </div>
   </article>
-<article class="card" data-dept="Frozen Meat" data-search="publix st. louis style pork spareribs free item of equal or lesser price. whole, in-the-bag, frozen frozen meat">
+<article class="card" data-dept="Frozen Meat" data-watched="" data-search="publix st. louis style pork spareribs free item of equal or lesser price. whole, in-the-bag, frozen frozen meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_01_Feature_05_91029_UL_255063_PackageShot.jpg" alt="Publix St. Louis Style Pork Spareribs"></div>
     <div class="body">
       <h3>Publix St. Louis Style Pork Spareribs</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $5.99 LB</div>
       <p class="desc">Free item of equal or lesser price. Whole, In-the-Bag, Frozen</p>
       <div class="meta"><span class="dept">Frozen Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Frozen Meat" data-search="publix pork loin back ribs free item of equal or lesser price. whole, in-the-bag, frozen frozen meat">
+<article class="card" data-dept="Frozen Meat" data-watched="" data-search="publix pork loin back ribs free item of equal or lesser price. whole, in-the-bag, frozen frozen meat">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_01_Feature_05_91029_UL_255063.jpg" alt="Publix Pork Loin Back Ribs"></div>
     <div class="body">
       <h3>Publix Pork Loin Back Ribs</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. Whole, In-the-Bag, Frozen</p>
       <div class="meta"><span class="dept">Frozen Meat</span></div>
     </div>
   </article>
-<article class="card" data-dept="Water" data-search="publix alkaline water free item of equal or lesser price. 1.5-l bot. water">
+<article class="card" data-dept="Water" data-watched="" data-search="publix alkaline water free item of equal or lesser price. 1.5-l bot. water">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_18_Line_Item_02_298838_267654.jpg" alt="Publix Alkaline Water"></div>
     <div class="body">
       <h3>Publix Alkaline Water</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $1.99</div>
       <p class="desc">Free item of equal or lesser price. 1.5-L bot.</p>
       <div class="meta"><span class="dept">Water</span></div>
     </div>
   </article>
-<article class="card" data-dept="Pet Food" data-search="purina cat chow or kitten chow cat food free item of equal or lesser price. 3.15-lb bag pet food">
+<article class="card" data-dept="Pet Food" data-watched="" data-search="purina cat chow or kitten chow cat food free item of equal or lesser price. 3.15-lb bag pet food">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_17_Feature_04_86356_UL_266955.jpg" alt="Purina Cat Chow or Kitten Chow Cat Food"></div>
     <div class="body">
       <h3>Purina Cat Chow or Kitten Chow Cat Food</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 3.15-lb bag</p>
       <div class="meta"><span class="dept">Pet Food</span></div>
     </div>
   </article>
-<article class="card" data-dept="Insecticide" data-search="raid fly ribbon free item of equal or lesser price. traps flies, gnats, moths &amp;amp; other flying insects, 1-ct. pkg.; or fruit fly trap, apple, 2-ct. pkg. insecticide">
+<article class="card" data-dept="Insecticide" data-watched="" data-search="raid fly ribbon free item of equal or lesser price. traps flies, gnats, moths &amp;amp; other flying insects, 1-ct. pkg.; or fruit fly trap, apple, 2-ct. pkg. insecticide">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Line_Item_06_952568_266704.jpg" alt="Raid Fly Ribbon"></div>
     <div class="body">
       <h3>Raid Fly Ribbon</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.99</div>
       <p class="desc">Free item of equal or lesser price. Traps Flies, Gnats, Moths &amp; Other Flying Insects, 1-ct. pkg.; or Fruit Fly Trap, Apple, 2-ct. pkg.</p>
       <div class="meta"><span class="dept">Insecticide</span></div>
     </div>
   </article>
-<article class="card" data-dept="Non-Foods" data-search="schick hydro 5 blades refill free item of equal or lesser price. or razors, or hydro 3 refill, xtreme 3 razors, or intuition cartridges; or hydro silk razors, cartridges refill, or trimstyle kit, 1 to 4-ct. pkg. non-foods">
+<article class="card" data-dept="Non-Foods" data-watched="" data-search="schick hydro 5 blades refill free item of equal or lesser price. or razors, or hydro 3 refill, xtreme 3 razors, or intuition cartridges; or hydro silk razors, cartridges refill, or trimstyle kit, 1 to 4-ct. pkg. non-foods">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_15_Line_Item_03_43421_265654.jpg" alt="Schick Hydro 5 Blades Refill"></div>
     <div class="body">
       <h3>Schick Hydro 5 Blades Refill</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $18.99</div>
       <p class="desc">Free item of equal or lesser price. Or Razors, or Hydro 3 Refill, Xtreme 3 Razors, or Intuition Cartridges; or Hydro Silk Razors, Cartridges Refill, or Trimstyle Kit, 1 to 4-ct. pkg.</p>
       <div class="meta"><span class="dept">Non-Foods</span></div>
     </div>
   </article>
-<article class="card" data-dept="Spices &amp;amp; Extract" data-search="snack pack pudding free item of equal or lesser price. or snack pack or super snack pack juicy gels, 6-pk. 3.25 or 5.5-oz cup spices &amp;amp;amp; extract">
+<article class="card" data-dept="Spices &amp; Extract" data-watched="" data-search="snack pack pudding free item of equal or lesser price. or snack pack or super snack pack juicy gels, 6-pk. 3.25 or 5.5-oz cup spices &amp;amp; extract">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_04_200973_262278.jpg" alt="Snack Pack Pudding"></div>
     <div class="body">
       <h3>Snack Pack Pudding</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.19</div>
       <p class="desc">Free item of equal or lesser price. Or Snack Pack or Super Snack Pack Juicy Gels, 6-pk. 3.25 or 5.5-oz cup</p>
-      <div class="meta"><span class="dept">Spices &amp;amp; Extract</span></div>
+      <div class="meta"><span class="dept">Spices &amp; Extract</span></div>
     </div>
   </article>
-<article class="card" data-dept="Spices &amp;amp; Extract" data-search="splenda sweeteners free item of equal or lesser price. 100 or 200-ct. or 3.38 to 32-oz pkg. spices &amp;amp;amp; extract">
+<article class="card" data-dept="Spices &amp; Extract" data-watched="" data-search="splenda sweeteners free item of equal or lesser price. 100 or 200-ct. or 3.38 to 32-oz pkg. spices &amp;amp; extract">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_05_10523_262328.jpg" alt="Splenda Sweeteners"></div>
     <div class="body">
       <h3>Splenda Sweeteners</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $10.99</div>
       <p class="desc">Free item of equal or lesser price. 100 or 200-ct. or 3.38 to 32-oz pkg.</p>
-      <div class="meta"><span class="dept">Spices &amp;amp; Extract</span></div>
+      <div class="meta"><span class="dept">Spices &amp; Extract</span></div>
     </div>
   </article>
-<article class="card" data-dept="Soft Drinks" data-search="starbucks frappuccino chilled coffee drink free item of equal or lesser price. or doubleshot energy or protein coffee drink, 12 to 15-oz pkg.; or pure leaf real brewed tea, 18.5-oz bot. soft drinks">
+<article class="card" data-dept="Soft Drinks" data-watched="" data-search="starbucks frappuccino chilled coffee drink free item of equal or lesser price. or doubleshot energy or protein coffee drink, 12 to 15-oz pkg.; or pure leaf real brewed tea, 18.5-oz bot. soft drinks">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_13_Line_Item_03_808938_263410.jpg" alt="Starbucks Frappuccino Chilled Coffee Drink"></div>
     <div class="body">
       <h3>Starbucks Frappuccino Chilled Coffee Drink</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $3.99</div>
       <p class="desc">Free item of equal or lesser price. Or Doubleshot Energy or Protein Coffee Drink, 12 to 15-oz pkg.; or Pure Leaf Real Brewed Tea, 18.5-oz bot.</p>
       <div class="meta"><span class="dept">Soft Drinks</span></div>
     </div>
   </article>
-<article class="card" data-dept="Household Supplies" data-search="sterilite storage box free item of equal or lesser price. with lid: 6, 12/16, or 56/58-qt, each box household supplies">
+<article class="card" data-dept="Household Supplies" data-watched="" data-search="sterilite storage box free item of equal or lesser price. with lid: 6, 12/16, or 56/58-qt, each box household supplies">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_17_Feature_01_113062_266754.jpg" alt="Sterilite Storage Box"></div>
     <div class="body">
       <h3>Sterilite Storage Box</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $13.19</div>
       <p class="desc">Free item of equal or lesser price. With Lid: 6, 12/16, or 56/58-qt, each box</p>
       <div class="meta"><span class="dept">Household Supplies</span></div>
     </div>
   </article>
-<article class="card" data-dept="Condiments &amp;amp; Sauces" data-search="sweet baby ray&amp;#39;s barbecue sauce free item of equal or lesser price. 18.5 or 28-oz bot. condiments &amp;amp;amp; sauces">
+<article class="card" data-dept="Condiments &amp; Sauces" data-watched="" data-search="sweet baby ray&amp;#39;s barbecue sauce free item of equal or lesser price. 18.5 or 28-oz bot. condiments &amp;amp; sauces">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Feature_012_13641_UL_261347.jpg" alt="Sweet Baby Ray&#39;s Barbecue Sauce"></div>
     <div class="body">
       <h3>Sweet Baby Ray&#39;s Barbecue Sauce</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 18.5 or 28-oz bot.</p>
-      <div class="meta"><span class="dept">Condiments &amp;amp; Sauces</span></div>
+      <div class="meta"><span class="dept">Condiments &amp; Sauces</span></div>
     </div>
   </article>
-<article class="card" data-dept="Coffee &amp;amp; Tea" data-search="tim hortons k-cup coffee pods free item of equal or lesser price. or hot chocolate, 10 or 12-ct. box or ground coffee, 12-oz bag coffee &amp;amp;amp; tea">
+<article class="card" data-dept="Coffee &amp; Tea" data-watched="" data-search="tim hortons k-cup coffee pods free item of equal or lesser price. or hot chocolate, 10 or 12-ct. box or ground coffee, 12-oz bag coffee &amp;amp; tea">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_02_278663_262178.jpg" alt="Tim Hortons K-Cup Coffee Pods"></div>
     <div class="body">
       <h3>Tim Hortons K-Cup Coffee Pods</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $13.59</div>
       <p class="desc">Free item of equal or lesser price. Or Hot Chocolate, 10 or 12-ct. box or Ground Coffee, 12-oz bag</p>
-      <div class="meta"><span class="dept">Coffee &amp;amp; Tea</span></div>
+      <div class="meta"><span class="dept">Coffee &amp; Tea</span></div>
     </div>
   </article>
-<article class="card" data-dept="Milk" data-search="too good coffee creamer free item of equal or lesser price. 25.4-oz ctn. milk">
+<article class="card" data-dept="Milk" data-watched="" data-search="too good coffee creamer free item of equal or lesser price. 25.4-oz ctn. milk">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Feature_04_337062_UL_264161.jpg" alt="Too Good Coffee Creamer"></div>
     <div class="body">
       <h3>Too Good Coffee Creamer</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       
       <p class="desc">Free item of equal or lesser price. 25.4-oz ctn.</p>
       <div class="meta"><span class="dept">Milk</span></div>
     </div>
   </article>
-<article class="card" data-dept="Pizza" data-search="totino&amp;#39;s pizza rolls free item of equal or lesser price. 50 or 100-ct. 24.46 to 48.8-oz; or pizza, 9.8 to 12.21-oz; or superpretzel soft pretzels, 9.6 to 24.75-oz; or auntie anne&amp;#39;s pretzel nuggets, 9.7-oz pkg. pizza">
+<article class="card" data-dept="Pizza" data-watched="" data-search="totino&amp;#39;s pizza rolls free item of equal or lesser price. 50 or 100-ct. 24.46 to 48.8-oz; or pizza, 9.8 to 12.21-oz; or superpretzel soft pretzels, 9.6 to 24.75-oz; or auntie anne&amp;#39;s pretzel nuggets, 9.7-oz pkg. pizza">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_14_Line_Item_07_40959_264904.jpg" alt="Totino&#39;s Pizza Rolls"></div>
     <div class="body">
       <h3>Totino&#39;s Pizza Rolls</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $14.49</div>
       <p class="desc">Free item of equal or lesser price. 50 or 100-ct. 24.46 to 48.8-oz; or Pizza, 9.8 to 12.21-oz; or Superpretzel Soft Pretzels, 9.6 to 24.75-oz; or Auntie Anne&#39;s Pretzel Nuggets, 9.7-oz pkg.</p>
       <div class="meta"><span class="dept">Pizza</span></div>
     </div>
   </article>
-<article class="card" data-dept="Fruit Drinks" data-search="v8 plus energy beverage free item of equal or lesser price. 4 to 8-pk. 5.5 to 12-oz pkg.; or campbell&amp;#39;s 100% tomato juice, 6-pk. 5.5-oz can fruit drinks">
+<article class="card" data-dept="Fruit Drinks" data-watched="" data-search="v8 plus energy beverage free item of equal or lesser price. 4 to 8-pk. 5.5 to 12-oz pkg.; or campbell&amp;#39;s 100% tomato juice, 6-pk. 5.5-oz can fruit drinks">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_12_Line_Item_03_186197_262228.jpg" alt="V8 Plus Energy Beverage"></div>
     <div class="body">
       <h3>V8 Plus Energy Beverage</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $6.19</div>
       <p class="desc">Free item of equal or lesser price. 4 to 8-pk. 5.5 to 12-oz pkg.; or Campbell&#39;s 100% Tomato Juice, 6-pk. 5.5-oz can</p>
       <div class="meta"><span class="dept">Fruit Drinks</span></div>
     </div>
   </article>
-<article class="card" data-dept="Plastic Bags" data-search="ziploc seal top bags free item of equal or lesser price. freezer or storage, 16 to 30-ct. pkg.  (excluding ziploc slider bags) plastic bags">
+<article class="card" data-dept="Plastic Bags" data-watched="" data-search="ziploc seal top bags free item of equal or lesser price. freezer or storage, 16 to 30-ct. pkg.  (excluding ziploc slider bags) plastic bags">
     <div class="img-wrap"><img loading="lazy" src="https://akimages.shoplocal.com/dyn_li/368.0.90.0/Retailers/Publix/260702_Page_16_Line_Item_02_87352_266504.jpg" alt="Ziploc Seal Top Bags"></div>
     <div class="body">
       <h3>Ziploc Seal Top Bags</h3>
+      
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       <div class="save">SAVE UP TO $4.79</div>
       <p class="desc">Free item of equal or lesser price. Freezer or Storage, 16 to 30-ct. pkg.  (Excluding Ziploc Slider Bags)</p>
@@ -2180,7 +2393,7 @@
     const term = q.value.trim().toLowerCase();
     let visible = 0;
     for (const c of cards) {
-      const matchDept = !activeDept || c.dataset.dept === activeDept;
+      const matchDept = !activeDept || (activeDept === '__watched' ? !!c.dataset.watched : c.dataset.dept === activeDept);
       const matchText = !term || c.dataset.search.includes(term);
       const show = matchDept && matchText;
       c.classList.toggle('hidden', !show);
