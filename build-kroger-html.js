@@ -1,36 +1,58 @@
 const fs = require('fs');
 
-const data = JSON.parse(fs.readFileSync('bogo-api.json', 'utf8'));
-const bogo = data.filter(s => /buy 1 get 1/i.test(JSON.stringify(s)));
-
-const decode = s => (s || '')
-  .replace(/&#13;&#10;/g, ' ')
-  .replace(/&amp;/g, '&')
-  .replace(/&quot;/g, '"')
-  .replace(/&#39;/g, "'")
-  .replace(/&lt;/g, '<')
-  .replace(/&gt;/g, '>')
-  .trim();
+const data = JSON.parse(fs.readFileSync('kroger-api.json', 'utf8'));
+const ads = data.ads || [];
 
 const esc = s => (s || '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 
-const departments = [...new Set(bogo.map(i => i.department).filter(Boolean))].sort();
-const validRange = bogo[0] ? `${bogo[0].wa_startDateFormatted} – ${bogo[0].wa_endDateFormatted}` : '';
+const money = n => '$' + (Number.isInteger(n) ? n : n.toFixed(2));
+const titleCase = s => (s || '').toLowerCase().replace(/(^|[\s/&-])[a-z]/g, c => c.toUpperCase());
 
-const cards = bogo.map(i => {
-  const title = esc(decode(i.title));
-  const desc = esc(decode(i.description));
-  const save = esc(decode(i.additionalSavings || i.additionalDealInfo || ''));
-  const dept = esc(i.department || '');
-  const img = esc(i.enhancedImageUrl || i.imageUrl || '');
-  return `<article class="card" data-dept="${dept}" data-search="${esc((title + ' ' + desc + ' ' + dept).toLowerCase())}">
+// Map ad id -> group display name (Best Deals / Weekly Digital Deals / Mega...)
+const groupOf = {};
+for (const g of data.adGroups || []) {
+  for (const ref of g.ads) groupOf[ref.id] = g.shortDisplayName || g.name;
+}
+
+function dealText(a) {
+  const t = a.pricingTemplate || '';
+  if (t.includes('BOGO')) return `Buy ${a.buyQuantity || 1} Get ${a.getQuantity || 1} FREE`;
+  const p = a.salePrice ?? a.retailPrice ?? a.price;
+  if (t.includes('2FOR') && a.quantity && p != null) return `${a.quantity} for ${money(p)}`;
+  if (p != null) {
+    const per = a.uom ? '/' + a.uom.toLowerCase() : '';
+    return `${money(p)}${per}`;
+  }
+  return a.savings || a.specialPrice || null;
+}
+
+function fmtDate(iso) {
+  if (!iso) return '';
+  return new Date(iso).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', timeZone: 'America/New_York' });
+}
+
+const departments = [...new Set(ads.flatMap(a => (a.departments || []).map(d => titleCase(d.department))))].sort();
+const validRange = ads[0] ? `${fmtDate(ads[0].validFrom)} – ${fmtDate(ads[0].validTill)}` : '';
+
+const cards = ads.map(a => {
+  const title = esc(a.mainlineCopy);
+  const desc = esc(a.underlineCopy || '');
+  const deal = dealText(a);
+  const isBogo = (a.pricingTemplate || '').includes('BOGO');
+  const save = a.saveAmount ? `save ${money(a.saveAmount)}` : '';
+  const disclaimer = esc((a.disclaimer || a.miscellaneousText || '').trim());
+  const dept = esc((a.departments || []).map(d => titleCase(d.department)).join(', '));
+  const group = esc(groupOf[a.id] || '');
+  const img = esc((a.images || [])[0]?.url || '');
+  return `<article class="card" data-dept="${dept}" data-search="${esc((a.mainlineCopy + ' ' + (a.underlineCopy||'') + ' ' + dept + ' ' + group).toLowerCase())}">
     <div class="img-wrap">${img ? `<img loading="lazy" src="${img}" alt="${title}">` : ''}</div>
     <div class="body">
       <h3>${title}</h3>
-      <div class="bogo-tag">Buy 1 Get 1 FREE</div>
+      ${deal ? `<div class="deal-tag${isBogo ? ' bogo' : ''}">${esc(deal)}</div>` : ''}
       ${save ? `<div class="save">${save}</div>` : ''}
       ${desc ? `<p class="desc">${desc}</p>` : ''}
-      <div class="meta">${dept ? `<span class="dept">${dept}</span>` : ''}</div>
+      ${disclaimer ? `<p class="fine">${disclaimer}</p>` : ''}
+      <div class="meta">${group ? `<span class="dept">${group}</span>` : ''}${dept ? `<span class="dept">${dept}</span>` : ''}</div>
     </div>
   </article>`;
 }).join('\n');
@@ -39,7 +61,7 @@ const html = `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Publix BOGO — ${validRange}</title>
+<title>Kroger Weekly Deals — ${validRange}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -48,8 +70,10 @@ const html = `<!doctype html>
     --border: #262b36;
     --text: #e8ebf0;
     --muted: #8a93a6;
-    --accent: #22c55e;
-    --accent-bg: #0d2a1a;
+    --accent: #4d9fff;
+    --accent-bg: #0d1d33;
+    --bogo: #22c55e;
+    --bogo-bg: #0d2a1a;
     --pill: #1e2330;
   }
   * { box-sizing: border-box; }
@@ -125,23 +149,24 @@ const html = `<!doctype html>
   .card.hidden { display: none; }
   .img-wrap {
     aspect-ratio: 4 / 3;
-    background: #0b0d12;
+    background: #ffffff;
     display: flex; align-items: center; justify-content: center;
     overflow: hidden;
   }
   .img-wrap img { width: 100%; height: 100%; object-fit: contain; }
   .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
   h3 { font-size: 15px; margin: 0; font-weight: 600; line-height: 1.3; }
-  .bogo-tag {
+  .deal-tag {
     display: inline-block; align-self: flex-start;
     background: var(--accent-bg); color: var(--accent);
-    font-size: 11px; font-weight: 600; letter-spacing: .04em;
-    text-transform: uppercase;
+    font-size: 12px; font-weight: 600; letter-spacing: .02em;
     padding: 3px 8px; border-radius: 4px;
   }
+  .deal-tag.bogo { background: var(--bogo-bg); color: var(--bogo); text-transform: uppercase; font-size: 11px; letter-spacing: .04em; }
   .save { color: #fbbf24; font-size: 13px; font-weight: 500; }
   .desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
-  .meta { margin-top: auto; padding-top: 6px; }
+  .fine { color: var(--muted); font-size: 11px; margin: 2px 0 0; opacity: .8; }
+  .meta { margin-top: auto; padding-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
   .dept {
     color: var(--muted); font-size: 12px;
     background: var(--pill); padding: 2px 8px; border-radius: 4px;
@@ -152,9 +177,9 @@ const html = `<!doctype html>
 <body>
 <header>
   <div class="header-row">
-    <h1>Publix BOGO <span class="count">${bogo.length}</span><span class="dates">${validRange}</span></h1>
+    <h1>Kroger Deals <span class="count">${ads.length}</span><span class="dates">${validRange}</span></h1>
     <input type="search" id="q" placeholder="Search items…" autofocus>
-    <a class="xlink" href="kroger/">Kroger deals →</a>
+    <a class="xlink" href="../">Publix BOGO →</a>
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>
@@ -177,7 +202,7 @@ ${cards}
     const term = q.value.trim().toLowerCase();
     let visible = 0;
     for (const c of cards) {
-      const matchDept = !activeDept || c.dataset.dept === activeDept;
+      const matchDept = !activeDept || c.dataset.dept.split(', ').includes(activeDept);
       const matchText = !term || c.dataset.search.includes(term);
       const show = matchDept && matchText;
       c.classList.toggle('hidden', !show);
@@ -197,5 +222,5 @@ ${cards}
 </html>
 `;
 
-fs.writeFileSync('bogo.html', html);
-console.log('Wrote bogo.html —', bogo.length, 'items,', departments.length, 'departments');
+fs.writeFileSync('kroger.html', html);
+console.log('Wrote kroger.html —', ads.length, 'deals,', departments.length, 'departments');
