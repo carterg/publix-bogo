@@ -1,4 +1,5 @@
 const fs = require('fs');
+const listUi = require('./list-ui');
 
 const MIN_ITEMS = 50;
 
@@ -45,6 +46,7 @@ const isNew = i => prevTitles ? !prevTitles.has(decode(i.title).toLowerCase()) :
 
 const departments = [...new Set(bogo.map(i => decode(i.department)).filter(Boolean))].sort();
 const validRange = bogo[0] ? `${bogo[0].wa_startDateFormatted} – ${bogo[0].wa_endDateFormatted}` : '';
+const endIso = bogo[0] ? bogo[0].wa_endDate : '';
 
 bogo.sort((a, b) => isWatched(b) - isWatched(a));
 
@@ -63,7 +65,7 @@ const cards = bogo.map(i => {
       <div class="bogo-tag">Buy 1 Get 1 FREE</div>
       ${save ? `<div class="save">${save}</div>` : ''}
       ${desc ? `<p class="desc">${desc}</p>` : ''}
-      <div class="meta">${dept ? `<span class="dept">${dept}</span>` : ''}</div>
+      <div class="meta">${dept ? `<span class="dept">${dept}</span>` : ''}<button class="list-btn" data-list-add data-store="Publix" data-title="${title}" data-deal="BOGO" data-save="${(save.match(/\$([\d.]+)/) || [])[1] || ''}" data-dept="${dept}">+ List</button></div>
     </div>
   </article>`;
 }).join('\n');
@@ -74,6 +76,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <title>Publix BOGO — ${validRange}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="Grocery deals digest" href="feed.xml">
 <style>
   :root {
     --bg: #0f1115;
@@ -182,7 +185,10 @@ const html = `<!doctype html>
   .watch-tag { color: #fbbf24; background: #2b1d05; }
   .new-tag { color: #a78bfa; background: #1d1533; }
   .desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
-  .meta { margin-top: auto; padding-top: 6px; }
+  .meta { margin-top: auto; padding-top: 6px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .meta .list-btn { margin-left: auto; }
+  #ends { color: #fbbf24; }
+${listUi.css}
   .dept {
     color: var(--muted); font-size: 12px;
     background: var(--pill); padding: 2px 8px; border-radius: 4px;
@@ -193,10 +199,11 @@ const html = `<!doctype html>
 <body>
 <header>
   <div class="header-row">
-    <h1>Publix BOGO <span class="count">${bogo.length}</span><span class="dates">${validRange}</span></h1>
+    <h1>Publix BOGO <span class="count">${bogo.length}</span><span class="dates">${validRange}</span><span class="dates" id="ends" data-end="${esc(endIso)}"></span></h1>
     <input type="search" id="q" placeholder="Search items…" autofocus>
     <a class="xlink" href="kroger/">Kroger deals →</a>
     <a class="xlink" href="recipes/">Recipes →</a>
+    <a class="xlink" href="digest/">What's new →</a>
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>
@@ -208,7 +215,15 @@ const html = `<!doctype html>
 ${cards}
 <div class="empty" id="empty" style="display:none">No items match.</div>
 </main>
+${listUi.fab}
 <script>
+  (function () {
+    const el = document.getElementById('ends');
+    if (!el || !el.dataset.end) return;
+    const days = Math.ceil((new Date(el.dataset.end) - Date.now()) / 864e5);
+    el.textContent = days < 0 ? 'ad expired' : days === 0 ? 'ends today' : days === 1 ? 'ends tomorrow' : days + ' days left';
+  })();
+${listUi.js}
   const q = document.getElementById('q');
   const grid = document.getElementById('grid');
   const cards = Array.from(grid.querySelectorAll('.card'));

@@ -1,0 +1,21 @@
+[
+ {
+  "weekStart": "2026-07-01",
+  "week": "7/1 – 7/7",
+  "generatedAt": "2026-07-07T23:21:09.595Z",
+  "publixCount": 204,
+  "krogerCount": 46,
+  "watched": [],
+  "newItems": {
+   "publix": [],
+   "kroger": []
+  },
+  "recipes": [
+   "BBQ Chicken with Charred Corn & Crispy Potatoes",
+   "Shrimp Tacos with Avocado-Lime Crema",
+   "Smoky Kielbasa & Tomato Rice Skillet",
+   "Backyard Burger Night",
+   "Sticky BBQ Ribs with Corn & Watermelon"
+  ]
+ }
+]

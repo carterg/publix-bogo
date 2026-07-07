@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Kroger Weekly Deals — 7/1 – 7/7</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="Grocery deals digest" href="../feed.xml">
 <style>
   :root {
     --bg: #0f1115;
@@ -115,7 +116,65 @@
   .new-tag { color: #a78bfa; background: #1d1533; }
   .desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
   .fine { color: var(--muted); font-size: 11px; margin: 2px 0 0; opacity: .8; }
-  .meta { margin-top: auto; padding-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .meta { margin-top: auto; padding-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .meta .list-btn { margin-left: auto; }
+  #ends { color: #fbbf24; }
+
+  .list-btn {
+    background: var(--pill); color: var(--muted);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 3px 10px; font: inherit; font-size: 12.5px; cursor: pointer;
+  }
+  .list-btn:hover { color: var(--text); }
+  .list-btn.added { color: #fbbf24; border-color: #fbbf24; }
+  #list-fab {
+    position: fixed; right: 16px; bottom: 16px; z-index: 50;
+    background: var(--card); color: var(--text);
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 10px 16px; font: inherit; font-size: 14px; font-weight: 600;
+    cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,.4);
+  }
+  #list-fab .n { color: #fbbf24; font-variant-numeric: tabular-nums; }
+  #list-panel {
+    position: fixed; right: 16px; bottom: 68px; z-index: 50;
+    width: min(400px, calc(100vw - 32px));
+    max-height: 70vh; display: flex; flex-direction: column;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; box-shadow: 0 8px 32px rgba(0,0,0,.5);
+  }
+  #list-panel header, #list-panel .panel-head {
+    position: static; display: flex; align-items: center; gap: 8px;
+    padding: 12px 14px; border-bottom: 1px solid var(--border);
+    background: none; backdrop-filter: none;
+  }
+  #list-panel .panel-head strong { flex: 1; font-size: 15px; }
+  #list-panel .panel-head .total { color: #fbbf24; font-size: 12.5px; white-space: nowrap; }
+  #list-panel .panel-actions { display: flex; gap: 6px; padding: 8px 14px; border-bottom: 1px solid var(--border); }
+  #list-panel .panel-actions button {
+    background: var(--pill); color: var(--muted); border: 1px solid var(--border);
+    border-radius: 6px; padding: 4px 10px; font: inherit; font-size: 12.5px; cursor: pointer;
+  }
+  #list-panel .panel-actions button:hover { color: var(--text); }
+  #list-items { overflow-y: auto; padding: 8px 14px 14px; }
+  #list-items h4 {
+    margin: 10px 0 6px; font-size: 11px; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--muted);
+  }
+  #list-items .li {
+    display: flex; align-items: baseline; gap: 8px;
+    padding: 4px 0; font-size: 13.5px;
+  }
+  #list-items .li input { accent-color: #fbbf24; }
+  #list-items .li .t { flex: 1; }
+  #list-items .li.done .t { text-decoration: line-through; color: var(--muted); }
+  #list-items .li .d { color: var(--muted); font-size: 11.5px; white-space: nowrap; }
+  #list-items .li .rm {
+    background: none; border: none; color: var(--muted);
+    cursor: pointer; font: inherit; font-size: 14px; padding: 0 2px;
+  }
+  #list-items .li .rm:hover { color: #ef4444; }
+  #list-items .empty-list { color: var(--muted); font-size: 13px; padding: 12px 0; }
+
   .dept {
     color: var(--muted); font-size: 12px;
     background: var(--pill); padding: 2px 8px; border-radius: 4px;
@@ -126,10 +185,11 @@
 <body>
 <header>
   <div class="header-row">
-    <h1>Kroger Deals <span class="count">46</span><span class="dates">7/1 – 7/7</span></h1>
+    <h1>Kroger Deals <span class="count">46</span><span class="dates">7/1 – 7/7</span><span class="dates" id="ends" data-end="2026-07-08T03:59:59Z"></span></h1>
     <input type="search" id="q" placeholder="Search items…" autofocus>
     <a class="xlink" href="../">Publix BOGO →</a>
     <a class="xlink" href="../recipes/">Recipes →</a>
+    <a class="xlink" href="../digest/">What's new →</a>
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>
@@ -147,7 +207,7 @@
       <div class="save">save $2</div>
       <p class="desc">Limit 5</p>
       <p class="fine">With Digital Coupon</p>
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Produce</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Produce</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Whole Seedless Watermelon" data-deal="$3.99/ea" data-save="2" data-dept="Produce">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Grocery" data-watched="" data-search="coca-cola, pepsi or canada dry select varieties, 12-pack, 12 fl oz cans, limit 10 grocery this week&amp;#39;s best deals">
@@ -159,7 +219,7 @@
       
       <p class="desc">Select Varieties, 12-Pack, 12 fl oz Cans, Limit 10</p>
       <p class="fine">Regular retail is up to $11.99 each.</p>
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Grocery</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Coca-Cola, Pepsi or Canada Dry" data-deal="Buy 2 Get 3 FREE" data-save="" data-dept="Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Meat" data-watched="" data-search="fresh perdue boneless chicken sale select varieties, no antibiotics ever meat this week&amp;#39;s best deals">
@@ -171,7 +231,7 @@
       
       <p class="desc">Select Varieties, No Antibiotics Ever</p>
       <p class="fine">Mix and match of equal or lesser value</p>
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Meat</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Meat</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Fresh Perdue Boneless Chicken Sale" data-deal="Buy 1 Get 1 FREE" data-save="" data-dept="Meat">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Meat" data-watched="" data-search="kroger 80% lean ground beef sold in a 3 lb package for $14.97 meat this week&amp;#39;s best deals">
@@ -183,7 +243,7 @@
       
       <p class="desc">Sold in a 3 lb Package for $14.97</p>
       
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Meat</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Meat</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Kroger 80% Lean Ground Beef" data-deal="$4.99/lb" data-save="" data-dept="Meat">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Produce" data-watched="" data-search="kroger sweet corn or baker russet potatoes 4 ct produce this week&amp;#39;s best deals">
@@ -195,7 +255,7 @@
       
       <p class="desc">4 ct</p>
       
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Produce</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Produce</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Kroger Sweet Corn or Baker Russet Potatoes" data-deal="$2.99" data-save="" data-dept="Produce">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Deli/Bake" data-watched="" data-search="bakery fresh cherry pie or other varieties, 8&quot; or mini cupcakes, select varieties, 12 ct deli/bake this week&amp;#39;s best deals">
@@ -207,7 +267,7 @@
       
       <p class="desc">or Other Varieties, 8&quot; or Mini Cupcakes, Select Varieties, 12 ct</p>
       
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Deli/Bake</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Deli/Bake</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Bakery Fresh Cherry Pie" data-deal="$5" data-save="" data-dept="Deli/Bake">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="blue bell ice cream select varieties, 64 fl oz drug/gm, grocery this week&amp;#39;s best deals">
@@ -219,7 +279,7 @@
       
       <p class="desc">Select Varieties, 64 fl oz</p>
       <p class="fine">When you buy 2 or more in the same transaction. Quantities less than 2 are up to $7.99 each.</p>
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Blue Bell Ice Cream" data-deal="$6.99/ea" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="doritos 9-10.75 oz tostitos, 9.5-14.43 oz or ruffles 8-8.5 oz; select varieties drug/gm, grocery this week&amp;#39;s best deals">
@@ -231,7 +291,7 @@
       
       <p class="desc">9-10.75 oz Tostitos, 9.5-14.43 oz or Ruffles 8-8.5 oz; Select Varieties</p>
       <p class="fine">Regular retail is up to $5.49 each.</p>
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Doritos" data-deal="Buy 2 Get 3 FREE" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Liquor" data-watched="" data-search="bush&#39;s best baked or grillin&#39; beans select varieties, 21.7-28 oz liquor this week&amp;#39;s best deals">
@@ -243,7 +303,7 @@
       
       <p class="desc">Select Varieties, 21.7-28 oz</p>
       <p class="fine">Mix and match of equal or lesser value</p>
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Liquor</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Liquor</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Bush&#39;s Best Baked or Grillin&#39; Beans" data-deal="Buy 2 Get 1 FREE" data-save="" data-dept="Liquor">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="kroger sour cream, cottage cheese or dip select varieties, 16 oz drug/gm, grocery this week&amp;#39;s best deals">
@@ -255,7 +315,7 @@
       
       <p class="desc">Select Varieties, 16 oz</p>
       
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Kroger Sour Cream, Cottage Cheese or Dip" data-deal="3 for $5" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="powerade 28 fl oz or body armor, 16 fl oz; select varieties drug/gm, grocery this week&amp;#39;s best deals">
@@ -267,7 +327,7 @@
       
       <p class="desc">28 fl oz or Body Armor, 16 fl oz; Select Varieties</p>
       
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Powerade" data-deal="$0.88" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="nabisco oreo or chips ahoy family size cookies select varieties, 8-20 oz drug/gm, grocery this week&amp;#39;s best deals">
@@ -279,7 +339,7 @@
       
       <p class="desc">Select Varieties, 8-20 oz</p>
       <p class="fine">When you buy 3 or more in the same transaction. Quantities less than 3 are up to $4.79 each.</p>
-      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">This Week&#39;s Best Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Nabisco Oreo or Chips Ahoy Family Size Cookies" data-deal="3 for $10" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Grocery" data-watched="" data-search="land o lakes butter select varieties, 16 oz grocery buy 5 save $5">
@@ -291,7 +351,7 @@
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 16 oz</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Land O Lakes Butter" data-deal="$2.99/ea*" data-save="1" data-dept="Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="nabisco snack crackers 3.5-8.5 oz or ritz crackers, 3-13.7 oz; select varieties drug/gm, grocery buy 5 save $5">
@@ -303,7 +363,7 @@
       <div class="save">save $1</div>
       <p class="desc">3.5-8.5 oz or Ritz Crackers, 3-13.7 oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Nabisco Snack Crackers" data-deal="$2.49/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Grocery" data-watched="" data-search="simply fruit drink or ade 52 fl oz or kroger juice cocktail, 64 fl oz; select varieties grocery buy 5 save $5">
@@ -315,7 +375,7 @@
       <div class="save">save $1</div>
       <p class="desc">52 fl oz or Kroger Juice Cocktail, 64 fl oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Simply Fruit Drink or Ade" data-deal="$1.99/ea*" data-save="1" data-dept="Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Grocery" data-watched="" data-search="pepperidge farm goldfish 4.8-8 oz or kraft salad dressing, 14-16 fl oz; select varieties grocery buy 5 save $5">
@@ -327,7 +387,7 @@
       <div class="save">save $1</div>
       <p class="desc">4.8-8 oz or Kraft Salad Dressing, 14-16 fl oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Pepperidge Farm Goldfish" data-deal="$1.99/ea*" data-save="1" data-dept="Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Grocery" data-watched="" data-search="marie callender&#39;s pie select varieties, 25-42 oz grocery buy 5 save $5">
@@ -339,7 +399,7 @@
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 25-42 oz</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Marie Callender&#39;s Pie" data-deal="$5.99/ea*" data-save="1" data-dept="Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Grocery" data-watched="" data-search="kroger alkaline water 24-pack, 16.9 fl oz grocery weekly digital deals">
@@ -351,7 +411,7 @@
       
       <p class="desc">24-Pack, 16.9 fl oz</p>
       <p class="fine">Price without digital coupon is up to $5.99 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Kroger Alkaline Water" data-deal="$3.99/ea" data-save="" data-dept="Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Produce" data-watched="" data-search="2 lb strawberries or blueberries, 18 oz package produce weekly digital deals">
@@ -363,7 +423,7 @@
       
       <p class="desc">or Blueberries, 18 oz Package</p>
       <p class="fine">Price without digital coupon is up to $6.49 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Produce</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Produce</span><button class="list-btn" data-list-add data-store="Kroger" data-title="2 lb Strawberries" data-deal="$3.99/ea" data-save="" data-dept="Produce">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Meat" data-watched="" data-search="johnsonville dinner sausage select varieties, 12-19 oz meat weekly digital deals">
@@ -375,7 +435,7 @@
       
       <p class="desc">Select Varieties, 12-19 oz</p>
       <p class="fine">Price without digital coupon is up to $4.99 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Meat</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Meat</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Johnsonville Dinner Sausage" data-deal="$3.99/ea" data-save="" data-dept="Meat">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Grocery" data-watched="" data-search="kroger frozen dairy dessert sandwiches select varieties, 6-16 ct grocery weekly digital deals">
@@ -387,7 +447,7 @@
       
       <p class="desc">Select Varieties, 6-16 ct</p>
       <p class="fine">Price without digital coupon is up to $3.79 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Kroger Frozen Dairy Dessert Sandwiches" data-deal="$1.99/ea" data-save="" data-dept="Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="häagen-dazs ice cream 14 fl oz or bars, 3-6 ct; select varieties drug/gm, grocery buy 5 save $5">
@@ -399,7 +459,7 @@
       <div class="save">save $1</div>
       <p class="desc">14 fl oz or Bars, 3-6 ct; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Häagen-Dazs Ice Cream" data-deal="$3.99/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="ball park buns 8 ct or utz pretzels, 14-16 oz; select varieties drug/gm, grocery buy 5 save $5">
@@ -411,7 +471,7 @@
       <div class="save">save $1</div>
       <p class="desc">8 ct or Utz Pretzels, 14-16 oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Ball Park Buns" data-deal="$2.49/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="chex mix 7-8 oz or pringles party stack, 6.8-7.1 oz; select varieties drug/gm, grocery buy 5 save $5">
@@ -423,7 +483,7 @@
       <div class="save">save $1</div>
       <p class="desc">7-8 oz or Pringles Party Stack, 6.8-7.1 oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Chex Mix" data-deal="$1.99/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Grocery" data-watched="" data-search="general mills cereal 9-14 oz or jif peanut butter, 16 oz; select varieties grocery buy 5 save $5">
@@ -435,7 +495,7 @@
       <div class="save">save $1</div>
       <p class="desc">9-14 oz or Jif Peanut Butter, 16 oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="General Mills Cereal" data-deal="$1.99/ea*" data-save="1" data-dept="Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="post premier protein cereal or granola, 9 oz; select varieties drug/gm, grocery buy 5 save $5">
@@ -447,7 +507,7 @@
       <div class="save">save $1</div>
       <p class="desc">or Granola, 9 oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Post Premier Protein Cereal" data-deal="$3.99/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="vitaminwater select varieties, 20 fl oz drug/gm, grocery buy 5 save $5">
@@ -459,7 +519,7 @@
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 20 fl oz</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Vitaminwater" data-deal="$0.99/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="pop-tarts 8 ct or velveeta shells &amp; cheese, 9.4-12 oz; select varieties drug/gm, grocery buy 5 save $5">
@@ -471,7 +531,7 @@
       <div class="save">save $1</div>
       <p class="desc">8 ct or Velveeta Shells &amp; Cheese, 9.4-12 oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Pop-Tarts" data-deal="$1.99/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Meat" data-watched="" data-search="ball park meat franks select varieties, 15 oz meat buy 5 save $5">
@@ -483,7 +543,7 @@
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 15 oz</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Meat</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Meat</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Ball Park Meat Franks" data-deal="$2.49/ea*" data-save="1" data-dept="Meat">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="rao&#39;s pasta sauce 15-24 oz or perdue frozen chicken, 27-29 oz; select varieties drug/gm, grocery buy 5 save $5">
@@ -495,7 +555,7 @@
       <div class="save">save $1</div>
       <p class="desc">15-24 oz or Perdue Frozen Chicken, 27-29 oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Rao&#39;s Pasta Sauce" data-deal="$6.49/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="dawn dish soap 24-30.8 fl oz or powerwash dish spray, 16 fl oz; select varieties drug/gm, grocery buy 5 save $5">
@@ -507,7 +567,7 @@
       <div class="save">save $1</div>
       <p class="desc">24-30.8 fl oz or Powerwash Dish Spray, 16 fl oz; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Dawn Dish Soap" data-deal="$3.99/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="kroger family size appetizers 16-33 oz or clif builders bars, 6-10 ct; select varieties drug/gm, grocery buy 5 save $5">
@@ -519,7 +579,7 @@
       <div class="save">save $1</div>
       <p class="desc">16-33 oz or Clif Builders Bars, 6-10 ct; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Kroger Family Size Appetizers" data-deal="$8.99/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="ken&#39;s salad dressing 14-16 fl oz or pillsbury crescent rolls, 8 ct; select varieties drug/gm, grocery buy 5 save $5">
@@ -531,7 +591,7 @@
       <div class="save">save $1</div>
       <p class="desc">14-16 fl oz or Pillsbury Crescent Rolls, 8 ct; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Ken&#39;s Salad Dressing" data-deal="$2.49/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="smucker&#39;s uncrustables 8-10 ct or peet&#39;s coffee, 10-12 oz bag; select varieties drug/gm, grocery buy 5 save $5">
@@ -543,7 +603,7 @@
       <div class="save">save $1</div>
       <p class="desc">8-10 ct or Peet&#39;s Coffee, 10-12 oz Bag; Select Varieties</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Smucker&#39;s Uncrustables" data-deal="$9.99/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="dixie paper plates or bowls select varieties, 25-90 ct drug/gm, grocery buy 5 save $5">
@@ -555,7 +615,7 @@
       <div class="save">save $1</div>
       <p class="desc">Select Varieties, 25-90 ct</p>
       <p class="fine">*When you buy any 5 or more participating items in the same transaction.</p>
-      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Buy 5 Save $5</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Dixie Paper Plates or Bowls" data-deal="$5.49/ea*" data-save="1" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Meat" data-watched="" data-search="nathan&#39;s beef franks 12 oz or smithfield bacon, 12-16 oz; select varieties meat weekly digital deals">
@@ -567,7 +627,7 @@
       
       <p class="desc">12 oz or Smithfield Bacon, 12-16 oz; Select Varieties</p>
       <p class="fine">Price without digital coupon is up to $4.99 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Meat</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Meat</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Nathan&#39;s Beef Franks" data-deal="$3.99/ea" data-save="" data-dept="Meat">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Produce" data-watched="" data-search="washington red cherries  produce weekly digital deals">
@@ -579,7 +639,7 @@
       
       
       <p class="fine">Price without digital coupon is up to $4.99 lb. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Produce</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Produce</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Washington Red Cherries" data-deal="$2.99/lb" data-save="" data-dept="Produce">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="32 oz kroger cheese select varieties drug/gm, grocery weekly digital deals">
@@ -591,7 +651,7 @@
       
       <p class="desc">Select Varieties</p>
       <p class="fine">Price without digital coupon is up to $6.99 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="32 oz Kroger Cheese" data-deal="$4.99/ea" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="private selection wide pan bread 24 oz or buns, 8 ct; select varieties drug/gm, grocery weekly digital deals">
@@ -603,7 +663,7 @@
       
       <p class="desc">24 oz or Buns, 8 ct; Select Varieties</p>
       <p class="fine">Price without digital coupon is up to $2.49 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Private Selection Wide Pan Bread" data-deal="$1.99/ea" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Deli/Bake" data-watched="" data-search="sabra hummus 8 oz or stacy’s pita chips, 7.33 oz; select varieties deli/bake weekly digital deals">
@@ -615,7 +675,7 @@
       
       <p class="desc">8 oz or Stacy’s Pita Chips, 7.33 oz; Select Varieties</p>
       <p class="fine">Price without digital coupon is up to $3.49 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Deli/Bake</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Deli/Bake</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Sabra Hummus" data-deal="$2.49/ea" data-save="" data-dept="Deli/Bake">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Gm, Grocery" data-watched="" data-search="kroger ice cream select varieties, 48 fl oz drug/gm, gm, grocery weekly digital deals">
@@ -627,7 +687,7 @@
       
       <p class="desc">Select Varieties, 48 fl oz</p>
       <p class="fine">Price without digital coupon is up to $2.99 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Kroger Ice Cream" data-deal="$1.99/ea" data-save="" data-dept="Drug/Gm, Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="gatorade 12-pack, 12 fl oz or pure leaf tea, 6-pack, 16.9-18.5 fl oz; select varieties drug/gm, grocery weekly digital deals">
@@ -639,7 +699,7 @@
       
       <p class="desc">12-Pack, 12 fl oz or Pure Leaf Tea, 6-Pack, 16.9-18.5 fl oz; Select Varieties</p>
       <p class="fine">Price without digital coupon is up to $6.99 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Gatorade" data-deal="$4.99/ea" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="outshine fruit bars 6 ct or oreo frozen dairy dessert sandwiches, 4 ct; select varieties drug/gm, grocery weekly digital deals">
@@ -651,7 +711,7 @@
       
       <p class="desc">6 ct or Oreo Frozen Dairy Dessert Sandwiches, 4 ct; Select Varieties</p>
       <p class="fine">Price without digital coupon is up to $3.99 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Outshine Fruit Bars" data-deal="$2.99/ea" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="lay&#39;s potato chips 5-8 oz or kettle brand potato chips, 6-7.5 oz; select varieties drug/gm, grocery weekly digital deals">
@@ -663,7 +723,7 @@
       
       <p class="desc">5-8 oz or Kettle Brand Potato Chips, 6-7.5 oz; Select Varieties</p>
       <p class="fine">Price without digital coupon is up to $3.29 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Lay&#39;s Potato Chips" data-deal="$1.99/ea" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="starbucks coffee 10-12 oz bag or k-cups, 10 ct; select varieties drug/gm, grocery weekly digital deals">
@@ -675,7 +735,7 @@
       
       <p class="desc">10-12 oz Bag or K-Cups, 10 ct; Select Varieties</p>
       <p class="fine">Price without digital coupon is up to $10.99 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Starbucks Coffee" data-deal="$8.99/ea" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <article class="card" data-dept="Drug/Gm, Grocery" data-watched="" data-search="hellmann&#39;s mayonnaise select varieties, 20-30 fl oz drug/gm, grocery weekly digital deals">
@@ -687,12 +747,119 @@
       
       <p class="desc">Select Varieties, 20-30 fl oz</p>
       <p class="fine">Price without digital coupon is up to $6.49 each. *While supplies last.</p>
-      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span></div>
+      <div class="meta"><span class="dept">Weekly Digital Deals</span><span class="dept">Drug/Gm, Grocery</span><button class="list-btn" data-list-add data-store="Kroger" data-title="Hellmann&#39;s Mayonnaise" data-deal="$3.49/ea" data-save="" data-dept="Drug/Gm, Grocery">+ List</button></div>
     </div>
   </article>
 <div class="empty" id="empty" style="display:none">No items match.</div>
 </main>
+
+<button id="list-fab" title="Shopping list">🛒 <span class="n" id="list-n"></span></button>
+<div id="list-panel" hidden>
+  <div class="panel-head"><strong>Shopping list</strong><span class="total" id="list-total"></span></div>
+  <div class="panel-actions">
+    <button id="list-copy">Copy as text</button>
+    <button id="list-clear">Clear</button>
+    <button id="list-close">Close</button>
+  </div>
+  <div id="list-items"></div>
+</div>
 <script>
+  (function () {
+    const el = document.getElementById('ends');
+    if (!el || !el.dataset.end) return;
+    const days = Math.ceil((new Date(el.dataset.end) - Date.now()) / 864e5);
+    el.textContent = days < 0 ? 'ad expired' : days === 0 ? 'ends today' : days === 1 ? 'ends tomorrow' : days + ' days left';
+  })();
+
+(function () {
+  const KEY = 'pb-shopping-list';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch { return []; } };
+  const store = l => localStorage.setItem(KEY, JSON.stringify(l));
+  const keyOf = i => i.store + '|' + i.title;
+
+  const panel = document.getElementById('list-panel');
+  const itemsEl = document.getElementById('list-items');
+
+  function itemsFromBtn(btn) {
+    if (btn.dataset.items) { try { return JSON.parse(btn.dataset.items); } catch { return []; } }
+    return [{ store: btn.dataset.store, title: btn.dataset.title, deal: btn.dataset.deal || '',
+              save: parseFloat(btn.dataset.save) || 0, dept: btn.dataset.dept || '' }];
+  }
+
+  function render() {
+    const list = load();
+    document.getElementById('list-n').textContent = list.length || '';
+    const total = list.reduce((s, i) => s + (i.save || 0), 0);
+    document.getElementById('list-total').textContent = total ? 'save up to ~$' + total.toFixed(2) : '';
+
+    const byStore = {};
+    for (const i of list) (byStore[i.store] = byStore[i.store] || []).push(i);
+    itemsEl.innerHTML = Object.keys(byStore).sort().map(s =>
+      '<h4>' + esc(s) + '</h4>' + byStore[s].map(i =>
+        '<div class="li' + (i.done ? ' done' : '') + '" data-key="' + esc(keyOf(i)) + '">' +
+        '<input type="checkbox"' + (i.done ? ' checked' : '') + '>' +
+        '<span class="t">' + esc(i.title) + '</span>' +
+        (i.deal ? '<span class="d">' + esc(i.deal) + '</span>' : '') +
+        '<button class="rm" title="Remove">×</button></div>'
+      ).join('')
+    ).join('') || '<div class="empty-list">Tap “+ List” on a deal to add it.</div>';
+
+    document.querySelectorAll('[data-list-add]').forEach(btn => {
+      const keys = itemsFromBtn(btn).map(keyOf);
+      const have = new Set(list.map(keyOf));
+      const all = keys.length && keys.every(k => have.has(k));
+      btn.classList.toggle('added', all);
+      btn.textContent = all ? (btn.dataset.items ? '✓ On list' : '✓ Listed') : (btn.dataset.items ? btn.dataset.label || '+ Add sale items to list' : '+ List');
+    });
+  }
+
+  document.addEventListener('click', e => {
+    const add = e.target.closest('[data-list-add]');
+    if (add) {
+      const list = load();
+      const have = new Set(list.map(keyOf));
+      const items = itemsFromBtn(add);
+      if (items.every(i => have.has(keyOf(i)))) {
+        const drop = new Set(items.map(keyOf));
+        store(list.filter(i => !drop.has(keyOf(i))));
+      } else {
+        for (const i of items) if (!have.has(keyOf(i))) { list.push(i); have.add(keyOf(i)); }
+        store(list);
+      }
+      render(); return;
+    }
+    if (e.target.closest('#list-fab')) { panel.hidden = !panel.hidden; return; }
+    if (e.target.closest('#list-close')) { panel.hidden = true; return; }
+    if (e.target.closest('#list-clear')) { store([]); render(); return; }
+    if (e.target.closest('#list-copy')) {
+      const list = load();
+      const byStore = {};
+      for (const i of list) (byStore[i.store] = byStore[i.store] || []).push(i);
+      const text = Object.keys(byStore).sort().map(s =>
+        s.toUpperCase() + '\n' + byStore[s].map(i =>
+          '- [' + (i.done ? 'x' : ' ') + '] ' + i.title + (i.deal ? ' (' + i.deal + ')' : '')
+        ).join('\n')
+      ).join('\n\n');
+      navigator.clipboard.writeText(text).then(() => {
+        const b = document.getElementById('list-copy');
+        b.textContent = 'Copied!'; setTimeout(() => b.textContent = 'Copy as text', 1200);
+      });
+      return;
+    }
+    const li = e.target.closest('.li');
+    if (li && (e.target.matches('input') || e.target.matches('.rm'))) {
+      const key = li.dataset.key;
+      let list = load();
+      if (e.target.matches('.rm')) list = list.filter(i => keyOf(i) !== key);
+      else list = list.map(i => keyOf(i) === key ? { ...i, done: !i.done } : i);
+      store(list); render();
+    }
+  });
+
+  render();
+})();
+
   const q = document.getElementById('q');
   const grid = document.getElementById('grid');
   const cards = Array.from(grid.querySelectorAll('.card'));

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const listUi = require('./list-ui');
 
 const MIN_ITEMS = 15;
 
@@ -58,6 +59,7 @@ function fmtDate(iso) {
 
 const departments = [...new Set(ads.flatMap(a => (a.departments || []).map(d => titleCase(d.department))))].sort();
 const validRange = ads[0] ? `${fmtDate(ads[0].validFrom)} – ${fmtDate(ads[0].validTill)}` : '';
+const endIso = ads[0] ? ads[0].validTill : '';
 
 const cards = ads.map(a => {
   const title = esc(a.mainlineCopy);
@@ -79,7 +81,7 @@ const cards = ads.map(a => {
       ${save ? `<div class="save">${save}</div>` : ''}
       ${desc ? `<p class="desc">${desc}</p>` : ''}
       ${disclaimer ? `<p class="fine">${disclaimer}</p>` : ''}
-      <div class="meta">${group ? `<span class="dept">${group}</span>` : ''}${dept ? `<span class="dept">${dept}</span>` : ''}</div>
+      <div class="meta">${group ? `<span class="dept">${group}</span>` : ''}${dept ? `<span class="dept">${dept}</span>` : ''}<button class="list-btn" data-list-add data-store="Kroger" data-title="${title}" data-deal="${esc(deal || '')}" data-save="${a.saveAmount || ''}" data-dept="${dept}">+ List</button></div>
     </div>
   </article>`;
 }).join('\n');
@@ -90,6 +92,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <title>Kroger Weekly Deals — ${validRange}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="Grocery deals digest" href="../feed.xml">
 <style>
   :root {
     --bg: #0f1115;
@@ -201,7 +204,10 @@ const html = `<!doctype html>
   .new-tag { color: #a78bfa; background: #1d1533; }
   .desc { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
   .fine { color: var(--muted); font-size: 11px; margin: 2px 0 0; opacity: .8; }
-  .meta { margin-top: auto; padding-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .meta { margin-top: auto; padding-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .meta .list-btn { margin-left: auto; }
+  #ends { color: #fbbf24; }
+${listUi.css}
   .dept {
     color: var(--muted); font-size: 12px;
     background: var(--pill); padding: 2px 8px; border-radius: 4px;
@@ -212,10 +218,11 @@ const html = `<!doctype html>
 <body>
 <header>
   <div class="header-row">
-    <h1>Kroger Deals <span class="count">${ads.length}</span><span class="dates">${validRange}</span></h1>
+    <h1>Kroger Deals <span class="count">${ads.length}</span><span class="dates">${validRange}</span><span class="dates" id="ends" data-end="${esc(endIso)}"></span></h1>
     <input type="search" id="q" placeholder="Search items…" autofocus>
     <a class="xlink" href="../">Publix BOGO →</a>
     <a class="xlink" href="../recipes/">Recipes →</a>
+    <a class="xlink" href="../digest/">What's new →</a>
   </div>
   <div class="filters" id="filters">
     <span class="chip active" data-dept="">All</span>
@@ -227,7 +234,15 @@ const html = `<!doctype html>
 ${cards}
 <div class="empty" id="empty" style="display:none">No items match.</div>
 </main>
+${listUi.fab}
 <script>
+  (function () {
+    const el = document.getElementById('ends');
+    if (!el || !el.dataset.end) return;
+    const days = Math.ceil((new Date(el.dataset.end) - Date.now()) / 864e5);
+    el.textContent = days < 0 ? 'ad expired' : days === 0 ? 'ends today' : days === 1 ? 'ends tomorrow' : days + ' days left';
+  })();
+${listUi.js}
   const q = document.getElementById('q');
   const grid = document.getElementById('grid');
   const cards = Array.from(grid.querySelectorAll('.card'));

@@ -7,7 +7,7 @@
     "refresh:publix": "node bogo.js && node build-html.js && cp bogo.html index.html",
     "refresh:kroger": "node kroger.js && node build-kroger-html.js && cp kroger.html kroger/index.html",
     "build:recipes": "node build-recipes-html.js && cp recipes.html recipes/index.html",
-    "refresh": "npm run refresh:publix && npm run refresh:kroger && node snapshot.js"
+    "refresh": "npm run refresh:publix && npm run refresh:kroger && node snapshot.js && node build-digest.js"
   },
   "keywords": [],
   "author": "",

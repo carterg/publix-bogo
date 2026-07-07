@@ -1,4 +1,5 @@
 const fs = require('fs');
+const listUi = require('./list-ui');
 
 const data = JSON.parse(fs.readFileSync('recipes.json', 'utf8'));
 const recipes = data.recipes || [];
@@ -22,6 +23,7 @@ const cards = recipes.map(r => `<article class="recipe">
     <div class="cols">
       <div>
         <h3>On sale this week</h3>
+        <button class="list-btn" data-list-add data-label="+ Add sale items to list" data-items="${esc(JSON.stringify((r.saleIngredients || []).map(i => ({ store: i.store, title: i.item, deal: i.deal }))))}">+ Add sale items to list</button>
         <ul class="sale">
           ${(r.saleIngredients || []).map(i => `<li><span class="store ${i.store.toLowerCase()}">${esc(i.store)}</span> ${esc(i.item)} <span class="deal">${esc(i.deal)}</span></li>`).join('\n          ')}
         </ul>
@@ -114,6 +116,8 @@ const html = `<!doctype html>
     padding: 8px 12px; border-radius: 0 6px 6px 0;
   }
   .allergy { max-width: 900px; margin: 8px auto 0; padding: 0 16px; color: var(--muted); font-size: 12.5px; }
+  .recipe .list-btn { margin-bottom: 8px; }
+${listUi.css}
 </style>
 </head>
 <body>
@@ -124,6 +128,7 @@ const html = `<!doctype html>
     <span class="spacer"></span>
     <a class="xlink" href="../">Publix BOGO →</a>
     <a class="xlink" href="../kroger/">Kroger deals →</a>
+    <a class="xlink" href="../digest/">What's new →</a>
   </div>
 </header>
 <p class="intro">${esc(data.intro || '')}</p>
@@ -131,6 +136,10 @@ const html = `<!doctype html>
 ${cards}
 </main>
 <p class="allergy">Built for a dairy/egg-free household. Product formulations change — always confirm labels on packaged items.</p>
+${listUi.fab}
+<script>
+${listUi.js}
+</script>
 </body>
 </html>
 `;
