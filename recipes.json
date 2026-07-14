@@ -1,108 +1,112 @@
 {
-  "week": "7/1 – 7/7",
-  "generatedAt": "2026-07-07T21:00:00Z",
-  "intro": "Five dairy- and egg-free dinners built around this week's Publix BOGOs and Kroger deals.",
+  "week": "7/8 – 7/14",
+  "generatedAt": "2026-07-14T20:00:00.000Z",
+  "intro": "Five dairy-free, egg-free weeknight dinners built from this week's Publix BOGOs and Kroger deals. Proteins are running especially cheap — chicken thighs, salmon, pork chops, shrimp, and ground chicken are all on sale.",
   "recipes": [
     {
-      "title": "BBQ Chicken with Charred Corn & Crispy Potatoes",
-      "blurb": "Grilled (or seared) chicken glazed with BBQ sauce, with charred sweet corn and smashed roasted potatoes.",
-      "time": "45 min",
-      "serves": 4,
-      "tags": ["grill", "family favorite"],
-      "saleIngredients": [
-        { "item": "Perdue Boneless Chicken", "store": "Kroger", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Sweet Corn & Baker Russet Potatoes", "store": "Kroger", "deal": "$2.99 / 4 ct" },
-        { "item": "Sweet Baby Ray's Barbecue Sauce", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Fire & Smoke Seasoning", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Pompeian Imported Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
-      ],
-      "pantryIngredients": ["salt & pepper", "garlic powder"],
-      "steps": [
-        "Boil potatoes whole until just fork-tender, ~15 min. Drain, smash lightly, toss with olive oil and seasoning, and roast at 450°F until crispy, ~20 min.",
-        "Season chicken with Fire & Smoke rub. Grill or sear over medium-high heat until cooked through (165°F), brushing with BBQ sauce in the last few minutes.",
-        "Char the corn alongside the chicken, turning until spotted all over. Rest the chicken 5 min, glaze once more, and serve."
-      ],
-      "note": "Sweet Baby Ray's original is dairy/egg-free; skip any butter on the corn — olive oil + seasoning works great."
-    },
-    {
-      "title": "Shrimp Tacos with Avocado-Lime Crema",
-      "blurb": "Crispy or sautéed shrimp in crunchy taco shells with a dairy-free avocado crema standing in for sour cream.",
-      "time": "25 min",
-      "serves": 4,
-      "tags": ["quick", "seafood"],
-      "saleIngredients": [
-        { "item": "Publix Medium Shrimp Platter (or Gorton's Shrimp)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Old El Paso Taco Shells or Tortillas", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Red Seedless Watermelon Chunks", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
-      ],
-      "pantryIngredients": ["avocado", "lime", "cilantro", "shredded cabbage or lettuce", "chili powder", "cumin"],
-      "steps": [
-        "Blend one avocado with the juice of a lime, a handful of cilantro, and a pinch of salt until smooth — that's the crema.",
-        "Toss shrimp with chili powder and cumin, then sauté 2–3 min per side (or bake breaded shrimp per the box).",
-        "Warm the shells, fill with cabbage, shrimp, and crema. Serve with watermelon on the side."
-      ],
-      "note": "Plain shrimp is safe; if you go with Gorton's breaded shrimp, check the label — some breaded varieties contain dairy."
-    },
-    {
-      "title": "Smoky Kielbasa & Tomato Rice Skillet",
-      "blurb": "One-pan browned kielbasa simmered with tomatoes, peppers, and rice.",
+      "title": "Chimichurri Chicken Thighs with Jasmine Rice & Blistered Mushrooms",
+      "blurb": "Pre-marinated chimichurri thighs seared until crisp, served over fluffy jasmine rice with garlicky pan-blistered baby bellas.",
       "time": "35 min",
       "serves": 4,
-      "tags": ["one-pan"],
+      "tags": ["quick", "one-pan protein"],
       "saleIngredients": [
-        { "item": "Hillshire Farm Smoked Sausage or Polska Kielbasa", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "SMT Tomatoes (28-oz can)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Pompeian Imported Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+        { "item": "Publix Marinated Boneless Skinless Chicken Thighs (Chimichurri)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Four Elephants Thai Jasmine Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Baby Bella Mushrooms (sliced, 8 oz)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Bertolli Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Green Avocados", "store": "Publix", "deal": "On sale, each" }
       ],
-      "pantryIngredients": ["long-grain rice", "onion", "bell pepper", "garlic", "smoked paprika", "chicken broth or water"],
+      "pantryIngredients": ["salt & pepper", "garlic (or garlic powder)"],
       "steps": [
-        "Slice kielbasa into coins and brown in olive oil; set aside.",
-        "Sauté onion, pepper, and garlic in the same pan. Stir in 1 cup rice and a teaspoon of smoked paprika.",
-        "Add the can of tomatoes plus 1½ cups broth, return the kielbasa, cover, and simmer ~20 min until the rice is tender."
+        "Start the jasmine rice: rinse 1.5 cups, simmer with 2.25 cups water and a pinch of salt, covered, ~15 min; rest off heat.",
+        "Pat the chicken thighs dry and sear in a hot skillet with a little olive oil, 5–6 min per side until 165°F and caramelized. Rest on a plate.",
+        "In the same pan, add a splash more oil and the mushrooms. Cook undisturbed 3–4 min to blister, then toss with a little garlic and salt for another 2 min.",
+        "Fluff the rice, slice the chicken, and serve with mushrooms and sliced avocado on top."
       ],
-      "note": "Stick with the original smoked sausage — skip the cheddar variety."
+      "note": "The chimichurri marinade is oil-and-herb based — dairy/egg-free. No cheese or crema needed."
     },
     {
-      "title": "Backyard Burger Night",
-      "blurb": "Classic grilled burgers with grillin' beans and corn — condiments are on sale too.",
+      "title": "Sheet-Pan Salmon with Crispy Smashed Potatoes",
+      "blurb": "Roasted salmon fillets with olive-oil smashed russets — one sheet pan, no dairy, big crispy edges.",
+      "time": "45 min",
+      "serves": 4,
+      "tags": ["sheet-pan", "seafood"],
+      "saleIngredients": [
+        { "item": "Fresh Salmon Fillets (responsibly sourced)", "store": "Publix", "deal": "On sale, fresh" },
+        { "item": "Publix Idaho Russet Potatoes (5-lb bag)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Bertolli Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "McCormick Grill Mates Seasoning", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+      ],
+      "pantryIngredients": ["salt & pepper", "lemon (optional)"],
+      "steps": [
+        "Boil small whole potatoes until fork-tender, ~15 min. Drain and let steam-dry a few minutes.",
+        "Smash each potato flat on an oiled sheet pan, brush with olive oil, season, and roast at 450°F for 20 min until crisp.",
+        "Push potatoes aside, add the salmon fillets, brush with oil and Grill Mates, and roast 10–12 min more until the fish flakes.",
+        "Finish with a squeeze of lemon and serve."
+      ],
+      "note": "Grill Mates blends are dairy/egg-free, but glance at the label if you swap to a Bacon or creamy variety."
+    },
+    {
+      "title": "Salsa-Smothered Pork Chops with Rice & Avocado",
+      "blurb": "Quick-seared lean pork chops finished in chunky salsa, piled over microwave-fast rice with cool avocado.",
       "time": "30 min",
       "serves": 4,
-      "tags": ["grill"],
+      "tags": ["quick", "weeknight"],
       "saleIngredients": [
-        { "item": "Kroger 80% Lean Ground Beef", "store": "Kroger", "deal": "$4.99/lb (3-lb pkg $14.97)" },
-        { "item": "Nature's Own Hamburger Buns", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Bush's Best Baked or Grillin' Beans", "store": "Kroger", "deal": "Buy 2 Get 1 FREE" },
-        { "item": "Kroger Sweet Corn", "store": "Kroger", "deal": "$2.99 / 4 ct" },
-        { "item": "Heinz Tomato Ketchup", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Mt. Olive Relish or Pickles", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+        { "item": "Publix Lean Boneless Pork Loin Chops", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Pace Chunky Salsa", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Ben's Original Ready Rice", "store": "Kroger", "deal": "$1.99 ea" },
+        { "item": "Large Avocados", "store": "Kroger", "deal": "$1.88 ea" }
       ],
-      "pantryIngredients": ["salt & pepper", "onion", "lettuce", "tomato", "mustard"],
+      "pantryIngredients": ["salt & pepper", "cumin (optional)"],
       "steps": [
-        "Form ¼-lb patties, season generously, and press a dimple into the center of each.",
-        "Grill 3–4 min per side. Warm the beans in a pot on the side of the grill and char the corn.",
-        "Toast the buns, build with lettuce, tomato, onion, pickles — skip cheese and mayo."
+        "Season pork chops with salt, pepper, and a little cumin. Sear in a hot oiled skillet 3–4 min per side.",
+        "Pour in the salsa, cover, and simmer 5–6 min until the chops reach 145°F and the sauce thickens.",
+        "Heat the Ready Rice per package. Serve chops and salsa over rice with sliced avocado.",
+        "Spoon extra pan salsa over the top."
       ],
-      "note": "Nature's Own classic buns are typically dairy/egg-free, but check the label on the variety you grab. Veggie swap: Actual Veggies Black Bean Burgers are also BOGO at Publix this week."
+      "note": "Plain Pace salsa is dairy/egg-free — skip the queso-style dips on sale this week, which contain dairy."
     },
     {
-      "title": "Sticky BBQ Ribs with Corn & Watermelon",
-      "blurb": "Low-effort oven ribs (they come pre-seasoned in the bag) finished with a sticky glaze.",
-      "time": "2.5–3 hrs (mostly hands-off)",
+      "title": "Ground Chicken Tacos with Avocado & Salsa",
+      "blurb": "Fast skillet-seasoned ground chicken in warm flour tortillas, loaded with avocado and chunky salsa — no cheese needed.",
+      "time": "25 min",
       "serves": 4,
-      "tags": ["weekend", "hands-off"],
+      "tags": ["quick", "taco night"],
       "saleIngredients": [
-        { "item": "Publix St. Louis Style Pork Spareribs (frozen, in-bag)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Kosmos Q Rub or BBQ Sauce", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Kroger Sweet Corn", "store": "Kroger", "deal": "$2.99 / 4 ct" },
-        { "item": "Whole Seedless Watermelon", "store": "Kroger", "deal": "$3.99 (save $2)" }
+        { "item": "Perdue Ground Chicken (16 oz)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Mission Soft Taco Flour Tortillas", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Pace Chunky Salsa", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Large Avocados", "store": "Kroger", "deal": "$1.88 ea" }
       ],
-      "pantryIngredients": ["foil"],
+      "pantryIngredients": ["chili powder", "cumin", "garlic powder", "salt"],
       "steps": [
-        "Thaw ribs overnight in the fridge. Add extra rub if you like, wrap tightly in foil, and bake at 300°F for ~2½ hours until tender.",
-        "Unwrap, brush with BBQ sauce, and broil (or grill) 5 min until sticky and caramelized.",
-        "Serve with charred corn and cold watermelon."
+        "Brown the ground chicken in a skillet, breaking it up, ~6–8 min.",
+        "Stir in chili powder, cumin, garlic powder, salt, and a splash of water; simmer 2–3 min until saucy.",
+        "Warm the tortillas in a dry pan or microwave.",
+        "Fill tortillas with chicken, sliced avocado, and a spoonful of salsa."
       ],
-      "note": "The Prairie Fresh pre-seasoned ribs (also BOGO) work identically — glance at the marinade ingredients to confirm no dairy."
+      "note": "Check the tortilla label — most Mission flour tortillas are dairy/egg-free, but a few varieties add milk. Skip the sour cream and queso on sale this week."
+    },
+    {
+      "title": "Garlic Shrimp & Mushroom Spaghetti",
+      "blurb": "Olive-oil garlic shrimp tossed with blistered mushrooms and spaghetti — a bright, brothy, no-cream pasta.",
+      "time": "30 min",
+      "serves": 4,
+      "tags": ["seafood", "pasta"],
+      "saleIngredients": [
+        { "item": "Publix White Shrimp (large, 31–35 ct, frozen)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Baby Bella Mushrooms (sliced, 8 oz)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Bertolli Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+      ],
+      "pantryIngredients": ["dry spaghetti", "garlic", "red pepper flakes", "salt", "lemon", "parsley (optional)"],
+      "steps": [
+        "Boil spaghetti in salted water until al dente; reserve a cup of pasta water before draining.",
+        "Thaw and pat shrimp dry. In a wide pan, cook mushrooms in olive oil until browned, then push aside.",
+        "Add more oil, sliced garlic, and red pepper flakes; add shrimp and cook 2–3 min until just pink.",
+        "Toss in the pasta with a splash of pasta water and a squeeze of lemon; loosen to a light sauce and finish with parsley."
+      ],
+      "note": "Standard dry spaghetti is dairy/egg-free; avoid fresh or 'egg' pasta. This sauce is olive-oil based — no butter or cheese."
     }
   ]
 }

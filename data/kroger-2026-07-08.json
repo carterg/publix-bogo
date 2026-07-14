@@ -1,0 +1,913 @@
+{
+ "store": "kroger",
+ "weekStart": "2026-07-08",
+ "weekEnd": "2026-07-15",
+ "divisionCode": "540-Groveland",
+ "storeId": "42356",
+ "count": 55,
+ "items": [
+  {
+   "title": "Boneless Chuck Roast",
+   "description": "USDA CHOICE Limit 5",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 6.99,
+   "retailPrice": 9.99,
+   "saveAmount": 3,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "LB",
+   "event": "core",
+   "departments": [
+    "MEAT"
+   ]
+  },
+  {
+   "title": "Private Selection Angus 90% Lean Ground Sirloin",
+   "description": "16 oz or Wendy's Burger Patties 4 ct, 16 oz, $8",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 6.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "MEAT"
+   ]
+  },
+  {
+   "title": "Fresh Perdue Chicken Drumsticks, Thighs or Wings",
+   "description": "Bone-In, No Antibiotics Ever",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 2,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "MEAT"
+   ]
+  },
+  {
+   "title": "Oscar Mayer Bacon",
+   "description": "Select Varieties, 12-16 oz",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 1,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "MEAT"
+   ]
+  },
+  {
+   "title": "California Red, Green or Black Seedless Grapes",
+   "description": "",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 1.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "LB",
+   "event": "core",
+   "departments": [
+    "PRODUCE"
+   ]
+  },
+  {
+   "title": "Blueberries",
+   "description": "18 oz or Raspberries, 12 oz Package",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 4.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "PRODUCE"
+   ]
+  },
+  {
+   "title": "Taylor Farms Salad Kit",
+   "description": "Select Varieties, 7.3-13.5 oz",
+   "pricingTemplate": "_KRGR_2FOR",
+   "salePrice": null,
+   "retailPrice": 11,
+   "saveAmount": null,
+   "quantity": 3,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "PRODUCE"
+   ]
+  },
+  {
+   "title": "Private Selection Stone Fired Pizza",
+   "description": "Select Varieties, 14.2-19.75 oz",
+   "pricingTemplate": "_KRGR_2FOR",
+   "salePrice": null,
+   "retailPrice": 10,
+   "saveAmount": null,
+   "quantity": 2,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Private Selection Frozen Entrée",
+   "description": "Select Varieties, 16-52 oz",
+   "pricingTemplate": "_KRGR_BOGO %",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 1,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Kroger Butter",
+   "description": "Select Varieties, 16 oz",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 2.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "General Mills Cereal",
+   "description": "Select Varieties, 10.5-12 oz",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 2,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Häagen-Dazs Ice Cream",
+   "description": "14 fl oz or Bars, 3-6 ct; Select Varieties",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 1,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Thomas English Muffins",
+   "description": "6 ct or Bagels, 6-10 ct; Select Varieties",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 1,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Nabisco Oreo or Chips Ahoy Family Size Cookies",
+   "description": "Select Varieties, 8-20 oz",
+   "pricingTemplate": "_KRGR_FINAL COST WUB STD",
+   "salePrice": 3.49,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "mustbuy",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Bibigo or Pagoda Entrée",
+   "description": "Select Varieties, 8.1-24 oz",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 1,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Green Mountain or McCafé K-Cups",
+   "description": "Select Varieties, 10 ct",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 6.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "",
+   "event": "core",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Doritos",
+   "description": "9-10.75 oz or Lay's Potato Chips, 5-8 oz or Tostitos, 9.5-14.43 oz; Select Varieties",
+   "pricingTemplate": "_KRGR_FINAL COST WUB 2FOR",
+   "salePrice": 10,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 4,
+   "buyQuantity": 4,
+   "getQuantity": 0,
+   "uom": "",
+   "event": "mustbuy",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Pepsi",
+   "description": "12-Pack, 12 fl oz Cans",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Coca-Cola",
+   "description": "6-Pack, 16.9 fl oz Bottles",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Vitaminwater",
+   "description": "6-Pack, 16.9 fl oz Bottles",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Starbucks Frappuccino",
+   "description": "4-Pack, 9.5 fl oz Bottles",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Powerade",
+   "description": "8-Pack, 20 fl oz Bottles",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Polar Seltzer Water",
+   "description": "8-Pack, 12 fl oz Cans",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Body Armor",
+   "description": "8-Pack, 12 fl oz Bottles",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Canada Dry",
+   "description": "12-Pack, 12 fl oz Cans",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Lipton Tea",
+   "description": "12-Pack, 16.9 fl oz Bottles",
+   "pricingTemplate": "_KRGR_BOGO",
+   "salePrice": null,
+   "retailPrice": null,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 3,
+   "getQuantity": 3,
+   "uom": "",
+   "event": "mustbuy b3g3 free beverage p6w3-4 - 2026",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Kroger Milk",
+   "description": "Select Varieties, Half Gallon",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 1.59,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Oscar Mayer Beef Franks",
+   "description": "Select Varieties, 15 oz",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 2.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "MEAT"
+   ]
+  },
+  {
+   "title": "Kroger Cheese",
+   "description": "Select Varieties, 6-8 oz",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 1.49,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Large Avocados",
+   "description": "",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 1.88,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "PRODUCE"
+   ]
+  },
+  {
+   "title": "Ben's Ready Rice",
+   "description": "8.47-8.8 oz or Smart Ones Entrée, 6.49-10.5 oz; Select Varieties",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 1.99,
+   "retailPrice": 2.49,
+   "saveAmount": 0.5,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "General Mills Giant Size Cereal",
+   "description": "Select Varieties, 20-29 oz",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 4.49,
+   "retailPrice": 6.99,
+   "saveAmount": 2.5,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Rice-A-Roni or Pasta Roni",
+   "description": "Select Varieties, 4.3-7.2 oz",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 0.99,
+   "retailPrice": 1.49,
+   "saveAmount": 0.5,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Chobani Greek Yogurt",
+   "description": "Select Varieties, 5.3-6.7 oz",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN 2FOR",
+   "salePrice": 10,
+   "retailPrice": 12,
+   "saveAmount": 2,
+   "quantity": 10,
+   "buyQuantity": 10,
+   "getQuantity": 0,
+   "uom": "",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Outshine Fruit Bars",
+   "description": "6 ct or Smucker's Uncrustables, 4 ct; Select Varieties",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 3.49,
+   "retailPrice": 4.49,
+   "saveAmount": 1,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Heinz Ketchup",
+   "description": "32 oz",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 3.49,
+   "retailPrice": 5.49,
+   "saveAmount": 2,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Hormel Square Table Beef Entrée",
+   "description": "Select Varieties, 15 oz",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 9.99,
+   "retailPrice": 11.99,
+   "saveAmount": 2,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "MEAT"
+   ]
+  },
+  {
+   "title": "Breyers Ice Cream",
+   "description": "48 fl oz or Oatly Oat Milk, 64 fl oz; Select Varieties",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 3.99,
+   "retailPrice": 4.99,
+   "saveAmount": 1,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Quilted Northern Bath Tissue",
+   "description": "Select Varieties, 12 Mega Rolls",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 10.99,
+   "retailPrice": 12.99,
+   "saveAmount": 2,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Tyson Frozen Chicken",
+   "description": "Select Varieties, 23-29 oz",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 5.99,
+   "retailPrice": 7.49,
+   "saveAmount": 1.5,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Starbucks Coffee",
+   "description": "10-12 oz Bag or K-Cups, 10 ct; Select Varieties",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 9.99,
+   "retailPrice": 11.99,
+   "saveAmount": 2,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Chomps Meat Sticks",
+   "description": "Select Varieties, 8-14 ct",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 16.99,
+   "retailPrice": 18.99,
+   "saveAmount": 2,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Gatorade",
+   "description": "12-Pack, 12 fl oz or Frito-Lay Multipack, 10 ct; Select Varieties",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 5.99,
+   "retailPrice": 6.99,
+   "saveAmount": 1,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Bounce or Downy Dryer Sheets",
+   "description": "Select Varieties, 130-240 ct",
+   "pricingTemplate": "_KRGR_SAVINGS NET DOWN STD",
+   "salePrice": 8.99,
+   "retailPrice": 11.99,
+   "saveAmount": 3,
+   "quantity": 0,
+   "buyQuantity": 1,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "5x",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Personal Watermelon or Honeydew Melons",
+   "description": "",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 2.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "PRODUCE"
+   ]
+  },
+  {
+   "title": "Hillshire Farm Ultra Thin Lunch Meat",
+   "description": "Select Varieties, 7-9 oz",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 3.49,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "MEAT"
+   ]
+  },
+  {
+   "title": "Coca-Cola",
+   "description": "Select Varieties, 24-Pack, 12 fl oz Cans",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 10.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Classico Pasta Sauce",
+   "description": "Select Varieties, 15-24 oz",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 1.79,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Bakery Fresh Frosted Sugar Cookies",
+   "description": "Select Varieties, 10 ct",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 3.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DELI/BAKE"
+   ]
+  },
+  {
+   "title": "Kellogg's Large Size Cereal",
+   "description": "11-20.9 oz or Bear Naked Granola, 11-12 oz; Select Varieties",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 2.49,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Popsicle Ice Pops",
+   "description": "18 ct or Good Humor Frozen Dessert Bars, 6 ct; Select Varieties",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 2.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Marie Callender's Pot Pies",
+   "description": "14-15 oz or Healthy Choice Simply Steamer, 9-10 oz; Select Varieties",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 2.79,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DRUG/GM",
+    "GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Frito-Lay Multipack",
+   "description": "18 ct or Popcorners Multipack, 15 ct; Select Varieties",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 7.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "DiGiorno Pizza",
+   "description": "14.14-30.3 oz or Hot Pockets, 4 ct; Select Varieties",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 3.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  },
+  {
+   "title": "Kroger Trail Mix",
+   "description": "Select Varieties, 30-36 oz",
+   "pricingTemplate": "_KRGR_STD",
+   "salePrice": null,
+   "retailPrice": 6.99,
+   "saveAmount": null,
+   "quantity": 0,
+   "buyQuantity": 0,
+   "getQuantity": 0,
+   "uom": "EA",
+   "event": "hdo",
+   "departments": [
+    "DRUG/GM",
+    "GROCERY"
+   ]
+  }
+ ]
+}
