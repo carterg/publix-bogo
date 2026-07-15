@@ -1,0 +1,1010 @@
+{
+ "store": "publix",
+ "weekStart": "2026-07-15",
+ "weekEnd": "2026-07-21",
+ "count": 167,
+ "items": [
+  {
+   "title": "Post Fruity Pebbles Cereal",
+   "description": "Free item of equal or lesser price. Or Cocoa Pebbles or Honey Bunches of Oats, 11 or 12-oz box",
+   "save": "SAVE UP TO $8.49",
+   "department": "Cereal"
+  },
+  {
+   "title": "Thomas' English Muffins",
+   "description": "Free item of equal or lesser price. 12 or 13-oz pkg.",
+   "save": "SAVE UP TO $5.69",
+   "department": "Bread"
+  },
+  {
+   "title": "Catalina Crunch Cereal",
+   "description": "Free item of equal or lesser price. 8 or 9-oz bag",
+   "save": "SAVE UP TO $8.59",
+   "department": "Cereal"
+  },
+  {
+   "title": "Old El Paso Taco Dinner Kit",
+   "description": "Free item of equal or lesser price. Or Fajita, Enchilada, Burrito, or Chimichanga, 8.28 to 14-oz box; or Refried Beans, 16-oz can",
+   "save": "SAVE UP TO $5.09",
+   "department": "International Foods - Mexican"
+  },
+  {
+   "title": "Maxwell House Ground Coffee",
+   "description": "Free item of equal or lesser price. 9.9 to 11-oz can or K-Cups, 10-ct. box",
+   "save": "SAVE UP TO $12.59",
+   "department": "Coffee &amp; Tea"
+  },
+  {
+   "title": "Botticelli Premium Pasta Sauce",
+   "description": "Free item of equal or lesser price. Or Pizza Sauce, 12.3 to 24-oz jar, or Traditional Pesto, 6.5-oz jar; or Flora Tomatoes, 24 or 28-oz pkg.  (Excluding San Marzano)",
+   "save": "SAVE UP TO $7.99",
+   "department": "Pasta &amp; Pasta Sauce"
+  },
+  {
+   "title": "Bodyarmor Sports Drink",
+   "description": "Free item of equal or lesser price. 16 to 28-oz or 6 or 8-pk. 12 or 16-oz, Sportwater, 1 or 1.5-L or 6-pk. 1-L pkg.",
+   "save": "SAVE UP TO $11.99",
+   "department": "Sports Drinks"
+  },
+  {
+   "title": "Duke's Mayonnaise",
+   "description": "Free item of equal or lesser price. 11.5 to 30-oz pkg.",
+   "save": "SAVE UP TO $7.49",
+   "department": "Condiments &amp; Sauces"
+  },
+  {
+   "title": "Arnold or Brownberry Bread",
+   "description": "Free item of equal or lesser price. 16 to 24-oz; or Oroweat Protein Bread, 24-oz; or Beefsteak Bread, 18-oz pkg.  (Excluding Thins and Keto)",
+   "save": "SAVE UP TO $7.69",
+   "department": "Bread"
+  },
+  {
+   "title": "General Mills Cheerios Cereal",
+   "description": "Free item of equal or lesser price. 8.9 or 10.8-oz, Lucky Charms, 10.5-oz, or Cinnamon Toast Crunch, 12-oz box",
+   "save": "SAVE UP TO $9.89",
+   "department": "Cereal"
+  },
+  {
+   "title": "Lay's Potato Chips",
+   "description": "Free item of equal or lesser price. Or Poppables, 4.75 to 8-oz; or Kettle Cooked Potato Chips, 6 or 8-oz bag  (Excluding Baked, Simply, and Party Size)",
+   "save": "SAVE UP TO $4.29",
+   "department": "Potato Chips"
+  },
+  {
+   "title": "Nabisco Oreo Cookies",
+   "description": "Free item of equal or lesser price. 7.9 to 14.03-oz pkg.",
+   "save": "SAVE UP TO $6.13",
+   "department": "Cookies"
+  },
+  {
+   "title": "Orville Redenbacher's Gourmet Popping Corn",
+   "description": "Free item of equal or lesser price. 3 to 12-ct. 8.7 to 19.75-oz or 30-oz; or Angie's Boom Chicka Pop, 6-ct. 13.16 or 19.74-oz pkg.",
+   "save": "SAVE UP TO $6.79",
+   "department": "Popcorn"
+  },
+  {
+   "title": "Wonder Bread",
+   "description": "Free item of equal or lesser price. Or Buns, Breakfast, or Sweet Cakes, 6 to 24-oz pkg.",
+   "save": "SAVE UP TO $4.85",
+   "department": "Bread"
+  },
+  {
+   "title": "Unreal Chocolate",
+   "description": "Free item of equal or lesser price. Bars, Gems, Peanut Butter Cups, or Chocolate Covered Pretzels, 3.4 to 5-oz bag",
+   "save": "SAVE UP TO $5.99",
+   "department": "Candy"
+  },
+  {
+   "title": "Zephyrhills Spring Water",
+   "description": "Free item of equal or lesser price. 12-pk. 8-oz bot.",
+   "save": "SAVE UP TO $3.59",
+   "department": "Water"
+  },
+  {
+   "title": "Mayfield Creamery Ice Cream",
+   "description": "Free item of equal or lesser price. 1.5-qt ctn.",
+   "save": "SAVE UP TO $8.99",
+   "department": "Ice Cream"
+  },
+  {
+   "title": "Président Whipped Crème",
+   "description": "Free item of equal or lesser price. Original Madagascar Vanilla or Extra Creamy, 10-oz can",
+   "save": "SAVE UP TO $6.49",
+   "department": "Desserts"
+  },
+  {
+   "title": "The Greek Gods Greek Yogurt Style",
+   "description": "Free item of equal or lesser price. 32-oz tub",
+   "save": "SAVE UP TO $5.99",
+   "department": "Yogurt"
+  },
+  {
+   "title": "Pillsbury Grands! Biscuits",
+   "description": "Free item of equal or lesser price. 10.2-oz or Flaky Layers, 12-oz, or Crescents, 4-oz, or Cinnamon Rolls, 7.3-oz can",
+   "save": "SAVE UP TO $5.73",
+   "department": "Butter &amp; Margarine"
+  },
+  {
+   "title": "Digiorno Stuffed Crust Pizza",
+   "description": "Free item of equal or lesser price. 21.5 to 26.4-oz; or Ellio's Pizza, 18.3 to 19.64-oz box (Stuffed Crust Only)",
+   "save": "SAVE UP TO $11.79",
+   "department": "Pizza"
+  },
+  {
+   "title": "Nestlé Drumstick Sundae Cones",
+   "description": "Free item of equal or lesser price. Or Lil' or Mini Drums, 4 to 20-ct. box",
+   "save": "SAVE UP TO $10.79",
+   "department": "Novelties"
+  },
+  {
+   "title": "Celentano Pasta",
+   "description": "Free item of equal or lesser price. 12.5 to 24-oz; or Louisa Toasted Ravioli or Mac & Cheese, 16-oz pkg.",
+   "save": "SAVE UP TO $6.79",
+   "department": "Frozen Food"
+  },
+  {
+   "title": "Arm & Hammer Laundry Detergent",
+   "description": "Free item of equal or lesser price. 45.5, 50, or 67-oz or 24-ct. pkg.",
+   "save": "SAVE UP TO $7.49",
+   "department": "Laundry Detergent"
+  },
+  {
+   "title": "Clorox All Purpose Spray Cleaners",
+   "description": "Free item of equal or lesser price. 32-oz bot.  (Excluding Multi-Surface Sprays)",
+   "save": "SAVE UP TO $4.49",
+   "department": "Household Cleaners"
+  },
+  {
+   "title": "Tide or Gain Laundry Detergent",
+   "description": "Free item of equal or lesser price. 10 or 19-ct. bag or 29 to 41-oz bot.",
+   "save": "SAVE UP TO $8.99",
+   "department": "Laundry Detergent"
+  },
+  {
+   "title": "Command Hooks",
+   "description": "Free item of equal or lesser price. Or Strips or Clips, 1 to 18-ct. pkg.; or Post-It Products, 1 to 4-ct. pkg.",
+   "save": "SAVE UP TO $16.09",
+   "department": "Tools"
+  },
+  {
+   "title": "Purina Beneful Prepared Meals Dog Food",
+   "description": "Free item of equal or lesser price. 10-oz tub",
+   "save": "SAVE UP TO $2.89",
+   "department": "Pet Food"
+  },
+  {
+   "title": "Huggies Diapers",
+   "description": "Free item of equal or lesser price. 13 to 44-ct. pkg. or Pull-Ups Training Pants, 14 to 23-ct. pkg.  (Excluding Goodnights)",
+   "save": "SAVE UP TO $12.99",
+   "department": "Diapers"
+  },
+  {
+   "title": "Glade Candle",
+   "description": "Free item of equal or lesser price. 4.08 to 8.16-oz pkg.",
+   "save": "SAVE UP TO $7.09",
+   "department": "Candles"
+  },
+  {
+   "title": "Handi-foil Pans",
+   "description": "Free item of equal or lesser price. 1 to 7-ct. pkg.",
+   "save": "SAVE UP TO $13.99",
+   "department": "Foil Bakeware"
+  },
+  {
+   "title": "Jinx Grain-Free Homemades Dog Food",
+   "description": "Free item of equal or lesser price. Or Kibble Sauce, 9 or 12-oz pouch",
+   "save": "SAVE UP TO $5.99",
+   "department": "Pet Food"
+  },
+  {
+   "title": "Bob Evans Side Dishes",
+   "description": "Free item of equal or lesser price.  Microwavable, 12 to 24-oz pkg.",
+   "save": "SAVE UP TO $5.49",
+   "department": "Meat"
+  },
+  {
+   "title": "Sharpie Permanent Markers",
+   "description": "Free item of equal or lesser price. Assorted Colors: Fine Point or Precision Ultra Fine, 8-ct. pkg.",
+   "save": "SAVE UP TO $9.55",
+   "department": "School Supplies"
+  },
+  {
+   "title": "6-Pack 7UP Products",
+   "description": "Free item of equal or lesser price. 16.9-oz bot. or 8-pk. 12-oz bot. or 10-pk. 7.5-oz can",
+   "save": "SAVE UP TO $8.99",
+   "department": "Soft Drinks"
+  },
+  {
+   "title": "Essentia Purified Drinking Water",
+   "description": "Free item of equal or lesser price. 1.5-L bot.",
+   "save": "SAVE UP TO $2.79",
+   "department": "Water"
+  },
+  {
+   "title": "Hunt's Tomato Ketchup",
+   "description": "Free item of equal or lesser price. 20 or 32-oz bot.",
+   "save": "SAVE UP TO $2.99",
+   "department": "Condiments &amp; Sauces"
+  },
+  {
+   "title": "Top Flight 1 Subject Notebook",
+   "description": "Free item of equal or lesser price. Or Composition Book, each",
+   "save": "SAVE UP TO $2.05",
+   "department": "School Supplies"
+  },
+  {
+   "title": "Pilot G2 Premium Gel Roller Pens",
+   "description": "Free item of equal or lesser price. Refillable, 2-ct. pkg.",
+   "save": "SAVE UP TO $4.15",
+   "department": "School Supplies"
+  },
+  {
+   "title": "Publix Salsa",
+   "description": "Free item of equal or lesser price. Mild, Medium, Black Bean & Corn or Mango & Peach, Located in the Deli, 16-oz pkg.",
+   "save": "SAVE UP TO $3.79",
+   "department": "Deli"
+  },
+  {
+   "title": "Post Great Grains Cereal",
+   "description": "Free item of equal or lesser price. 13 to 16-oz box",
+   "save": "SAVE UP TO $7.49",
+   "department": "Cereal"
+  },
+  {
+   "title": "Folgers Ground Coffee",
+   "description": "Free item of equal or lesser price. 19.2 to 25.9-oz can",
+   "save": "SAVE UP TO $24.99",
+   "department": "Coffee &amp; Tea"
+  },
+  {
+   "title": "Fresh Attitude Salads",
+   "description": "Free item of equal or lesser price.  Arugula, Spring Mix, Half and Half, Hearty Harvest, or Baby Spinach, 5-oz pkg.",
+   "save": "SAVE UP TO $3.99",
+   "department": "Produce"
+  },
+  {
+   "title": "Kraft Dressing",
+   "description": "Free item of equal or lesser price.  8-oz bot.",
+   "save": "SAVE UP TO $2.99",
+   "department": "Salad Dressing"
+  },
+  {
+   "title": "Wish-Bone Dressing",
+   "description": "Free item of equal or lesser price. 15-oz bot.",
+   "save": "SAVE UP TO $3.99",
+   "department": "Salad Dressing"
+  },
+  {
+   "title": "Pompeian Imported Olive Oil",
+   "description": "Free item of equal or lesser price. 25.4 or 32-oz bot.",
+   "save": "SAVE UP TO $25.99",
+   "department": "Cooking &amp; Olive Oil"
+  },
+  {
+   "title": "Utz Party Size! Potato Chips",
+   "description": "Free item of equal or lesser price. 12.5 or 13-oz bag; or Boulder Canyon Tortilla Chips, 8-oz bag; or On The Border Café Style Tortilla Chips, 15-oz bag",
+   "save": "SAVE UP TO $6.99",
+   "department": "Potato Chips"
+  },
+  {
+   "title": "Mahatma Yellow Rice",
+   "description": "Free item of equal or lesser price.  Seasoned, 5-oz bag",
+   "save": "SAVE UP TO $1.09",
+   "department": "Rice &amp; Dry Beans"
+  },
+  {
+   "title": "Sargento Balanced Breaks Snack",
+   "description": "Free item of equal or lesser price. 4 or 4.5-oz pkg.",
+   "save": "SAVE UP TO $4.19",
+   "department": "Meat &amp; Cheese Snacks"
+  },
+  {
+   "title": "Sharpie Highlighters",
+   "description": "Free item of equal or lesser price. Smear Guard: Chisel or Narrow Chisel, Assorted Colors, 4-ct. pkg.",
+   "save": "SAVE UP TO $3.79",
+   "department": "School Supplies"
+  },
+  {
+   "title": "Dave's Killer Bread Organic Burger Buns",
+   "description": "Free item of equal or lesser price.  21 Whole Grains and Seeds or Burger Buns Done Right, 17.6-oz pkg.; or Organic Sandwich Rolls: Original or 21 Whole Grains and Seeds, 18-oz bag",
+   "save": "SAVE UP TO $7.49",
+   "department": "Bread"
+  },
+  {
+   "title": "Mrs. Butterworth's Syrup",
+   "description": "Free item of equal or lesser price. 24-oz bot.",
+   "save": "SAVE UP TO $4.49",
+   "department": "Syrup &amp; Honey"
+  },
+  {
+   "title": "Tyson Restaurant Style Chicken",
+   "description": "Free item of equal or lesser price. Crispy Nuggets, Lightly Breaded Bites, or Strips, Uncooked, 32 or 40-oz pkg.",
+   "save": "SAVE UP TO $15.99",
+   "department": "Frozen Meat"
+  },
+  {
+   "title": "Cholula Hot Sauce",
+   "description": "Free item of equal or lesser price. 5-oz bot.",
+   "save": "SAVE UP TO $3.99",
+   "department": "Condiments &amp; Sauces"
+  },
+  {
+   "title": "Smithfield Marinated Pork Tenderloin",
+   "description": "Free item of equal or lesser price. Or Loin Filet, 19.2 or 23-oz pkg.",
+   "save": "SAVE UP TO $9.49",
+   "department": "Meat"
+  },
+  {
+   "title": "Publix Hummus",
+   "description": "Free item of equal or lesser price. Located in the Deli, 10-oz cont.",
+   "save": "SAVE UP TO $3.99",
+   "department": "Deli"
+  },
+  {
+   "title": "Popsicle Ice Pops",
+   "description": "Free item of equal or lesser price. 6-ct. or 29.7-oz; or Fudgsicle Original Fudge Bars, 29.7-oz box",
+   "save": "SAVE UP TO $6.84",
+   "department": "Novelties"
+  },
+  {
+   "title": "Charmin Essentials Bathroom Tissue",
+   "description": "Free item of equal or lesser price. Mega Rolls, Strong, 9-roll pkg.",
+   "save": "SAVE UP TO $10.99",
+   "department": "Bathroom Tissue"
+  },
+  {
+   "title": "Meat Mitch BBQ Sauce",
+   "description": "Free item of equal or lesser price.  16 to 21-oz bot.",
+   "save": "SAVE UP TO $7.99",
+   "department": "Condiments &amp; Sauces"
+  },
+  {
+   "title": "Nestlé Coffee Mate Coffee Creamer",
+   "description": "Free item of equal or lesser price. 32-oz bot.  (Excluding Natural Bliss)",
+   "save": "SAVE UP TO $4.49",
+   "department": "Milk"
+  },
+  {
+   "title": "Ronzoni Pasta",
+   "description": "Free item of equal or lesser price. 8 to 16-oz box",
+   "save": "SAVE UP TO $2.99",
+   "department": "Pasta &amp; Pasta Sauce"
+  },
+  {
+   "title": "Sweet Baby Ray's Gourmet Sauces Barbecue Sauce",
+   "description": "Free item of equal or lesser price. 18-oz bot.",
+   "save": "SAVE UP TO $2.67",
+   "department": "Condiments &amp; Sauces"
+  },
+  {
+   "title": "Blueberries",
+   "description": "Free item of equal or lesser price. 11-oz pkg.",
+   "save": "SAVE UP TO $5.99",
+   "department": "Produce"
+  },
+  {
+   "title": "Organic Strawberries",
+   "description": "Free item of equal or lesser price. 16-oz pkg.",
+   "save": "SAVE UP TO $6.99",
+   "department": "Produce"
+  },
+  {
+   "title": "Seasonal Rose Bouquet",
+   "description": "Free item of equal or lesser price. Each",
+   "save": "SAVE UP TO $14.99",
+   "department": "Floral"
+  },
+  {
+   "title": "Mama Mancini's Meals",
+   "description": "Free item of equal or lesser price. Available in the Grab and Go Section of the Deli, 12 or 14-oz tray",
+   "save": "SAVE UP TO $8.99",
+   "department": "Deli"
+  },
+  {
+   "title": "Galbani Fresh Mozzarella Cheese",
+   "description": "Free item of equal or lesser price. Located in the Deli Specialty Cheese Section, 16-oz pkg.",
+   "save": "SAVE UP TO $8.99",
+   "department": "Deli"
+  },
+  {
+   "title": "Coca-Cola Products",
+   "description": "Free item of equal or lesser price. 1.25-L bot.",
+   "save": "Save Up To $2.59",
+   "department": null
+  },
+  {
+   "title": "King's Hawaiian Sweet Rolls",
+   "description": "Free item of equal or lesser price. Or Savory Butter Rolls, Located in the Deli, 4-pk. 4-oz pkg.",
+   "save": "Save Up To $2.09",
+   "department": null
+  },
+  {
+   "title": "La Banderita Extra Large Flour Tortillas",
+   "description": "Free item of equal or lesser price. Burrito Grande or Comalera Sonora Style Thin Flour Tortillas, or Super Burrito Flour Tortillas, 6 or 8-ct. 15.8 or 20-oz bag",
+   "save": "Save Up To $4.09",
+   "department": null
+  },
+  {
+   "title": "Nutty & Fruity Mango",
+   "description": "Free item of equal or lesser price. Soft & Juicy, 5-oz bag",
+   "save": "Save Up To $5.99",
+   "department": null
+  },
+  {
+   "title": "Bai Antioxidant Beverage",
+   "description": "Free item of equal or lesser price. 18-oz bot.",
+   "save": "Save Up To $2.59",
+   "department": null
+  },
+  {
+   "title": "Dandy Celery Sticks",
+   "description": "Free item of equal or lesser price. 1.25-lb pkg.",
+   "save": "Save Up To $5.15",
+   "department": null
+  },
+  {
+   "title": "Bonduelle Bistro Bowls",
+   "description": "Free item of equal or lesser price. Chicken Caesar, Santa Fe With Chicken, Cranberry Walnut, Chicken and Bacon Caesar, or Chef With Turkey and Ham, 5 to 7.75-oz cont.",
+   "save": "Save Up To $5.45",
+   "department": null
+  },
+  {
+   "title": "Butterball Turkey Bacon",
+   "description": "Free item of equal or lesser price. 12-oz pkg.",
+   "save": "Save Up To $4.35",
+   "department": null
+  },
+  {
+   "title": "Belgioioso Grated Parmesan Cheese",
+   "description": "Free item of equal or lesser price. Or Shredded or Shaved; or Shredded Four Cheese Blend, Located in the Specialty Cheese Section, 4-oz pkg.",
+   "save": "Save Up To $4.15",
+   "department": null
+  },
+  {
+   "title": "Butterball Turkey Sausage",
+   "description": "Free item of equal or lesser price. Or Polska Kielbasa, 13-oz pkg.",
+   "save": "Save Up To $4.99",
+   "department": null
+  },
+  {
+   "title": "221 B.C. Organic Kombucha",
+   "description": "Free item of equal or lesser price. 16-oz cont.",
+   "save": "Save Up To $4.45",
+   "department": null
+  },
+  {
+   "title": "Galbani Mozzarella Cheese",
+   "description": "Free item of equal or lesser price. 16-oz pkg.",
+   "save": "Save Up To $7.69",
+   "department": null
+  },
+  {
+   "title": "Entenmann's Loaf Cake",
+   "description": "Free item of equal or lesser price. 11 to 14.5-oz box",
+   "save": "Save Up To $6.59",
+   "department": null
+  },
+  {
+   "title": "Roar Organic Vitamin Enhanced Beverage",
+   "description": "Free item of equal or lesser price. 18-oz bot.",
+   "save": "Save Up To $2.39",
+   "department": null
+  },
+  {
+   "title": "Poly 2-Pocket 3-Tang Folder",
+   "description": "Free item of equal or lesser price. Each",
+   "save": "Save Up To $1.55",
+   "department": null
+  },
+  {
+   "title": "Zico Pure Organic Coconut Water",
+   "description": "Free item of equal or lesser price. 100% Nam Hom, 13.5-oz cont.",
+   "save": "Save Up To $4.65",
+   "department": null
+  },
+  {
+   "title": "Zico Coconut Water",
+   "description": "Free item of equal or lesser price. 1-L pkg.",
+   "save": "Save Up To $5.79",
+   "department": null
+  },
+  {
+   "title": "Wise Cheez Doodles Corn Snacks",
+   "description": "Free item of equal or lesser price. Or Corn Chips; or Onion Rings or Popcorn, 5.5 to 9.25-oz bag",
+   "save": "Save Up To $4.79",
+   "department": null
+  },
+  {
+   "title": "Jack Link's Beef Jerky",
+   "description": "Free item of equal or lesser price. 2.85-oz pkg.",
+   "save": "Save Up To $9.29",
+   "department": null
+  },
+  {
+   "title": "David Seeds Sunflower Seeds",
+   "description": "Free item of equal or lesser price. Or Bigs Sunflower Seeds, 5.25 or 5.35-oz bag",
+   "save": "Save Up To $3.59",
+   "department": null
+  },
+  {
+   "title": "La Bonne Vie Goat Cheese Log",
+   "description": "Free item of equal or lesser price. 4-oz pkg.",
+   "save": "Save Up To $4.15",
+   "department": null
+  },
+  {
+   "title": "Lindy's Homemade Italian Ice",
+   "description": "Free item of equal or lesser price. 36-oz box",
+   "save": "Save Up To $4.69",
+   "department": null
+  },
+  {
+   "title": "Matlaw's New England Style Stuffed Clams",
+   "description": "Free item of equal or lesser price. Or Stuffed Scallops, Grill-Ready, Frozen, 9 or 11-oz pkg.",
+   "save": "Save Up To $5.59",
+   "department": null
+  },
+  {
+   "title": "Bare Apple Chips",
+   "description": "Free item of equal or lesser price. Fuji & Reds, Granny Smith, or Cinnamon, 3.4-oz pkg.; or Baked Banana Chips, 2.7-oz pkg.",
+   "save": "Save Up To $6.49",
+   "department": null
+  },
+  {
+   "title": "Nakano Rice Vinegar",
+   "description": "Free item of equal or lesser price. 12-oz bot.",
+   "save": "Save Up To $3.65",
+   "department": null
+  },
+  {
+   "title": "Nesquik Chocolate Milk Powder",
+   "description": "Free item of equal or lesser price. 20.1-oz can",
+   "save": "Save Up To $7.49",
+   "department": null
+  },
+  {
+   "title": "Banquet Brown'N Serve Sausage Links",
+   "description": "Free item of equal or lesser price. Or Patties, Sold Frozen, 6.4-oz pkg.",
+   "save": "Save Up To $2.99",
+   "department": null
+  },
+  {
+   "title": "Daiya Cheese Alternative Cheddar Style",
+   "description": "Free item of equal or lesser price. Or Swiss or Shreds: Mexican Blend, Cheddar, or Mozzarella, 7.1 or 7.8-oz pkg.",
+   "save": "Save Up To $5.65",
+   "department": null
+  },
+  {
+   "title": "Brooklyn Cured Beef Salami",
+   "description": "Free item of equal or lesser price. Smoked or Tuscan Red Wine, Located in the Deli, 3-oz tray",
+   "save": "Save Up To $8.55",
+   "department": null
+  },
+  {
+   "title": "Bic EZ Correct Correction Tape",
+   "description": "Free item of equal or lesser price. White, 1-ct.; or Wite-Out Plus, With Foam Brush, White, 1-ct. pkg.",
+   "save": "Save Up To $3.55",
+   "department": null
+  },
+  {
+   "title": "GreenWise Granola Bark",
+   "description": "Free item of equal or lesser price. Made With No Artificial Flavors, Colors, or Preservatives, 10.48-oz pkg.",
+   "save": "Save Up To $4.99",
+   "department": null
+  },
+  {
+   "title": "Garcia Beef Smoked Sausage",
+   "description": "Free item of equal or lesser price. 24-oz pkg.",
+   "save": "Save Up To $10.29",
+   "department": null
+  },
+  {
+   "title": "Top Flight Filler Paper",
+   "description": "Free item of equal or lesser price. 150-ct. pkg.",
+   "save": "Save Up To $2.25",
+   "department": null
+  },
+  {
+   "title": "Bic Medium Point Pen",
+   "description": "Free item of equal or lesser price. 10-ct. pkg.",
+   "save": "Save Up To $2.19",
+   "department": null
+  },
+  {
+   "title": "Bic Disposable Razors",
+   "description": "Free item of equal or lesser price. 2 to 4-ct. pkg.",
+   "save": "Save Up To $8.99",
+   "department": null
+  },
+  {
+   "title": "Twinings of London Tea",
+   "description": "Free item of equal or lesser price. K-Cups, 10 or 12-ct. box",
+   "save": "Save Up To $11.99",
+   "department": null
+  },
+  {
+   "title": "Flora Organic Bruschette Mini Toasts",
+   "description": "Free item of equal or lesser price. Olive Oil, Garlic & Herb, Tomato & Basil, or Rosemary, 5.3-oz bag",
+   "save": "Save Up To $4.15",
+   "department": null
+  },
+  {
+   "title": "Mama Mary's Thin & Crispy Pizza Crust, 12-In",
+   "description": "Or Gourmet, Located in the Publix Deli, 16 or 24-oz pkg. (Mama Mary's Pizza Sauce, 10-oz pkg. &hellip; Buy 1 Get 1 Free of Equal or Lesser Price)",
+   "save": "Save Up To $1.00",
+   "department": null
+  },
+  {
+   "title": "Natural Care Flea & Tick Spray",
+   "description": "Free item of equal or lesser price. Dog & Home, 32-oz bot.",
+   "save": "Save Up To $7.99",
+   "department": null
+  },
+  {
+   "title": "WTRMLN WTR Hydration",
+   "description": "Free item of equal or lesser price. Original, 33.8-oz cont.",
+   "save": "Save Up To $10.29",
+   "department": null
+  },
+  {
+   "title": "Cra-Z-Art Crayons",
+   "description": "Free item of equal or lesser price. 24-ct. pkg.",
+   "save": "Save Up To $1.49",
+   "department": null
+  },
+  {
+   "title": "Cra-Z-Art Markers",
+   "description": "Free item of equal or lesser price. Washable, 8-ct. box",
+   "save": "Save Up To $2.75",
+   "department": null
+  },
+  {
+   "title": "Feel Good Foods Appetizers",
+   "description": "Free item of equal or lesser price. 8 or 10-oz box",
+   "save": "Save Up To $8.99",
+   "department": null
+  },
+  {
+   "title": "Cra-Z-Art Colored Pencils",
+   "description": "Free item of equal or lesser price. 12-ct. box",
+   "save": "Save Up To $2.19",
+   "department": null
+  },
+  {
+   "title": "Annie's Macaroni & Cheese",
+   "description": "Free item of equal or lesser price. Or Pasta & Cheese, Vegan Mac, or Super! Mac, 5.25 to 11.3-oz box",
+   "save": "SAVE UP TO $8.85",
+   "department": "Pasta &amp; Pasta Sauce"
+  },
+  {
+   "title": "Arm & Hammer Scent Booster",
+   "description": "Free item of equal or lesser price. 18 or 24-oz; or Sheets, 80 to 200-ct.; or Fabric Rinse, 28-oz bot.",
+   "save": "",
+   "department": "Laundry Detergent"
+  },
+  {
+   "title": "Bai Antioxidant Infusion or Cocofusion Beverage",
+   "description": "Free item of equal or lesser price. 18-oz bot.",
+   "save": "",
+   "department": "Water"
+  },
+  {
+   "title": "Banquet Mega XL Entrées",
+   "description": "Free item of equal or lesser price. 24 or 26-oz box",
+   "save": "SAVE UP TO $5.99",
+   "department": "Dinners"
+  },
+  {
+   "title": "Bic Mechanical Pencils",
+   "description": "Free item of equal or lesser price. 10-ct. pkg.",
+   "save": "",
+   "department": "School Supplies"
+  },
+  {
+   "title": "Biolyte Electrolyte Supplement",
+   "description": "Free item of equal or lesser price. 16-oz bot.",
+   "save": "",
+   "department": "Sports Drinks"
+  },
+  {
+   "title": "California Olive Ranch Extra Virgin Olive Oil",
+   "description": "Free item of equal or lesser price. 16.9 to 47.3-oz bot.",
+   "save": "SAVE UP TO $32.99",
+   "department": "Cooking &amp; Olive Oil"
+  },
+  {
+   "title": "Casa Madeira Grape Juice",
+   "description": "Free item of equal or lesser price. 33.8-oz bot.",
+   "save": "SAVE UP TO $6.59",
+   "department": "Fruit Drinks"
+  },
+  {
+   "title": "Clif Bar Sustained Energy Bar",
+   "description": "Free item of equal or lesser price. 10-pk. 2.4-oz box; or Clif Zbar Family Pack, 15.24-oz box",
+   "save": "SAVE UP TO $12.99",
+   "department": "Cereal"
+  },
+  {
+   "title": "Core Hydration Nutrient Enhanced Water",
+   "description": "Free item of equal or lesser price. 6-pk. 16.9-oz bot.",
+   "save": "",
+   "department": "Water"
+  },
+  {
+   "title": "Country Crock or I Can't Believe It's Not Butter Spread",
+   "description": "Free item of equal or lesser price. 45-oz tub",
+   "save": "",
+   "department": "Butter &amp; Margarine"
+  },
+  {
+   "title": "Crystal Light Drink Mix",
+   "description": "Free item of equal or lesser price. 10 or 12-qt or 5 to 10-ct. box; or Arizona Drink Mix, 10-ct. box; or Crystal Light or Mio Liquid Drink Mix, 1.62-oz bot.",
+   "save": "SAVE UP TO $4.19",
+   "department": "Flavored Water Enhancers"
+  },
+  {
+   "title": "Cutter Insect Repellent",
+   "description": "Free item of equal or lesser price. Spray or Aerosol, 4 or 6-oz pkg. or Backyard Bug Control Outdoor Fogger, 16-oz can",
+   "save": "SAVE UP TO $6.49",
+   "department": "Insecticide"
+  },
+  {
+   "title": "Disney Princess String Cheese",
+   "description": "Free item of equal or lesser price. Or SpongeBob or Paw Patrol; or Teenage Mutant Ninja Turtles Stick Cheese; or Land O Lakes Snack Cheese, 7.5 to 10-oz pkg.",
+   "save": "SAVE UP TO $5.69",
+   "department": "Cheese"
+  },
+  {
+   "title": "Dove Bar Ice Cream Bars or Outshine Fruit Bars",
+   "description": "Free item of equal or lesser price. 3 to 14-ct. or 14.7 to 16.1-oz box",
+   "save": "",
+   "department": "Novelties"
+  },
+  {
+   "title": "Dove Anti-Perspirant/Deodorant",
+   "description": "Free item of equal or lesser price. Invisible Solid, 2.6-oz pkg.",
+   "save": "SAVE UP TO $5.27",
+   "department": "Deodorant"
+  },
+  {
+   "title": "Dr. Praeger's Entrées",
+   "description": "Free item of equal or lesser price. 8 to 10-oz box; or Path of Life Quinoa or Cilantro Lime Rice Blend, Gluten Free, 10-oz bag",
+   "save": "SAVE UP TO $6.19",
+   "department": "Meatless"
+  },
+  {
+   "title": "Elmer's School Glue Sticks",
+   "description": "Free item of equal or lesser price. Disappearing Purple or No Run, Safe Non-Toxic, Washable, 3-ct. or 4-oz pkg.",
+   "save": "SAVE UP TO $4.15",
+   "department": "School Supplies"
+  },
+  {
+   "title": "Emerald Nuts",
+   "description": "Free item of equal or lesser price. 5 to 10-oz bag  (Excluding Multipacks)",
+   "save": "SAVE UP TO $5.29",
+   "department": "Nuts"
+  },
+  {
+   "title": "Expo Dry Erase Markers",
+   "description": "Free item of equal or lesser price. 4-ct. pkg.",
+   "save": "",
+   "department": "School Supplies"
+  },
+  {
+   "title": "Fels-Naptha Soap Laundry Bar & Stain Remover",
+   "description": "Free item of equal or lesser price. 5-oz bar",
+   "save": "SAVE UP TO $2.09",
+   "department": "Household Cleaners"
+  },
+  {
+   "title": "Frick's Sliced Ham",
+   "description": "Free item of equal or lesser price. Boneless, Honey or Applewood, Smoked, Fully Cooked, 24-oz pkg.",
+   "save": "SAVE UP TO $13.29",
+   "department": "Meat"
+  },
+  {
+   "title": "Glade Plugins Scented Oil Refills",
+   "description": "Free item of equal or lesser price. 2-ct. pkg.; or Automatic Spray Refill, 6.2-oz can  (Excluding Glade Fresh)",
+   "save": "SAVE UP TO $6.49",
+   "department": "Air Fresheners"
+  },
+  {
+   "title": "H&auml;agen-Dazs Ice Cream",
+   "description": "Free item of equal or lesser price. 28-oz ctn.",
+   "save": "",
+   "department": "Ice Cream"
+  },
+  {
+   "title": "Jell-O Instant Pudding & Pie Filling",
+   "description": "Free item of equal or lesser price. Or Instant Pudding or Gelatin, 6 or 8 1/2 Cup Serving Size, each box",
+   "save": "SAVE UP TO $2.19",
+   "department": "Spices &amp; Extract"
+  },
+  {
+   "title": "Jelly Belly Jelly Beans or Black Forest Organic Gummy Candy",
+   "description": "Free item of equal or lesser price. 8-oz bag",
+   "save": "",
+   "department": "Candy"
+  },
+  {
+   "title": "Lance Sandwich Crackers",
+   "description": "Free item of equal or lesser price. 12.5 to 17.4-oz pkg.",
+   "save": "SAVE UP TO $4.19",
+   "department": "Crackers"
+  },
+  {
+   "title": "Land O' Frost Premium Lunch Meats",
+   "description": "Free item of equal or lesser price. 14 to 16-oz pkg.",
+   "save": "SAVE UP TO $8.59",
+   "department": "Lunch Meat"
+  },
+  {
+   "title": "Maison Perrier French Kiss Juice Beverage",
+   "description": "Free item of equal or lesser price. Sparkling, 6-pk. 330-mL can",
+   "save": "SAVE UP TO $8.49",
+   "department": "Water"
+  },
+  {
+   "title": "Mooala Organic Almond Milk",
+   "description": "Free item of equal or lesser price. Or Banana Milk, 48-oz bot.",
+   "save": "SAVE UP TO $5.49",
+   "department": "Milk"
+  },
+  {
+   "title": "Moore's Meat Marinade or Buffalo Wing Sauce",
+   "description": "Free item of equal or lesser price. 16-oz bot.",
+   "save": "",
+   "department": "Condiments &amp; Sauces"
+  },
+  {
+   "title": "Nature Valley Granola",
+   "description": "Free item of equal or lesser price. 11 to 17-oz bag",
+   "save": "",
+   "department": "Cereal"
+  },
+  {
+   "title": "Nestlé Coffee Mate Cold Foam Coffee Creamer",
+   "description": "Free item of equal or lesser price. 14-oz can",
+   "save": "",
+   "department": "Milk"
+  },
+  {
+   "title": "Olde Thompson Spices or Seasonings",
+   "description": "Free item of equal or lesser price. 3.9 to 16-oz pkg.",
+   "save": "SAVE UP TO $6.99",
+   "department": "Spices &amp; Extract"
+  },
+  {
+   "title": "Forager Project Greek Style Coconut & Cashew Yogurt",
+   "description": "Free item of equal or lesser price. 5-oz cup",
+   "save": "",
+   "department": "Yogurt"
+  },
+  {
+   "title": "Log Cabin Syrup",
+   "description": "Free item of equal or lesser price. 24-oz bot.",
+   "save": "",
+   "department": "Syrup &amp; Honey"
+  },
+  {
+   "title": "Parm Crisps, Family Size",
+   "description": "Free item of equal or lesser price. 5-oz pkg.",
+   "save": "",
+   "department": "Deli"
+  },
+  {
+   "title": "Perdue Breaded Chicken Breast Nuggets",
+   "description": "Free item of equal or lesser price. Or Patties or Tenders, Fully Cooked, 22 to 29-oz pkg.",
+   "save": "SAVE UP TO $8.99",
+   "department": "Frozen Meat"
+  },
+  {
+   "title": "Peter Pan Peanut Butter",
+   "description": "Free item of equal or lesser price. 28-oz jar",
+   "save": "",
+   "department": "Peanut Butter &amp; Jelly"
+  },
+  {
+   "title": "Pillsbury Toaster Strudel Pastries",
+   "description": "Free item of equal or lesser price. 6-ct. 11.7-oz box; or Toaster Scrambles, 4-ct. 7.2-oz box",
+   "save": "SAVE UP TO $3.65",
+   "department": "Breakfast"
+  },
+  {
+   "title": "Pilon Ground Espresso Coffee",
+   "description": "Free item of equal or lesser price. 10-oz bag",
+   "save": "",
+   "department": "Coffee &amp; Tea"
+  },
+  {
+   "title": "Planet Oat Oatmilk Creamer",
+   "description": "Free item of equal or lesser price. 32-oz bot.",
+   "save": "",
+   "department": "Milk"
+  },
+  {
+   "title": "Purina Beggin' Dog Treats",
+   "description": "Free item of equal or lesser price. 6-oz pouch",
+   "save": "",
+   "department": "Pet Food"
+  },
+  {
+   "title": "Purina Dog Chow Dog Food",
+   "description": "Free item of equal or lesser price. 3.2 or 3.5-lb bag",
+   "save": "",
+   "department": "Pet Food"
+  },
+  {
+   "title": "Rao's Slow Simmered Soup",
+   "description": "Free item of equal or lesser price. 15.25 to 16-oz jar",
+   "save": "SAVE UP TO $5.49",
+   "department": "Soup &amp; Broth"
+  },
+  {
+   "title": "Rollin Greens Protein",
+   "description": "Free item of equal or lesser price. 4.5-oz pouch",
+   "save": "",
+   "department": "Canned Meat/Seafood"
+  },
+  {
+   "title": "Rosina Meatballs",
+   "description": "Free item of equal or lesser price. 18 to 26-oz pkg.; or Opaa! Ready Carved Lunch Meat Slices, 12-oz pkg.",
+   "save": "SAVE UP TO $12.49",
+   "department": "Frozen Meat"
+  },
+  {
+   "title": "Sharpie Pocket Highlighters",
+   "description": "Free item of equal or lesser price. Assorted Pastel Colors, 6-ct. pkg.",
+   "save": "",
+   "department": "School Supplies"
+  },
+  {
+   "title": "Sicilian Village Marinated Olives",
+   "description": "Free item of equal or lesser price. Sicilian: Green and Black or Green; or Kalamata, 7-oz pouch",
+   "save": "SAVE UP TO $6.79",
+   "department": "Pickles &amp; Olives"
+  },
+  {
+   "title": "Skinny Pop Popcorn",
+   "description": "Free item of equal or lesser price. 3.9 or 8-oz bag",
+   "save": "SAVE UP TO $6.99",
+   "department": "Popcorn"
+  },
+  {
+   "title": "Springer Mountain Farms Chicken Breast Strips",
+   "description": "Free item of equal or lesser price. Fully Cooked, 8-oz pkg.",
+   "save": "SAVE UP TO $4.99",
+   "department": "Meat"
+  },
+  {
+   "title": "Top Fox Organic Snacking Pumpkin Seeds",
+   "description": "Free item of equal or lesser price. Or Sunflower or Duos Sunflower + Pumpkin, 3.5 to 5.5-oz bag",
+   "save": "SAVE UP TO $3.99",
+   "department": "Snacks"
+  },
+  {
+   "title": "Totino's Pizza Rolls",
+   "description": "Free item of equal or lesser price. 50 or 100-ct. 24.46 to 48.8-oz pkg.",
+   "save": "",
+   "department": "Snacks"
+  },
+  {
+   "title": "Westcott Kids 5\" Scissor, Blunt or Pointed",
+   "description": "Free item of equal or lesser price. 1-ct. pkg.",
+   "save": "",
+   "department": "School Supplies"
+  },
+  {
+   "title": "Wow Bao Soup Dumplings",
+   "description": "Free item of equal or lesser price. 6-oz; or Entrées, 10-oz box",
+   "save": "SAVE UP TO $8.99",
+   "department": "Dinners"
+  },
+  {
+   "title": "12-Pack Zevia Zero Sugar Soda",
+   "description": "Free item of equal or lesser price. 12-oz can",
+   "save": "SAVE UP TO $11.99",
+   "department": "Soft Drinks"
+  }
+ ]
+}

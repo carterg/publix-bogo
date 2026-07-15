@@ -1,112 +1,117 @@
 {
-  "week": "7/8 – 7/14",
-  "generatedAt": "2026-07-14T20:00:00.000Z",
-  "intro": "Five dairy-free, egg-free weeknight dinners built from this week's Publix BOGOs and Kroger deals. Proteins are running especially cheap — chicken thighs, salmon, pork chops, shrimp, and ground chicken are all on sale.",
+  "week": "7/15 – 7/21",
+  "generatedAt": "2026-07-15T21:15:00.000Z",
+  "intro": "Five dairy-free, egg-free weeknight dinners built from this week's Publix BOGOs and Kroger deals. Proteins are the headline again — Italian sausage, chicken breast, white shrimp, ground beef, and pork tenderloin are all on sale, alongside cheap peppers, potatoes, mushrooms, and avocados.",
   "recipes": [
     {
-      "title": "Chimichurri Chicken Thighs with Jasmine Rice & Blistered Mushrooms",
-      "blurb": "Pre-marinated chimichurri thighs seared until crisp, served over fluffy jasmine rice with garlicky pan-blistered baby bellas.",
-      "time": "35 min",
+      "title": "Sheet-Pan Italian Sausage, Peppers & Potatoes",
+      "blurb": "Everything roasts on one pan while you do nothing: sweet Italian sausage, tricolor peppers, and russet chunks, all crisped in olive oil.",
+      "time": "40 min",
       "serves": 4,
-      "tags": ["quick", "one-pan protein"],
+      "tags": ["sheet-pan", "one-pan protein", "weeknight"],
       "saleIngredients": [
-        { "item": "Publix Marinated Boneless Skinless Chicken Thighs (Chimichurri)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Four Elephants Thai Jasmine Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Baby Bella Mushrooms (sliced, 8 oz)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Bertolli Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Sweet Italian Sausage", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Idaho Russet Potatoes", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Pompeian Imported Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+      ],
+      "pantryIngredients": ["salt & pepper", "garlic powder", "dried oregano or Italian seasoning"],
+      "steps": [
+        "Heat oven to 425°F. Cut potatoes into 3/4-inch chunks, peppers and onion into wide strips.",
+        "Toss vegetables on a sheet pan with olive oil, salt, pepper, garlic powder, and oregano. Roast 15 min.",
+        "Nestle the sausages (whole or cut into coins) among the vegetables. Roast another 20–25 min, tossing once, until sausage is 160°F and potatoes are browned.",
+        "Finish under the broiler 2 min for extra color if you like, then serve straight from the pan."
+      ],
+      "note": "Publix Sweet Italian Sausage is dairy/egg-free, but glance at the label if you swap brands — some fresh sausages add milk-based fillers."
+    },
+    {
+      "title": "Garlic-Lime Shrimp & Yellow Rice Bowls",
+      "blurb": "Quick-seared white shrimp over saffron-y yellow rice, loaded with charred peppers, corn, and cool avocado.",
+      "time": "30 min",
+      "serves": 4,
+      "tags": ["seafood", "quick", "weeknight"],
+      "saleIngredients": [
+        { "item": "White Shrimp", "store": "Publix", "deal": "On sale, per lb" },
+        { "item": "Mahatma Yellow Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Bulk Sweet Corn", "store": "Publix", "deal": "On sale, each" },
         { "item": "Green Avocados", "store": "Publix", "deal": "On sale, each" }
       ],
-      "pantryIngredients": ["salt & pepper", "garlic (or garlic powder)"],
+      "pantryIngredients": ["garlic", "lime", "olive oil", "salt", "Cholula or hot sauce (optional)"],
       "steps": [
-        "Start the jasmine rice: rinse 1.5 cups, simmer with 2.25 cups water and a pinch of salt, covered, ~15 min; rest off heat.",
-        "Pat the chicken thighs dry and sear in a hot skillet with a little olive oil, 5–6 min per side until 165°F and caramelized. Rest on a plate.",
-        "In the same pan, add a splash more oil and the mushrooms. Cook undisturbed 3–4 min to blister, then toss with a little garlic and salt for another 2 min.",
-        "Fluff the rice, slice the chicken, and serve with mushrooms and sliced avocado on top."
+        "Cook the yellow rice per the package. Cut corn kernels off the cob; dice peppers.",
+        "Sear peppers and corn in a hot skillet with a little oil until charred at the edges, 4–5 min; set aside.",
+        "Pat shrimp dry, toss with garlic, salt, and a squeeze of lime. Sear 1–2 min per side until just pink.",
+        "Build bowls: rice, charred veg, shrimp, sliced avocado, more lime, and a shake of Cholula."
       ],
-      "note": "The chimichurri marinade is oil-and-herb based — dairy/egg-free. No cheese or crema needed."
+      "note": "Use plain White Shrimp here, not the pre-breaded panko shrimp — breaded coatings often contain egg."
     },
     {
-      "title": "Sheet-Pan Salmon with Crispy Smashed Potatoes",
-      "blurb": "Roasted salmon fillets with olive-oil smashed russets — one sheet pan, no dairy, big crispy edges.",
-      "time": "45 min",
-      "serves": 4,
-      "tags": ["sheet-pan", "seafood"],
-      "saleIngredients": [
-        { "item": "Fresh Salmon Fillets (responsibly sourced)", "store": "Publix", "deal": "On sale, fresh" },
-        { "item": "Publix Idaho Russet Potatoes (5-lb bag)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Bertolli Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "McCormick Grill Mates Seasoning", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
-      ],
-      "pantryIngredients": ["salt & pepper", "lemon (optional)"],
-      "steps": [
-        "Boil small whole potatoes until fork-tender, ~15 min. Drain and let steam-dry a few minutes.",
-        "Smash each potato flat on an oiled sheet pan, brush with olive oil, season, and roast at 450°F for 20 min until crisp.",
-        "Push potatoes aside, add the salmon fillets, brush with oil and Grill Mates, and roast 10–12 min more until the fish flakes.",
-        "Finish with a squeeze of lemon and serve."
-      ],
-      "note": "Grill Mates blends are dairy/egg-free, but glance at the label if you swap to a Bacon or creamy variety."
-    },
-    {
-      "title": "Salsa-Smothered Pork Chops with Rice & Avocado",
-      "blurb": "Quick-seared lean pork chops finished in chunky salsa, piled over microwave-fast rice with cool avocado.",
+      "title": "Chicken & Broccoli Stir-Fry over Jasmine Rice",
+      "blurb": "A fast, savory stir-fry of sliced chicken breast and broccoli in a glossy garlic-soy sauce over fluffy jasmine rice.",
       "time": "30 min",
       "serves": 4,
-      "tags": ["quick", "weeknight"],
+      "tags": ["quick", "one-pan protein", "weeknight"],
       "saleIngredients": [
-        { "item": "Publix Lean Boneless Pork Loin Chops", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Pace Chunky Salsa", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Ben's Original Ready Rice", "store": "Kroger", "deal": "$1.99 ea" },
-        { "item": "Large Avocados", "store": "Kroger", "deal": "$1.88 ea" }
+        { "item": "GreenWise Boneless Skinless Chicken Breast", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Broccoli or Cauliflower", "store": "Publix", "deal": "On sale, each" },
+        { "item": "Mahatma Jasmine Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Springer Mountain Farms Boneless Chicken Breasts", "store": "Kroger", "deal": "Buy 1 Get 1 FREE (swap option)" }
       ],
-      "pantryIngredients": ["salt & pepper", "cumin (optional)"],
+      "pantryIngredients": ["soy sauce", "garlic", "fresh ginger (or ground)", "cornstarch", "neutral oil", "brown sugar or honey"],
       "steps": [
-        "Season pork chops with salt, pepper, and a little cumin. Sear in a hot oiled skillet 3–4 min per side.",
-        "Pour in the salsa, cover, and simmer 5–6 min until the chops reach 145°F and the sauce thickens.",
-        "Heat the Ready Rice per package. Serve chops and salsa over rice with sliced avocado.",
-        "Spoon extra pan salsa over the top."
+        "Start the jasmine rice: rinse, simmer covered with a pinch of salt ~15 min, rest off heat.",
+        "Slice chicken thin; toss with 1 tsp cornstarch and a splash of soy. Cut broccoli into florets, onion into wedges.",
+        "Stir-fry chicken in hot oil until golden and cooked through; remove. Stir-fry broccoli and onion 3–4 min with a splash of water to steam.",
+        "Return chicken, add a sauce of 3 tbsp soy, 1 tsp sugar, garlic, ginger, and 1 tsp cornstarch in 1/4 cup water. Toss until glossy; serve over rice."
       ],
-      "note": "Plain Pace salsa is dairy/egg-free — skip the queso-style dips on sale this week, which contain dairy."
+      "note": "Naturally dairy/egg-free. Kroger has Springer Mountain chicken breast BOGO this week too if Publix is picked over."
     },
     {
-      "title": "Ground Chicken Tacos with Avocado & Salsa",
-      "blurb": "Fast skillet-seasoned ground chicken in warm flour tortillas, loaded with avocado and chunky salsa — no cheese needed.",
-      "time": "25 min",
+      "title": "Ground Beef & Mushroom Bolognese",
+      "blurb": "A rich, meaty red sauce with baby bella mushrooms and onion, simmered into a jar of Rao's and tossed with pasta.",
+      "time": "40 min",
       "serves": 4,
-      "tags": ["quick", "taco night"],
+      "tags": ["pasta", "weeknight"],
       "saleIngredients": [
-        { "item": "Perdue Ground Chicken (16 oz)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Mission Soft Taco Flour Tortillas", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Pace Chunky Salsa", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Large Avocados", "store": "Kroger", "deal": "$1.88 ea" }
+        { "item": "Steakhouse Elite Signature Ground Beef", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Baby Bella Whole Mushrooms", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Rao's Homemade Sauce", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Ronzoni Pasta", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
       ],
-      "pantryIngredients": ["chili powder", "cumin", "garlic powder", "salt"],
+      "pantryIngredients": ["olive oil", "garlic", "salt & pepper", "dried oregano"],
       "steps": [
-        "Brown the ground chicken in a skillet, breaking it up, ~6–8 min.",
-        "Stir in chili powder, cumin, garlic powder, salt, and a splash of water; simmer 2–3 min until saucy.",
-        "Warm the tortillas in a dry pan or microwave.",
-        "Fill tortillas with chicken, sliced avocado, and a spoonful of salsa."
+        "Boil salted water and cook the Ronzoni pasta to al dente; reserve a cup of pasta water before draining.",
+        "Brown the ground beef in a little olive oil, breaking it up; season with salt and pepper. Remove excess fat.",
+        "Add chopped onion and sliced mushrooms; cook 6–8 min until soft and browned. Stir in garlic and oregano.",
+        "Pour in the Rao's sauce, simmer 10 min, loosen with pasta water, then toss with the pasta and serve."
       ],
-      "note": "Check the tortilla label — most Mission flour tortillas are dairy/egg-free, but a few varieties add milk. Skip the sour cream and queso on sale this week."
+      "note": "Rao's marinara is dairy/egg-free — skip the parmesan for a dairy-free bowl, or top with a dairy-free grated cheese. Barilla pasta is $1.39 at Kroger this week if you'd rather stock up there."
     },
     {
-      "title": "Garlic Shrimp & Mushroom Spaghetti",
-      "blurb": "Olive-oil garlic shrimp tossed with blistered mushrooms and spaghetti — a bright, brothy, no-cream pasta.",
-      "time": "30 min",
+      "title": "Salsa-Simmered Pork Tacos with Avocado",
+      "blurb": "Marinated pork tenderloin seared and simmered in salsa until saucy, piled into warm tortillas with avocado and peppers.",
+      "time": "35 min",
       "serves": 4,
-      "tags": ["seafood", "pasta"],
+      "tags": ["taco night", "one-pan protein", "weeknight"],
       "saleIngredients": [
-        { "item": "Publix White Shrimp (large, 31–35 ct, frozen)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Baby Bella Mushrooms (sliced, 8 oz)", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Bertolli Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+        { "item": "Smithfield Marinated Pork Tenderloin", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Salsa", "store": "Publix", "deal": "On sale" },
+        { "item": "Green Avocados", "store": "Publix", "deal": "On sale, each" },
+        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Pork Boston Butt", "store": "Kroger", "deal": "Buy 1 Get 1 FREE (budget swap)" }
       ],
-      "pantryIngredients": ["dry spaghetti", "garlic", "red pepper flakes", "salt", "lemon", "parsley (optional)"],
+      "pantryIngredients": ["corn or flour tortillas", "lime", "salt", "cumin", "cilantro (optional)"],
       "steps": [
-        "Boil spaghetti in salted water until al dente; reserve a cup of pasta water before draining.",
-        "Thaw and pat shrimp dry. In a wide pan, cook mushrooms in olive oil until browned, then push aside.",
-        "Add more oil, sliced garlic, and red pepper flakes; add shrimp and cook 2–3 min until just pink.",
-        "Toss in the pasta with a splash of pasta water and a squeeze of lemon; loosen to a light sauce and finish with parsley."
+        "Cut pork tenderloin into strips or bite-size pieces; season with a little cumin and salt.",
+        "Sear in a hot skillet until browned, 4–5 min. Add sliced peppers and cook 3 min.",
+        "Pour in the salsa, lower heat, and simmer 8–10 min until the pork is cooked through and the sauce clings.",
+        "Warm tortillas, fill with pork, and top with sliced avocado, a squeeze of lime, and cilantro."
       ],
-      "note": "Standard dry spaghetti is dairy/egg-free; avoid fresh or 'egg' pasta. This sauce is olive-oil based — no butter or cheese."
+      "note": "Skip the sour cream and cheese to keep it dairy-free — the avocado does the creamy work. For a slow, cheap crowd version, use Kroger's BOGO Boston Butt and simmer longer."
     }
   ]
 }
