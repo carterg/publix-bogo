@@ -1,7 +1,7 @@
 {
   "week": "7/15 – 7/21",
   "generatedAt": "2026-07-15T21:15:00.000Z",
-  "intro": "Five dairy-free, egg-free weeknight dinners built from this week's Publix BOGOs and Kroger deals. Proteins are the headline again — Italian sausage, chicken breast, white shrimp, ground beef, and pork tenderloin are all on sale, alongside cheap peppers, potatoes, mushrooms, and avocados.",
+  "intro": "Five dairy-free, egg-free weeknight dinners built from this week's Publix and Kroger sales. Proteins are the headline again — Italian sausage, chicken breast, white shrimp, ground beef, and pork tenderloin are all discounted, alongside cheap peppers, potatoes, mushrooms, and avocados. Each ingredient below shows its actual deal.",
   "recipes": [
     {
       "title": "Sheet-Pan Italian Sausage, Peppers & Potatoes",
@@ -10,10 +10,10 @@
       "serves": 4,
       "tags": ["sheet-pan", "one-pan protein", "weeknight"],
       "saleIngredients": [
-        { "item": "Publix Sweet Italian Sausage", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Idaho Russet Potatoes", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Sweet Italian Sausage", "store": "Publix", "deal": "$5.69" },
+        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "$4.99" },
+        { "item": "Publix Idaho Russet Potatoes", "store": "Publix", "deal": "$3.99" },
+        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "$3.49" },
         { "item": "Pompeian Imported Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
       ],
       "pantryIngredients": ["salt & pepper", "garlic powder", "dried oregano or Italian seasoning"],
@@ -32,11 +32,11 @@
       "serves": 4,
       "tags": ["seafood", "quick", "weeknight"],
       "saleIngredients": [
-        { "item": "White Shrimp", "store": "Publix", "deal": "On sale, per lb" },
+        { "item": "White Shrimp", "store": "Publix", "deal": "$8.99 lb" },
         { "item": "Mahatma Yellow Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Bulk Sweet Corn", "store": "Publix", "deal": "On sale, each" },
-        { "item": "Green Avocados", "store": "Publix", "deal": "On sale, each" }
+        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "$4.99" },
+        { "item": "Bulk Sweet Corn", "store": "Publix", "deal": "5 for $3.00" },
+        { "item": "Green Avocados", "store": "Publix", "deal": "2 for $5.00" }
       ],
       "pantryIngredients": ["garlic", "lime", "olive oil", "salt", "Cholula or hot sauce (optional)"],
       "steps": [
@@ -54,10 +54,10 @@
       "serves": 4,
       "tags": ["quick", "one-pan protein", "weeknight"],
       "saleIngredients": [
-        { "item": "GreenWise Boneless Skinless Chicken Breast", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Broccoli or Cauliflower", "store": "Publix", "deal": "On sale, each" },
-        { "item": "Mahatma Jasmine Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "GreenWise Boneless Skinless Chicken Breast", "store": "Publix", "deal": "$4.99 lb" },
+        { "item": "Broccoli or Cauliflower", "store": "Publix", "deal": "2 for $6.00" },
+        { "item": "Mahatma Jasmine Rice", "store": "Publix", "deal": "$2.00" },
+        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "$3.49" },
         { "item": "Springer Mountain Farms Boneless Chicken Breasts", "store": "Kroger", "deal": "Buy 1 Get 1 FREE (swap option)" }
       ],
       "pantryIngredients": ["soy sauce", "garlic", "fresh ginger (or ground)", "cornstarch", "neutral oil", "brown sugar or honey"],
@@ -76,11 +76,11 @@
       "serves": 4,
       "tags": ["pasta", "weeknight"],
       "saleIngredients": [
-        { "item": "Steakhouse Elite Signature Ground Beef", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Baby Bella Whole Mushrooms", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Rao's Homemade Sauce", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Steakhouse Elite Signature Ground Beef", "store": "Publix", "deal": "$9.99" },
+        { "item": "Publix Baby Bella Whole Mushrooms", "store": "Publix", "deal": "2 for $4.00" },
+        { "item": "Rao's Homemade Sauce", "store": "Publix", "deal": "$6.99" },
         { "item": "Ronzoni Pasta", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "$3.49" }
       ],
       "pantryIngredients": ["olive oil", "garlic", "salt & pepper", "dried oregano"],
       "steps": [
@@ -99,9 +99,9 @@
       "tags": ["taco night", "one-pan protein", "weeknight"],
       "saleIngredients": [
         { "item": "Smithfield Marinated Pork Tenderloin", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Salsa", "store": "Publix", "deal": "On sale" },
-        { "item": "Green Avocados", "store": "Publix", "deal": "On sale, each" },
-        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Salsa", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Green Avocados", "store": "Publix", "deal": "2 for $5.00" },
+        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "$4.99" },
         { "item": "Pork Boston Butt", "store": "Kroger", "deal": "Buy 1 Get 1 FREE (budget swap)" }
       ],
       "pantryIngredients": ["corn or flour tortillas", "lime", "salt", "cumin", "cilantro (optional)"],
