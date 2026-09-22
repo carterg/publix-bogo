@@ -1,117 +1,124 @@
 {
-  "week": "7/15 – 7/21",
-  "generatedAt": "2026-07-15T21:15:00.000Z",
-  "intro": "Five dairy-free, egg-free weeknight dinners built from this week's Publix and Kroger sales. Proteins are the headline again — Italian sausage, chicken breast, white shrimp, ground beef, and pork tenderloin are all discounted, alongside cheap peppers, potatoes, mushrooms, and avocados. Each ingredient below shows its actual deal.",
+  "week": "9/16 – 9/22",
+  "generatedAt": "2026-09-22T20:30:00.000Z",
+  "intro": "Five dairy-free, egg-free weeknight dinners built around this week's Publix Buy 1 Get 1 FREE items, so you pay for one and get a second one free. Boneless skinless chicken breast is BOGO this week, so buy two packs and use them for two dinners. Italian sausage, ham steak, pulled pork, pasta, sauce, rice, olive oil, broth, green beans and Campari tomatoes are also BOGO. BOGO items that usually contain dairy or egg (cheeses, Rosina meatballs, pesto, Alfredo sauce, King's Hawaiian buns, mayo) were left out.",
   "recipes": [
     {
-      "title": "Sheet-Pan Italian Sausage, Peppers & Potatoes",
-      "blurb": "Everything roasts on one pan while you do nothing: sweet Italian sausage, tricolor peppers, and russet chunks, all crisped in olive oil.",
-      "time": "40 min",
-      "serves": 4,
-      "tags": ["sheet-pan", "one-pan protein", "weeknight"],
-      "saleIngredients": [
-        { "item": "Publix Sweet Italian Sausage", "store": "Publix", "deal": "$5.69" },
-        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "$4.99" },
-        { "item": "Publix Idaho Russet Potatoes", "store": "Publix", "deal": "$3.99" },
-        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "$3.49" },
-        { "item": "Pompeian Imported Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
-      ],
-      "pantryIngredients": ["salt & pepper", "garlic powder", "dried oregano or Italian seasoning"],
-      "steps": [
-        "Heat oven to 425°F. Cut potatoes into 3/4-inch chunks, peppers and onion into wide strips.",
-        "Toss vegetables on a sheet pan with olive oil, salt, pepper, garlic powder, and oregano. Roast 15 min.",
-        "Nestle the sausages (whole or cut into coins) among the vegetables. Roast another 20–25 min, tossing once, until sausage is 160°F and potatoes are browned.",
-        "Finish under the broiler 2 min for extra color if you like, then serve straight from the pan."
-      ],
-      "note": "Publix Sweet Italian Sausage is dairy/egg-free, but glance at the label if you swap brands — some fresh sausages add milk-based fillers."
-    },
-    {
-      "title": "Garlic-Lime Shrimp & Yellow Rice Bowls",
-      "blurb": "Quick-seared white shrimp over saffron-y yellow rice, loaded with charred peppers, corn, and cool avocado.",
-      "time": "30 min",
-      "serves": 4,
-      "tags": ["seafood", "quick", "weeknight"],
-      "saleIngredients": [
-        { "item": "White Shrimp", "store": "Publix", "deal": "$8.99 lb" },
-        { "item": "Mahatma Yellow Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "$4.99" },
-        { "item": "Bulk Sweet Corn", "store": "Publix", "deal": "5 for $3.00" },
-        { "item": "Green Avocados", "store": "Publix", "deal": "2 for $5.00" }
-      ],
-      "pantryIngredients": ["garlic", "lime", "olive oil", "salt", "Cholula or hot sauce (optional)"],
-      "steps": [
-        "Cook the yellow rice per the package. Cut corn kernels off the cob; dice peppers.",
-        "Sear peppers and corn in a hot skillet with a little oil until charred at the edges, 4–5 min; set aside.",
-        "Pat shrimp dry, toss with garlic, salt, and a squeeze of lime. Sear 1–2 min per side until just pink.",
-        "Build bowls: rice, charred veg, shrimp, sliced avocado, more lime, and a shake of Cholula."
-      ],
-      "note": "Use plain White Shrimp here, not the pre-breaded panko shrimp — breaded coatings often contain egg."
-    },
-    {
-      "title": "Chicken & Broccoli Stir-Fry over Jasmine Rice",
-      "blurb": "A fast, savory stir-fry of sliced chicken breast and broccoli in a glossy garlic-soy sauce over fluffy jasmine rice.",
-      "time": "30 min",
-      "serves": 4,
-      "tags": ["quick", "one-pan protein", "weeknight"],
-      "saleIngredients": [
-        { "item": "GreenWise Boneless Skinless Chicken Breast", "store": "Publix", "deal": "$4.99 lb" },
-        { "item": "Broccoli or Cauliflower", "store": "Publix", "deal": "2 for $6.00" },
-        { "item": "Mahatma Jasmine Rice", "store": "Publix", "deal": "$2.00" },
-        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "$3.49" },
-        { "item": "Springer Mountain Farms Boneless Chicken Breasts", "store": "Kroger", "deal": "Buy 1 Get 1 FREE (swap option)" }
-      ],
-      "pantryIngredients": ["soy sauce", "garlic", "fresh ginger (or ground)", "cornstarch", "neutral oil", "brown sugar or honey"],
-      "steps": [
-        "Start the jasmine rice: rinse, simmer covered with a pinch of salt ~15 min, rest off heat.",
-        "Slice chicken thin; toss with 1 tsp cornstarch and a splash of soy. Cut broccoli into florets, onion into wedges.",
-        "Stir-fry chicken in hot oil until golden and cooked through; remove. Stir-fry broccoli and onion 3–4 min with a splash of water to steam.",
-        "Return chicken, add a sauce of 3 tbsp soy, 1 tsp sugar, garlic, ginger, and 1 tsp cornstarch in 1/4 cup water. Toss until glossy; serve over rice."
-      ],
-      "note": "Naturally dairy/egg-free. Kroger has Springer Mountain chicken breast BOGO this week too if Publix is picked over."
-    },
-    {
-      "title": "Ground Beef & Mushroom Bolognese",
-      "blurb": "A rich, meaty red sauce with baby bella mushrooms and onion, simmered into a jar of Rao's and tossed with pasta.",
-      "time": "40 min",
-      "serves": 4,
-      "tags": ["pasta", "weeknight"],
-      "saleIngredients": [
-        { "item": "Steakhouse Elite Signature Ground Beef", "store": "Publix", "deal": "$9.99" },
-        { "item": "Publix Baby Bella Whole Mushrooms", "store": "Publix", "deal": "2 for $4.00" },
-        { "item": "Rao's Homemade Sauce", "store": "Publix", "deal": "$6.99" },
-        { "item": "Ronzoni Pasta", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Yellow Onions", "store": "Publix", "deal": "$3.49" }
-      ],
-      "pantryIngredients": ["olive oil", "garlic", "salt & pepper", "dried oregano"],
-      "steps": [
-        "Boil salted water and cook the Ronzoni pasta to al dente; reserve a cup of pasta water before draining.",
-        "Brown the ground beef in a little olive oil, breaking it up; season with salt and pepper. Remove excess fat.",
-        "Add chopped onion and sliced mushrooms; cook 6–8 min until soft and browned. Stir in garlic and oregano.",
-        "Pour in the Rao's sauce, simmer 10 min, loosen with pasta water, then toss with the pasta and serve."
-      ],
-      "note": "Rao's marinara is dairy/egg-free — skip the parmesan for a dairy-free bowl, or top with a dairy-free grated cheese. Barilla pasta is $1.39 at Kroger this week if you'd rather stock up there."
-    },
-    {
-      "title": "Salsa-Simmered Pork Tacos with Avocado",
-      "blurb": "Marinated pork tenderloin seared and simmered in salsa until saucy, piled into warm tortillas with avocado and peppers.",
+      "title": "Greek Sheet-Pan Chicken with Green Beans & Tomatoes",
+      "blurb": "Chicken breast, snipped green beans and Campari tomatoes roasted on one pan with Greek seasoning and plenty of olive oil. The tomatoes burst and make their own sauce.",
       "time": "35 min",
       "serves": 4,
-      "tags": ["taco night", "one-pan protein", "weeknight"],
+      "tags": ["sheet-pan", "BOGO protein", "weeknight"],
       "saleIngredients": [
-        { "item": "Smithfield Marinated Pork Tenderloin", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Publix Salsa", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
-        { "item": "Green Avocados", "store": "Publix", "deal": "2 for $5.00" },
-        { "item": "Publix Tricolor Peppers", "store": "Publix", "deal": "$4.99" },
-        { "item": "Pork Boston Butt", "store": "Kroger", "deal": "Buy 1 Get 1 FREE (budget swap)" }
+        { "item": "Publix Boneless Skinless Chicken Breasts", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Pero Family Farms Snipped Green Beans", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Campari Tomatoes", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Konriko Greek Seasoning", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Pompeian Imported Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Ben's Original Long Grain White Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
       ],
-      "pantryIngredients": ["corn or flour tortillas", "lime", "salt", "cumin", "cilantro (optional)"],
+      "pantryIngredients": ["1 lemon", "2 cloves garlic", "salt & pepper"],
       "steps": [
-        "Cut pork tenderloin into strips or bite-size pieces; season with a little cumin and salt.",
-        "Sear in a hot skillet until browned, 4–5 min. Add sliced peppers and cook 3 min.",
-        "Pour in the salsa, lower heat, and simmer 8–10 min until the pork is cooked through and the sauce clings.",
-        "Warm tortillas, fill with pork, and top with sliced avocado, a squeeze of lime, and cilantro."
+        "Heat oven to 425°F. Start the rice on the stove according to the package.",
+        "Pound the chicken breasts to an even 3/4 inch (or halve them horizontally). Rub with olive oil, 1 1/2 tsp Greek seasoning, and the zest of the lemon.",
+        "Toss green beans, whole Campari tomatoes, and sliced garlic with olive oil and a pinch of salt on a sheet pan. Nestle the chicken on top.",
+        "Roast 20–25 min, until the chicken reaches 165°F and the tomatoes are blistered.",
+        "Squeeze lemon over everything. Serve over rice and spoon the pan juices on top."
       ],
-      "note": "Skip the sour cream and cheese to keep it dairy-free — the avocado does the creamy work. For a slow, cheap crowd version, use Kroger's BOGO Boston Butt and simmer longer."
+      "note": "Buy two packs of chicken. Put the second pack in the fridge for the tacos below, or freeze it."
+    },
+    {
+      "title": "Chicken Tacos with Refried Beans & Salsa",
+      "blurb": "Uses the free pack of chicken: seared, spiced and shredded into crunchy taco shells, served with refried beans and salsa.",
+      "time": "30 min",
+      "serves": 4,
+      "tags": ["tacos", "BOGO protein", "kid-friendly"],
+      "saleIngredients": [
+        { "item": "Publix Boneless Skinless Chicken Breasts", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Old El Paso Taco Shells", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Rosarita Refried Beans", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Publix Salsa", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Baby Seedless Cucumbers", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+      ],
+      "pantryIngredients": ["chili powder", "ground cumin", "garlic powder", "1 lime", "shredded lettuce or cabbage", "neutral oil", "salt"],
+      "steps": [
+        "Season the chicken with 2 tsp chili powder, 1 tsp cumin, 1/2 tsp garlic powder, and salt.",
+        "Sear in an oiled skillet over medium-high, 6 min per side, until 165°F. Rest 5 min, then shred with two forks and toss with the lime juice and a spoonful of salsa.",
+        "Warm the refried beans in a small pot with a splash of water. Warm the taco shells in the oven per the box.",
+        "Dice the baby cucumbers for a cool, crunchy topping.",
+        "Build the tacos: a smear of beans, then chicken, lettuce, cucumber, and salsa."
+      ],
+      "note": "Rosarita Traditional refried beans may contain lard but have no dairy. The Vegetarian variety is also dairy-free. Old El Paso shells are normally dairy- and egg-free, but check the label on flavored varieties."
+    },
+    {
+      "title": "Italian Sausage Pasta with Marinara",
+      "blurb": "Browned Italian sausage simmered in jarred marinara and tossed with dry pasta. A pantry dinner where the protein, pasta, sauce and oil are all BOGO.",
+      "time": "25 min",
+      "serves": 4,
+      "tags": ["pasta", "one-pot", "weeknight"],
+      "saleIngredients": [
+        { "item": "Carando Italian Sausage", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Mueller's Pasta", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Classico Sauce", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Bertolli Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Campari Tomatoes", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+      ],
+      "pantryIngredients": ["1 onion", "3 cloves garlic", "red pepper flakes", "dried basil or Italian seasoning", "salt"],
+      "steps": [
+        "Boil a big pot of salted water for the pasta (penne or rigatoni work well).",
+        "Remove the sausage from its casings and brown it in a little olive oil in a deep skillet, breaking it up, about 6 min. Add the diced onion and garlic and cook 3 min more.",
+        "Add a jar of marinara, a handful of halved Campari tomatoes, a pinch of pepper flakes, and the basil. Simmer 10 min.",
+        "Cook the pasta 1 min shy of al dente. Reserve 1/2 cup of pasta water, then drain.",
+        "Toss the pasta into the sauce, loosening it with the pasta water. Finish with a drizzle of olive oil. No cheese is needed."
+      ],
+      "note": "Choose a Classico flavor with no cheese, like Marinara with Plum Tomatoes or Tomato & Basil. Skip the Four Cheese, Alfredo and Vodka varieties. Mueller's dry pasta is egg-free, but avoid any egg noodles. Carando sausage is usually dairy-free, but check the label because some Italian sausages include cheese."
+    },
+    {
+      "title": "BBQ Pulled Pork Sandwiches with Quick Cucumber Pickles",
+      "blurb": "Curly's pre-cooked pulled pork warmed with extra BBQ sauce and piled onto buns with homemade quick pickles. Dinner in 15 minutes.",
+      "time": "15 min",
+      "serves": 4,
+      "tags": ["sandwiches", "no-cook-ish", "fast"],
+      "saleIngredients": [
+        { "item": "Curly's Pulled Pork", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Kinder's BBQ Sauce", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Wonder Bread", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Baby Seedless Cucumbers", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Mt. Olive Pickles", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Lay's Potato Chips", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+      ],
+      "pantryIngredients": ["1/2 cup cider or white vinegar", "1 tbsp sugar", "1 tsp salt", "1/4 red onion"],
+      "steps": [
+        "Quick pickles: thinly slice the baby cucumbers and red onion. Stir the vinegar, sugar, salt, and 1/4 cup water until dissolved, then pour over the vegetables. Let sit while you do the rest.",
+        "Heat the pulled pork in a saucepan (or the microwave) with a few extra spoonfuls of Kinder's BBQ sauce.",
+        "Toast the buns if you like.",
+        "Pile the pork onto the buns and top with the drained quick pickles or Mt. Olive pickle chips. Serve with plain Lay's chips on the side."
+      ],
+      "note": "The Wonder BOGO includes buns, but many packaged buns contain milk or egg, so check the label. Kinder's has a creamy ranch-style sauce, so pick a straight BBQ flavor instead. Plain Lay's Classic chips are dairy-free, but flavored ones (sour cream, cheddar) are not. Check the Curly's label for your flavor."
+    },
+    {
+      "title": "Smoky Ham, Rice & Green Bean Skillet",
+      "blurb": "A one-skillet Southern-style dinner: seared ham steak, rice cooked in broth, and green beans, with a few dashes of Frank's RedHot.",
+      "time": "35 min",
+      "serves": 4,
+      "tags": ["one-pan", "Southern", "budget"],
+      "saleIngredients": [
+        { "item": "Frick's Ham Steak", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Ben's Original Long Grain White Rice", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Swanson Broth", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Pero Family Farms Snipped Green Beans", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Frank's Redhot Sauce", "store": "Publix", "deal": "Buy 1 Get 1 FREE" },
+        { "item": "Pompeian Imported Olive Oil", "store": "Publix", "deal": "Buy 1 Get 1 FREE" }
+      ],
+      "pantryIngredients": ["1 onion", "2 cloves garlic", "smoked paprika", "dried thyme", "salt & pepper"],
+      "steps": [
+        "Dice the ham steak into 1/2-inch cubes. Brown in olive oil in a large lidded skillet over medium-high, 5 min. Remove.",
+        "Add the diced onion and cook 4 min, then the garlic, 1 tsp smoked paprika, and 1/2 tsp thyme for 30 sec.",
+        "Stir in 1 cup rice to toast for 1 min, then add 2 cups Swanson broth. Bring to a boil, cover, and simmer on low for 12 min.",
+        "Scatter the green beans and ham over the rice, cover again, and cook 6–8 min more until the rice is tender and the beans are crisp-tender.",
+        "Fluff, season, and shake Frank's RedHot over the top to taste."
+      ],
+      "note": "The second ham steak and the extra broth, rice and green beans from the BOGOs can make this a second time later in the week, or go into a quick fried rice. Standard ham steak and Swanson broth are dairy-free, but check the label on flavored or glazed hams."
     }
   ]
 }

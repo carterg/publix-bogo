@@ -2,7 +2,7 @@
  {
   "weekStart": "2026-09-16",
   "week": "9/16 – 9/22",
-  "generatedAt": "2026-09-22T20:05:37.267Z",
+  "generatedAt": "2026-09-22T20:08:17.625Z",
   "publixCount": 192,
   "krogerCount": 50,
   "watched": [],
@@ -82,7 +82,13 @@
     "Snuggle Dryer Sheets"
    ]
   },
-  "recipes": []
+  "recipes": [
+   "Greek Sheet-Pan Chicken with Green Beans & Tomatoes",
+   "Chicken Tacos with Refried Beans & Salsa",
+   "Italian Sausage Pasta with Marinara",
+   "BBQ Pulled Pork Sandwiches with Quick Cucumber Pickles",
+   "Smoky Ham, Rice & Green Bean Skillet"
+  ]
  },
  {
   "weekStart": "2026-09-02",
